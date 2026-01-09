@@ -1,0 +1,55 @@
+import React from 'react'
+import styles from '../style/Navbar.module.css';
+import { IoMenu } from "react-icons/io5";
+import { useNavigate } from 'react-router-dom';
+
+
+function CustomHeader({ heading, text, textTwo, span, textThree }) {
+
+    const navigate = useNavigate()
+    return (
+        <>
+
+
+            <section className="breed-section" style={{ backgroundImage: 'url(/assets/img/about/about-breed.webp)' }}>
+
+                <div style={{ padding: '0 60px' }}>
+                    <div className={styles.topBar}>
+                        <img
+                            src="/assets/logo/logo.png"
+                            alt="Logo"
+                            className={styles.logo}
+                            onClick={() => navigate('/')}
+                        />
+                        <IoMenu className={styles.menuIcon} />
+                    </div>
+                </div>
+
+                <div className="breed-overlay"></div>
+
+                <div className="breed-content container">
+                    <div className="col-12 row mx-auto">
+                        <div className="col-xl-10">
+                            <h1 className="breed-big-title">{heading}{span && <sup>{span}</sup>}</h1>
+                            {textThree && <h1 className="breed-title">{textThree}</h1>}
+
+                            {text && <p className="breed-subtitle">
+                                {text}
+                            </p>}
+                            {textTwo && <div className="breed-text">
+                                <p>
+                                    {textTwo}
+                                </p>
+                            </div>}
+                        </div>
+                    </div>
+                </div>
+                <div className="decor-shape1">
+                    <img src="assets/img/shape/Group_11.png" alt="Shape1" />
+                </div>
+            </section>
+        </>
+    )
+}
+
+export default CustomHeader

@@ -1,25 +1,61 @@
-import logo from './logo.svg';
+// // import logo from './logo.svg';
 import './App.css';
+import './custom.css';
+// import Home from './pages/Home/Home';
+// import Navbar from './pages/Navbar';
+
+// function App() {
+//   return (
+//     <>
+
+//     </>
+//   );
+// }
+
+// export default App;
+
+
+
+// import './App.css';
+// import './custom.css';
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// import Navbar from './pages/Navbar';
+import Home from './pages/Home/Home';
+import About from "./pages/About";
+import Magnize from './pages/Magnize';
+import From from './pages/From';
+import Footer from './pages/Footer';
+import HalfOfFame from './pages/HalfOfFame';
+import Courses from './pages/Courses';
+import GtoTrain from './pages/Home/GtoTrain';
+import ScrollToTop from './components/ScrollToTop';
+// import About from './pages/About/About';
+// import More from './pages/More/More';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Magazine" element={<Magnize />} />
+        <Route path="/HalfOfFame" element={<HalfOfFame />} />
+        <Route path="/Courses" element={<Courses />} />
+        <Route path="/GtoTrain" element={<GtoTrain />} />
+        {/* <Route path="/about" element={<About />} />
+        <Route path="/more" element={<More />} /> */}
+      </Routes>
+      <From />
+      <Footer />
+    </BrowserRouter>
   );
 }
 
 export default App;
+
+
+//  <Navbar />
+//       <Home />

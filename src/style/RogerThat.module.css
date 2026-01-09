@@ -1,0 +1,192 @@
+.section {
+    /* width: 100%; */
+    min-height: 100vh;
+    padding: 80px 100px;
+    background: linear-gradient(270deg,
+            #111015 0%,
+            #111111 50%,
+            #111015 100%);
+    color: #c6c5af;
+    font-family: var(--font1);
+}
+
+/* ================= HEADER ================= */
+
+.header {
+    /* max-width: 720px; */
+    width: 100%;
+    /* position: relative; */
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    /* flex: 1; */
+}
+
+
+
+.title {
+    font-size: 56px;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+.title span {
+    opacity: 0.4;
+}
+
+.subTitle {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: #c6c5af;
+    font-weight: 500;
+    line-height: 150%;
+    font-family: var(--font1);
+
+}
+
+.description {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #c6c5af;
+    max-width: 640px;
+    font-weight: 400;
+    line-height: 150%;
+    font-family: var(--font1);
+
+}
+
+/* ================= ARROWS ================= */
+
+.arrows {
+    /* position: absolute;
+    right: -220px;
+    top: 50%;
+    transform: translateY(-50%); */
+    display: flex;
+    gap: 14px;
+}
+
+.arrow {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #d2a100;
+    background: transparent;
+    color: #d2a100;
+    font-size: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.arrow:hover {
+    background: rgba(210, 161, 0, 0.1);
+}
+
+/* ================= CARDS ================= */
+
+.cards {
+    display: flex;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.card {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(198, 197, 175, 0.3);
+    backdrop-filter: blur(10px);
+    transition: transform 0.35s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ================= CTA ================= */
+
+.cta {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.ctaBtn {
+    padding: 10px 24px;
+    border: 1px solid #d2a100;
+    background: transparent;
+    color: #d2a100;
+    letter-spacing: 1px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.ctaBtn:hover {
+    background: rgba(210, 161, 0, 0.1);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+    .section {
+        padding: 60px 40px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .arrows {
+        position: static;
+        transform: none;
+        margin-top: 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+/* SWIPER */
+.mySwiper {
+    margin-top: 60px;
+}
+
+/* pagination container */
+.paginationWrapper {
+    display: flex;
+    justify-content: flex-end;
+    /* 👈 RIGHT SIDE */
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* GLOBAL swiper pagination */
+:global(.roger-pagination) {
+    display: flex;
+    gap: 10px;
+}
+
+/* pagination bullet → BOX */
+:global(.roger-pagination .swiper-pagination-bullet) {
+    width: 28px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 0;
+    /* ❌ no circle */
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+/* ACTIVE BOX */
+:global(.roger-pagination .swiper-pagination-bullet-active) {
+    background: #ffffff;
+}
