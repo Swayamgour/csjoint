@@ -44,7 +44,7 @@ function Magnize() {
             <section className="container sectionspace80">
                 <div className="row col-12 mx-auto">
 
-                    <div className="col-md-2 col-sm-3 col-4 ms-auto">
+                    <div className="col-auto">
                         <form action="">
                             <div className="form-group">
                                 <select name="" className="form-select thm-select" id="">

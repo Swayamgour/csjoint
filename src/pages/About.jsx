@@ -59,7 +59,7 @@ function About() {
                             <div className="team-card">
 
                                 <div className="col-12 row mx-auto">
-                                    <div className="col-lg-3 col-md-4">
+                                    <div className="col-xl-3 col-lg-4 col-md-5">
                                         {/* <!-- LEFT IMAGE --> */}
                                         <div className="team-image">
                                             <img src="/assets/img/about/founder.png" alt="Image" />
@@ -67,7 +67,7 @@ function About() {
                                             <h4>Lt. Commander Nikhil Kumar Chandrakala (Retd.)</h4>
                                         </div>
                                     </div>
-                                    <div className="col-lg-9 col-md-8">
+                                    <div className="col-xl-9 col-lg-8 col-md-7">
                                         {/* <!-- RIGHT CONTENT --> */}
                                         <div className="team-detailed-content">
                                             <div className="accordion team-accordion" id="teamAccordion">

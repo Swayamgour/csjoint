@@ -1,6 +1,8 @@
 import React from 'react'
 import CustomHeader from '../components/CustomHeader'
 import Methodology from '../components/Methodology'
+import TipsToExcel from '../components/TipsToExcel'
+import SelectionMap from '../components/SelectionMap'
 
 function SsbPage() {
 
@@ -13,6 +15,8 @@ function SsbPage() {
         <>
             <CustomHeader heading={data.heading} textTwo={data.textTwo} />
             <Methodology />
+            <TipsToExcel />
+            <SelectionMap />
 
         </>
     )

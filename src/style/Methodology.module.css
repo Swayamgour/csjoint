@@ -237,134 +237,362 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.section {
-  min-height: 100vh;
+/* DaySchedule.module.css */
+.DayScheduleSection {
   padding: 80px 100px;
-  background: linear-gradient(270deg, #111015 0%, #111111 50%, #111015 100%);
-  font-family: var(--font-primary);
+  /* min-height: 100vh; */
+  background: radial-gradient(circle at top left, #3b2f12, #000);
   color: #c6c5af;
+  font-family: var(--font1);
+  position: relative;
+  overflow: hidden;
 }
 
-.title {
-  font-size: 42px;
+.heading {
+  font-size: 56px;
+  font-weight: 400;
   margin-bottom: 60px;
+  text-align: center;
+  color: #f2f0e1;
+  position: relative;
+  z-index: 3;
 }
 
 /* TIMELINE */
 .timeline {
   display: flex;
   flex-direction: column;
-  gap: 70px;
+  gap: 60px;
+  position: relative;
+  z-index: 2;
 }
 
 /* EACH ROW */
 .row {
   display: flex;
+  position: relative;
+  height: 60px;
+}
+
+/* CONNECTING LINE */
+.connectingLine {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.connectingLine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%,
+    rgba(210, 161, 0, 0.3) 50%,
+    transparent 100%);
+  animation: lineGlow 3s infinite;
+}
+
+/* MOVING TRACK */
+.movingTrack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 10px;
+  z-index: 1;
+}
+
+.trackPoint {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* MOVING DOT */
+.movingDot {
+  width: 12px;
+  height: 12px;
+  background: #d2a100;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s ease;
+  box-shadow: 0 0 15px #d2a100;
+}
+
+.movingDot.active {
+  opacity: 1;
+  transform: scale(1);
+  animation: pulseMove 1.5s ease-out;
+}
+
+/* ROW CONTENT */
+.rowContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  z-index: 2;
   gap: 24px;
+}
+
+.itemWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 /* BOX */
 .box {
-  padding: 10px 18px;
-  border: 1px solid rgba(198, 197, 175, 0.6);
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
-  white-space: nowrap;
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(8px);
-}
-
-/* LABEL */
-.label {
-  font-size: 12px;
-  opacity: 0.8;
-  white-space: nowrap;
-}
-
-/* CONNECTOR */
-.connector {
   position: relative;
-  width: 40px;
-  height: 1px;
-  background: rgba(198, 197, 175, 0.4);
+  z-index: 2;
+  padding: 12px 20px;
+  border: 1px solid rgba(198, 197, 175, 0.45);
+  background: rgba(0, 0, 0, 0.45);
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #f2f0e1;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
 }
 
-/* DOT */
-.dot {
+.box:hover {
+  border-color: rgba(210, 161, 0, 0.8);
+  background: rgba(0, 0, 0, 0.6);
+  transform: translateY(-2px);
+}
+
+/* STATIC DOT */
+.staticDot {
+  width: 8px;
+  height: 8px;
+  background: rgba(198, 197, 175, 0.3);
+  border-radius: 50%;
+  z-index: 2;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.staticDot.dotActive {
+  background: #d2a100;
+  box-shadow: 0 0 10px #d2a100;
+  transform: scale(1.5);
+}
+
+.staticDot::after {
+  content: '';
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 6px;
-  height: 6px;
-  background: #d2a100;
-  border-radius: 50%;
   transform: translate(-50%, -50%);
-  animation: pulse 2s infinite ease-in-out;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid rgba(210, 161, 0, 0.5);
+  opacity: 0;
 }
 
-/* DOT GLOW */
-.dot::after {
-  content: "";
-  position: absolute;
-  inset: -6px;
-  border-radius: 50%;
-  background: rgba(210, 161, 0, 0.3);
-  animation: glow 2s infinite ease-in-out;
+.staticDot.dotActive::after {
+  animation: ripple 1s ease-out;
+}
+
+/* TEXT LABEL */
+.label {
+  font-size: 14px;
+  color: #c6c5af;
+  white-space: nowrap;
+  z-index: 2;
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.label:hover {
+  color: #f2f0e1;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 /* ANIMATIONS */
-@keyframes pulse {
+@keyframes pulseMove {
   0% {
-    transform: translate(-50%, -50%) scale(1);
+    transform: scale(0.8);
+    box-shadow: 0 0 0 0 rgba(210, 161, 0, 0.7);
   }
   50% {
-    transform: translate(-50%, -50%) scale(1.4);
+    transform: scale(1.2);
+    box-shadow: 0 0 0 10px rgba(210, 161, 0, 0);
   }
   100% {
-    transform: translate(-50%, -50%) scale(1);
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(210, 161, 0, 0);
   }
 }
 
-@keyframes glow {
-  0% {
-    opacity: 0.2;
+@keyframes lineGlow {
+  0%, 100% {
+    opacity: 0.3;
   }
   50% {
-    opacity: 0.7;
-  }
-  100% {
-    opacity: 0.2;
+    opacity: 0.6;
   }
 }
 
-/* RESPONSIVE */
+@keyframes ripple {
+  0% {
+    width: 16px;
+    height: 16px;
+    opacity: 1;
+  }
+  100% {
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+  }
+}
+
+/* BACKGROUND PATTERN */
+.DayScheduleSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(210, 161, 0, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(210, 161, 0, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ================= RESPONSIVE ================= */
 @media (max-width: 1024px) {
-  .section {
+  .DayScheduleSection {
     padding: 60px 40px;
   }
 
-  .row {
+  .heading {
+    font-size: 42px;
+  }
+
+  .rowContent {
     flex-wrap: wrap;
-    gap: 16px;
+    row-gap: 16px;
+    justify-content: center;
+  }
+
+  .connectingLine {
+    display: none;
+  }
+
+  .movingTrack {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .DayScheduleSection {
+    padding: 40px 20px;
+  }
+
+  .heading {
+    font-size: 32px;
   }
 
   .box,
   .label {
-    font-size: 11px;
+    font-size: 13px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .row {
+    height: auto;
+    min-height: 120px;
+  }
+
+  .rowContent {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .itemWrapper {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Mobile connecting lines */
+  .row:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    height: 40px;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(-50%);
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .heading {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .timeline {
+    gap: 40px;
+  }
+
+  .box {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+
+  .label {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+/* ADD THIS */
+.active {
+  opacity: 1;
+  transform: scale(1);
+  animation: pulseMove 1.5s ease-out;
+}
+@media (max-width: 768px) {
+
+  .rowContent {
+    flex-direction: column;
+    align-items: stretch;   /* 👈 important */
+    gap: 20px;
+    width: 100%;
+  }
+
+  .itemWrapper {
+    width: 100%;
+    justify-content: center;
   }
 }

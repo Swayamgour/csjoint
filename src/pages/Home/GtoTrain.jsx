@@ -17,7 +17,7 @@ function GtoTrain() {
 
 
 
-           
+
             <CustomHeader heading={data.heading} text={data.text} textTwo={data.textTwo} span={data.span} textThree={data.textThree} />
 
             <section className="GTO-pedagogical-section sectionspace80">
@@ -92,9 +92,61 @@ function GtoTrain() {
                 </div>
             </section>
 
-            <section className="sectionspace80">
-                <div className="container">
 
+          
+
+            <section className="GTO-img-section">
+                <div className="container-fluid px-0">
+                    <div className="row g-0">
+                        <div className="col-lg-12 img-gradient-wrapper">
+                            <img src="/assets/img/about/about-breed.webp" alt="Enable Image" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section className="GTO-what-is-not-section sectionspace80">
+                <div className="container what-is-not-text-box px-0">
+                    <div className="row g-0">
+                        <div className="col-lg-3 d-flex align-items-center justify-content-center">
+                            <div className="what-is-not-img">
+                                <img src="/assets/img/about/Group_67.png" alt="GTX Image" />
+                            </div>
+                        </div>
+                        <div className="col-lg-9 px-0">
+                            <div className="what-is-not-text">
+                                <div className="sct-title">
+                                    <h2>What GTX™ is not</h2>
+                                </div>
+                                <ul className="ps-0">
+                                    <li>It is not a replacement for the real GTO ground.</li>
+                                    <li>It is not a coaching shortcut.</li>
+                                    <li>GTX™ is a preparatory bridge — designed to support authentic performance.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section className="GTO-bottom-banner-section sectionspace40 pb-5">
+                <div className="container bottom-banner-text-box">
+                    <div className="row g-0">
+
+                        <div className="col-lg-9 mx-auto">
+                            <div className="bottom-banner-text text-center">
+                                <div className="sct-title mb-4">
+                                    <h2>Built with experience, <br/>used with responsibility</h2>
+                                </div>
+                                <p className='text-center'>
+                                    Created by an ex-GTO, GTX™ blends real assessment insight with modern technology   <br/>staying fully aligned with the spirit and integrity of the SSB process.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 

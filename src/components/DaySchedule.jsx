@@ -108,69 +108,110 @@ import styles from '../style/Methodology.module.css';
 
 // import styles from "./DaySchedule.module.css";
 
+// import styles from "./DaySchedule.module.css";
+
+// DaySchedule.jsx
+// "use client";
+
+import { useState, useEffect } from 'react';
+// import styles from './DaySchedule.module.css';
+
 const DaySchedule = () => {
+    const [activeDot, setActiveDot] = useState(0);
+
+    const timelineData = [
+        // Row 1
+        {
+            id: 1,
+            items: [
+                { type: 'box', content: 'DAY 1 - STAGE 1 TESTING [OIR & PPDT]' },
+                { type: 'dot', id: 'dot1' },
+                { type: 'box', content: 'DAY 2 - PSYCH TESTS [TAT, WAT, SRT, SDT]' },
+                { type: 'dot', id: 'dot2' },
+                { type: 'label', content: 'Personal Interview' },
+                { type: 'dot', id: 'dot3' }
+            ]
+        },
+        // Row 2
+        {
+            id: 2,
+            items: [
+                { type: 'box', content: 'DAY 4 - GTO 2 DAY [IO, CT, FGT]' },
+                { type: 'dot', id: 'dot4' },
+                { type: 'label', content: 'Personal Interview' },
+                { type: 'dot', id: 'dot5' },
+                { type: 'box', content: 'DAY 3 - GTO 1 DAY [GD, GRE, PGT, GOR, HGT, LECTURETTE]' }
+            ]
+        },
+        // Row 3
+        {
+            id: 3,
+            items: [
+                { type: 'label', content: 'Personal Interview' },
+                { type: 'dot', id: 'dot6' },
+                { type: 'box', content: 'DAY 5 - BOARD CONFERENCE' }
+            ]
+        }
+    ];
+
+    const movingDots = ['dot1', 'dot2', 'dot3', 'dot4', 'dot5', 'dot6'];
+
+    useEffect(() => {
+        // Moving dot animation
+        const interval = setInterval(() => {
+            setActiveDot((prev) => (prev + 1) % movingDots.length);
+        }, 1500);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
-        <section className={styles.section}>
-            <h2 className={styles.title}>Day wise assessment schedule</h2>
+        <section className={styles.DayScheduleSection}>
+            <h2 className={styles.heading}>Day wise assessment schedule</h2>
 
             <div className={styles.timeline}>
-                {/* ROW 1 */}
-                <div className={styles.row}>
-                    <div className={styles.box}>
-                        DAY 1 – STAGE 1 TESTING (OIR & PPDT)
+                {timelineData.map((row) => (
+                    <div key={row.id} className={styles.row}>
+                        {/* Main connecting line */}
+                        <div className={styles.connectingLine}></div>
+
+                        {/* Moving dots track */}
+                        <div className={styles.movingTrack}>
+                            {row.items.map((item, index) => (
+                                <div key={index} className={styles.trackPoint}>
+                                    {item.type === 'dot' && (
+                                        <div
+                                            className={`${styles.movingDot} ${movingDots[activeDot] === item.id ? styles.active : ''
+                                                }`}
+                                        />
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Content */}
+                        <div className={styles.rowContent}>
+                            {row.items.map((item, index) => (
+                                <div key={index} className={styles.itemWrapper}>
+                                    {item.type === 'box' && (
+                                        <div className={styles.box}>{item.content}</div>
+                                    )}
+                                    {item.type === 'label' && (
+                                        <span className={styles.label}>{item.content}</span>
+                                    )}
+                                    {item.type === 'dot' && (
+                                        <div className={`${styles.staticDot} ${movingDots[activeDot] === item.id ? styles.dotActive : ''
+                                            }`} />
+                                    )}
+                                </div>
+                            ))}
+                        </div>
                     </div>
-
-                    <div className={styles.connector}>
-                        <span className={styles.dot}></span>
-                    </div>
-
-                    <div className={styles.box}>
-                        DAY 2 – PSYCH TESTS (TAT, WAT, SRT, SDT)
-                    </div>
-
-                    <div className={styles.connector}>
-                        <span className={styles.dot}></span>
-                    </div>
-
-                    <div className={styles.label}>Personal Interview</div>
-                </div>
-
-                {/* ROW 2 */}
-                <div className={styles.row}>
-                    <div className={styles.box}>
-                        DAY 4 – GTO 2 DAY (IO, CT, FGT)
-                    </div>
-
-                    <div className={styles.connector}>
-                        <span className={styles.dot}></span>
-                    </div>
-
-                    <div className={styles.label}>Personal Interview</div>
-
-                    <div className={styles.connector}>
-                        <span className={styles.dot}></span>
-                    </div>
-
-                    <div className={styles.box}>
-                        DAY 3 – GTO 1 DAY (GD, GPE, PGT, GOR, HGT, LECTURETTE)
-                    </div>
-                </div>
-
-                {/* ROW 3 */}
-                <div className={styles.row}>
-                    <div className={styles.label}>Personal Interview</div>
-
-                    <div className={styles.connector}>
-                        <span className={styles.dot}></span>
-                    </div>
-
-                    <div className={styles.box}>
-                        DAY 5 – BOARD CONFERENCE
-                    </div>
-                </div>
+                ))}
             </div>
         </section>
     );
 };
 
 export default DaySchedule;
+

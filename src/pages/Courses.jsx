@@ -14,12 +14,24 @@ function Courses() {
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> */}
 
 
-           <CustomHeader heading={data.heading} text={data.text} />
+            <CustomHeader heading={data.heading} text={data.text} />
 
             <section className="container sectionspace80">
                 <div className="our-courses-section">
 
-                    <ul className="nav course-nav-tabs" role="tablist">
+                    <div className="course-mobile-select d-md-none mb-3">
+                        <div className="form-group">
+                            <label for="course" className="form-label  mb-1" style={{color:'var(--theme-white)'}}>Select Course:-</label>
+                            <select className="form-select" id="courseTabSelect">
+                                <option value="#c1">10 days Services Selection Board Hackathon</option>
+                                <option value="#c2">Introduction to SSB & PPDT</option>
+                                <option value="#c3">Psych Theory Course</option>
+                                <option value="#c4">Interview Theory Course</option>
+                                <option value="#c5">Group Testing Course</option>
+                            </select>
+                        </div>
+                    </div>
+                    <ul className="nav course-nav-tabs d-none d-md-flex" role="tablist">
                         <li className="nav-item">
                             <button className="nav-link active" data-bs-toggle="tab" data-bs-target="#c1">
                                 10 days Services Selection Board Hackathon
@@ -178,4 +190,15 @@ function Courses() {
     )
 }
 
+{/* <script>
+    document.getElementById('courseTabSelect').addEventListener('change', function() {
+        const target = this.value;
+        const tab = document.querySelector(
+            `.course-nav-tabs .nav-link[data-bs-target="${target}"]`
+        );
+        if (tab) {
+            new bootstrap.Tab(tab).show();
+        }
+    });
+    </script> */}
 export default Courses

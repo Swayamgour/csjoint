@@ -91,9 +91,9 @@
 
 .imageBox img {
     width: 100%;
-    height: 320px;
+    /* height: 320px; */
     object-fit: cover;
-    border-radius: 12px;
+    /* border-radius: 12px; */
     opacity: 0.9;
 }
 
@@ -124,7 +124,7 @@
     }
 
     .imageBox img {
-        height: 260px;
+        /* height: 260px;/ */
     }
 }
 
@@ -166,7 +166,7 @@
     }
 
     .imageBox img {
-        height: 220px;
+        /* height: 220px; */
     }
 }
 
@@ -177,6 +177,6 @@
     }
 
     .imageBox img {
-        height: 180px;
+        /* height: 180px; */
     }
 }
