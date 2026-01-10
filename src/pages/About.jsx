@@ -2,6 +2,7 @@ import React from 'react'
 import From from './From'
 import Footer from './Footer'
 import CustomHeader from '../components/CustomHeader'
+import SwiperComponents from '../components/SwiperComponents'
 // import 
 
 function About() {
@@ -22,95 +23,16 @@ function About() {
 
             <CustomHeader heading={data?.heading} text={data?.text} textTwo={data.textTwo} />
 
-            <section className="journey-section container sectionspace80">
-                <div className="sct-title">
-                    <h2> Our Journey</h2>
-                </div>
-                <div className="col-xl-10 col-lg-11 col-12 mx-auto">
-                    <div className="journey-wrap">
 
-                        {/* <!-- journey-timeline --> */}
-                        <div className="journey-timeline">
-                            <span className="journey-timeline-base"></span>
-                            <span className="journey-timeline-progress"></span>
-                            <div className="journey-timeline-dots"></div>
-                        </div>
 
-                        {/* <!-- CONTENT --> */}
-                        <div className="journey-content">
-
-                            <div className="swiper journey-swiper">
-                                <div className="swiper-wrapper">
-
-                                    <div className="swiper-slide journey-swiper-slider">
-                                        <div className="journey-text">
-                                            <span className="date">October 2023</span>
-                                            <h3>CS Joint Services Academy</h3>
-                                            <p>
-                                                Expansion into structured offline mentoring with
-                                                psychology-driven training.
-                                            </p>
-                                        </div>
-                                        <div className="journey-image">
-                                            <img src="/assets/img/about/journey-slider.png" alt="Image" />
-                                        </div>
-                                    </div>
-
-                                    <div className="swiper-slide journey-swiper-slider">
-                                        <div className="journey-text">
-                                            <span className="journey-date">October 2023</span>
-                                            <h3>CS Joint Services Academy</h3>
-                                            <p>
-                                                Expansion into structured offline mentoring with
-                                                psychology-driven training.
-                                            </p>
-                                        </div>
-                                        <div className="journey-image">
-                                            <img src="/assets/img/about/journey-slider.png" alt="Image" />
-                                        </div>
-                                    </div>
-
-                                    <div className="swiper-slide journey-swiper-slider">
-                                        <div className="journey-text">
-                                            <span className="journey-date">October 2023</span>
-                                            <h3>CS Joint Services Academy</h3>
-                                            <p>
-                                                Expansion into structured offline mentoring with
-                                                psychology-driven training.
-                                            </p>
-                                        </div>
-
-                                        <div className="journey-image">
-                                            <img src="/assets/img/about/journey-slider.png" alt="Image" />
-                                        </div>
-                                    </div>
-
-                                    <div className="swiper-slide journey-swiper-slider">
-                                        <div className="journey-text">
-                                            <span className="journey-date">October 2023</span>
-                                            <h3>CS Joint Services Academy</h3>
-                                            <p>
-                                                Expansion into structured offline mentoring with
-                                                psychology-driven training.
-                                            </p>
-                                        </div>
-                                        <div className="journey-image">
-                                            <img src="/assets/img/about/journey-slider.png" alt="Image" />
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <SwiperComponents />
 
 
 
 
             <section className="team-section container sectionspace80 ">
-                <div className="row align-items-center gy-3">
+                <div className="row flex-column flex-md-row align-items-center gy-3">
+
                     {/* TITLE */}
                     <div className="col-12 col-lg-9 order-1 order-lg-1">
                         <div className="sct-title">
@@ -119,12 +41,12 @@ function About() {
                     </div>
 
                     {/* ARROWS */}
-                    <div className="col-12 col-lg-3 order-2 order-lg-2 text-start text-lg-end">
+                    {/* <div className="col-12 col-lg-3 order-2 order-lg-2 text-start text-lg-end">
                         <div className="thm-sld-nav-btns d-flex justify-content-start justify-content-lg-end">
                             <div className="thm-sld-nav-prev">&#10094;</div>
                             <div className="thm-sld-nav-next">&#10095;</div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
 

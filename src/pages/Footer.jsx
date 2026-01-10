@@ -70,12 +70,14 @@ function Footer() {
                     </div>
 
 
-                    <span className={styles.copy}>
-                        © Copyright 2026 All Rights Reserved
-                    </span>
+
                 </div>
 
             </div>
+
+            <span className={styles.copy}>
+                © Copyright 2026 All Rights Reserved
+            </span>
         </footer>
     );
 }

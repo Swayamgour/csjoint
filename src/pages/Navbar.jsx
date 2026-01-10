@@ -83,8 +83,11 @@ function Navbar() {
                                     Virtual GTO Training Experience
                                 </span>
                             </p>
+                            <div style={{marginTop:'30px'}}>
 
-                            <CustomButton text="Sign Up Now" />
+                                <CustomButton text="Sign Up Now" />
+                            </div>
+
                         </div>
                     </div>
                 </section>

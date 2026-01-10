@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import styles from '../../style/RogerThat.module.css'
@@ -47,28 +47,41 @@ const RogerThat = () => {
 
             {/* SWIPER */}
             <Swiper
-                slidesPerView={2}                 // ✅ ONLY 2 CARDS
+                slidesPerView={2}
                 spaceBetween={40}
+
+                loop={true}   // 👈 boolean rakho (string nahi)
+
+                autoplay={{
+                    delay: 2500,                 // ⏱ 2.5 sec
+                    disableOnInteraction: false, // 👆 swipe ke baad bhi chalta rahe
+                    pauseOnMouseEnter: true,     // 🖱 hover par pause (optional)
+                }}
+
                 pagination={{
                     el: ".roger-pagination",
                     clickable: true,
                 }}
+
                 navigation={{
                     prevEl: prevRef.current,
                     nextEl: nextRef.current,
                 }}
+
                 onBeforeInit={(swiper) => {
                     swiper.params.navigation.prevEl = prevRef.current;
                     swiper.params.navigation.nextEl = nextRef.current;
                 }}
+
                 breakpoints={{
                     0: { slidesPerView: 1 },
                     1024: { slidesPerView: 2 },
                 }}
-                modules={[Pagination, Navigation]}
-                loop='true'
+
+                modules={[Pagination, Navigation, Autoplay]}
                 className={styles.mySwiper}
             >
+
                 {array.map((e) => (
                     <SwiperSlide key={e.id}>
                         <div className={styles.card}>

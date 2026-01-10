@@ -1,6 +1,6 @@
 .footer {
     background: #3b3930;
-    padding: 70px 0;
+    padding: 70px 0 0;
     color: #c6c5af;
 }
 
@@ -85,7 +85,7 @@
 
 /* ================= RESPONSIVE ================= */
 
-@media (max-width: 600px) {
+@media (max-width: 780px) {
     .container {
         grid-template-columns: 1fr 1fr;
         gap: 10px;
@@ -95,7 +95,7 @@
     /* LOGO – FULL WIDTH TOP */
     .logoBox {
         grid-column: 1 / -1;
-        justify-content: flex-start;
+        justify-content: center;
         margin-bottom: 20px;
     }
 
@@ -125,7 +125,7 @@
 @media (max-width: 600px) {
 
     .footer {
-       padding: 10px 0;
+        padding: 10px 0;
     }
 
     .contactRow {
@@ -141,8 +141,11 @@
         font-size: 14px;
     }
 
-    .copy {
-        text-align: center;
-        margin-top: 20px;
-    }
+}
+
+.copy {
+
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 10px;
 }

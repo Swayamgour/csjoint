@@ -114,6 +114,46 @@ export const resourcesData = [
 
 
 
+export const journeyData = [
+    {
+        date: "July 2021",
+        title: "Integrated SSB Virtuosos Club",
+        desc: "Started as an online SSB mentoring platform. ~200+ students coached single-handedly. 140+ success stories.",
+        image: "/assets/img/about/journey-slider.png",
+    },
+    {
+        date: "October 2023",
+        title: "CS Joint Services Academy",
+        desc: "Expansion into full-fledged academy with offline & online programs.",
+        image: "/assets/img/about/journey-slider.png",
+    },
+    {
+        date: "January 2025",
+        title: "Pan India Reach",
+        desc: "Training aspirants across India with structured programs.",
+        image: "/assets/img/about/journey-slider.png",
+    },
+    {
+        date: "July 2021",
+        title: "Integrated SSB Virtuosos Club",
+        desc: "Started as an online SSB mentoring platform. ~200+ students coached single-handedly. 140+ success stories.",
+        image: "/assets/img/about/journey-slider.png",
+    },
+    {
+        date: "October 2023",
+        title: "CS Joint Services Academy",
+        desc: "Expansion into full-fledged academy with offline & online programs.",
+        image: "/assets/img/about/journey-slider.png",
+    },
+    {
+        date: "January 2025",
+        title: "Pan India Reach",
+        desc: "Training aspirants across India with structured programs.",
+        image: "/assets/img/about/journey-slider.png",
+    },
+];
+
+
 
 
 
