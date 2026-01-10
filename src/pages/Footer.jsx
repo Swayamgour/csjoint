@@ -23,8 +23,8 @@ function Footer() {
                     <h4>Useful Links</h4>
                     <ul>
                         <li onClick={() => navigate("/")}>Home</li>
-                        <li onClick={() => navigate("/WhatIsSSB")}>What is SSB?</li>
-                        <li onClick={() => navigate("/PrivacyPolicy")}>Privacy policy</li>
+                        <li>What is SSB?</li>
+                        <li >Privacy policy</li>
                     </ul>
                 </div>
 
