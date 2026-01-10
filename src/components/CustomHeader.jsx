@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from '../style/Navbar.module.css';
 import { IoMenu } from "react-icons/io5";
 import { useNavigate } from 'react-router-dom';
+import Sidebar from './Sidebar';
 
 
 function CustomHeader({ heading, text, textTwo, span, textThree }) {
 
     const navigate = useNavigate()
+
+    const [open, setOpen] = useState(false);
     return (
         <>
 
@@ -21,9 +24,12 @@ function CustomHeader({ heading, text, textTwo, span, textThree }) {
                             className={styles.logo}
                             onClick={() => navigate('/')}
                         />
-                        <IoMenu className={styles.menuIcon} />
+                        <IoMenu className={styles.menuIcon} onClick={() => setOpen(true)} />
                     </div>
                 </div>
+
+                <Sidebar open={open} onClose={() => setOpen(false)} />
+
 
                 <div className="breed-overlay"></div>
 

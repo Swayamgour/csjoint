@@ -814,6 +814,11 @@ p {
     color: var(--theme-white);
 }
 
+.responsiveFooter{
+    display: flex;
+    /* flex-direction: ; */
+}
+
 .footer-logo {
     width: 250px;
     filter: grayscale(100%) brightness(1.2) contrast(1.4);
@@ -1544,5 +1549,8 @@ img {
 
   .footer-widget-title {
     font-size: 20px;
+  }
+  .sectionspace80{
+    padding: 0;
   }
 }

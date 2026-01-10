@@ -1,73 +1,75 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
-
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import styles from "../style/Footer.module.css";
 
 function Footer() {
+    const navigate = useNavigate();
 
-    const navigate = useNavigate()
     return (
-        <footer className="footer-section sectionspace80">
-            <div className="container">
+        <footer className={styles.footer}>
+            <div className={styles.container}>
 
-                <div className="row">
-                    {/* //  LOGO --> */}
-                    <div className="col-lg-3 col-md-6 text-center text-md-start">
-                        <img src="/assets/logo/logo.png" className="footer-logo" alt="Footer logo" />
-                    </div>
-
-                    {/* <div className=''> */}
-                        {/* //  LINKS --> */}
-                        <div className="col-lg-3 col-md-6">
-                            <div className="footer-widget">
-                                <h3 className="footer-widget-title">Useful Links</h3>
-                                <ul>
-                                    <li onClick={() => navigate('/')}>Home</li>
-                                    <li>What is SSB?</li>
-                                    <li>Privacy policy</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-3 col-md-6">
-                            <div className="footer-widget">
-                                <h3 className="footer-widget-title">Our Services</h3>
-                                <ul>
-                                    <li onClick={() => navigate('/About')} >About US</li>
-                                    <li onClick={() => navigate('/Magazine')} >Magazine</li>
-                                    <li onClick={() => navigate('/HalfOfFame')} >Hall Of Fame</li>
-                                    <li onClick={() => navigate('/Courses')} >Courses</li>
-                                    <li onClick={() => navigate('/GtoTrain')} >GTO Training</li>
-                                    {/* <li>Podcast</li> */}
-                                </ul>
-                                <div className="footer-socials">
-                                    <i className="footer-social-icon fa fa-youtube-play"></i>
-                                    <i className="footer-social-icon fa fa-linkedin-square"></i>
-                                    <i className="footer-social-icon fa fa-instagram"></i>
-                                    <i className="footer-social-icon fa fa-facebook"></i>
-                                </div>
-                            </div>
-                        </div>
-                    {/* </div> */}
-
-                    {/* //  CONTACT --> */}
-                    <div className="col-lg-3 col-md-6">
-                        <div className="footer-widget">
-                            <h3 className="footer-widget-title">Contact Us</h3>
-                            <ul>
-                                <li><i className="fa fa-whatsapp me-2 fs-5"></i> +91 84204 22821</li>
-                                <li><i className="fa fa-phone me-2 fs-5"></i> +91 90246 67319</li>
-                                <li><i className="fa fa-envelope me-2 fs-5 "></i> info@ssbwithisv.in</li>
-                            </ul>
-                            <p className="footer-widget-text">© Copyright 2024 All Rights Reserved</p>
-                        </div>
-                    </div>
-
+                {/* LOGO */}
+                <div className={styles.logoBox}>
+                    <img
+                        src="/assets/logo/logo.png"
+                        alt="CS Joint Services Academy"
+                        className={styles.logo}
+                    />
                 </div>
 
+                {/* LINKS */}
+                <div className={styles.links}>
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li onClick={() => navigate("/")}>Home</li>
+                        <li onClick={() => navigate("/WhatIsSSB")}>What is SSB?</li>
+                        <li onClick={() => navigate("/PrivacyPolicy")}>Privacy policy</li>
+                    </ul>
+                </div>
+
+                {/* SERVICES */}
+                <div className={styles.links}>
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li onClick={() => navigate("/About")}>About Us</li>
+                        <li onClick={() => navigate("/Magazine")}>Magazine</li>
+                        <li onClick={() => navigate("/HalfOfFame")}>Hall of Fame</li>
+                        <li onClick={() => navigate("/Courses")}>Courses</li>
+                        <li onClick={() => navigate("/GtoTrain")}>GTO Training</li>
+                    </ul>
+
+                    {/* SOCIAL ICONS */}
+                    <div className={styles.socials}>
+                        <i className="fa fa-youtube-play"></i>
+                        <i className="fa fa-linkedin-square"></i>
+                        <i className="fa fa-instagram"></i>
+                        <i className="fa fa-facebook"></i>
+                    </div>
+                </div>
+
+                {/* CONTACT */}
+                <div className={styles.contact}>
+                    <h4>Contact Us</h4>
+
+                    <p>
+                        <i className="fa fa-whatsapp"></i> +91 84204 22821
+                    </p>
+                    <p>
+                        <i className="fa fa-phone"></i> +91 90246 67319
+                    </p>
+                    <p>
+                        <i className="fa fa-envelope"></i> info@ssbwithisv.in
+                    </p>
+
+                    <span className={styles.copy}>
+                        © Copyright 2026 All Rights Reserved
+                    </span>
+                </div>
 
             </div>
         </footer>
-    )
+    );
 }
 
-export default Footer
+export default Footer;

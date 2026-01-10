@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../style/Navbar.module.css";
 import { IoMenu } from "react-icons/io5";
 import CircularCard from "../components/CircularCard";
 import CustomButton from "../components/CustomButton";
+import Sidebar from "../components/Sidebar";
 
 function Navbar() {
     const array = [
@@ -10,6 +11,8 @@ function Navbar() {
         { number: "90", title: "Years of Domain Expertise" },
         { number: "4", title: "Years of Proven Track Record" },
     ];
+
+    const [open, setOpen] = useState(false);
 
     return (
         <div className={styles.pageWrapper}>
@@ -22,7 +25,7 @@ function Navbar() {
                             alt="Logo"
                             className={styles.logo}
                         />
-                        <IoMenu className={styles.menuIcon} />
+                        <IoMenu className={styles.menuIcon} onClick={() => setOpen(true)} />
                     </div>
 
                     <header className={styles.header}>
@@ -38,6 +41,8 @@ function Navbar() {
                         </div>
                     </header>
                 </section>
+
+                <Sidebar open={open} onClose={() => setOpen(false)} />
 
                 {/* CIRCLE SECTION */}
                 <section className={styles.circleSection}>

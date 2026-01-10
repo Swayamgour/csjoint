@@ -31,7 +31,7 @@ function From() {
                             <textarea placeholder="Write Your Message"></textarea>
                         </div>
 
-                        <div className="col-12 text-center">
+                        <div style={{marginBottom:'20px'}} className="col-12 text-center">
                             <button type="submit" className="enquiry-submit-btn">SUBMIT</button>
                         </div>
                     </div>

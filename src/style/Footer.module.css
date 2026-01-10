@@ -1,0 +1,121 @@
+.footer {
+    background: #3b3930;
+    padding: 70px 0;
+    color: #c6c5af;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 60px;
+
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+
+/* LOGO */
+.logoBox {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 230px;
+    filter: grayscale(100%) brightness(1.2);
+}
+
+/* COMMON */
+.links h4,
+.contact h4 {
+    font-size: 20px;
+    margin-bottom: 18px;
+    color: #f2f0e1;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links li {
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.links li:hover {
+    color: #ffffff;
+}
+
+/* SOCIALS */
+.socials {
+    margin-top: 18px;
+    display: flex;
+    gap: 16px;
+}
+
+.socials i {
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.socials i:hover {
+    color: #ffffff;
+}
+
+/* CONTACT */
+.contact p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.copy {
+    display: block;
+    margin-top: 20px;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    /* LOGO – FULL WIDTH TOP */
+    .logoBox {
+        grid-column: 1 / -1;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    /* LINKS + SERVICES – 50% / 50% */
+    .links {
+        width: 100%;
+    }
+
+    /* CONTACT – FULL WIDTH BOTTOM */
+    /* .contact {
+        grid-column: 1 / -1;
+        margin-top: 30px;
+        text-align: center;
+    } */
+
+    .socials {
+        justify-content: flex-start;
+    }
+
+    .contact p {
+        justify-content: center;
+    }
+}
