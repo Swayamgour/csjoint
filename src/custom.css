@@ -562,8 +562,8 @@ p {
 
 .journey-image {
     margin-top: 10px;
-    width: auto;
-    height: 330px;
+    width: 100%;
+    /* height: 330px; */
 }
 
 .journey-image img {
@@ -743,6 +743,14 @@ p {
 
 
 /* =========== bottom  enquiry form css ============ */
+
+.enquiry-form{
+  margin: 0 auto;
+
+
+}
+
+
 .enquiry-form-section {
     background:
         radial-gradient(circle at top left, rgba(202, 162, 77, 0.15), transparent 45%),
@@ -1299,9 +1307,9 @@ p {
 /* ==========================================
    GLOBAL RESPONSIVE SAFETY
 ========================================== */
-* {
+/* * {
   max-width: 100%;
-}
+} */
 
 img {
   height: auto;

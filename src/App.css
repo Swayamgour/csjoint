@@ -270,3 +270,23 @@
 
 
 }
+
+
+.responsivePadding {
+  padding: 0 60px;
+  /* Desktop default */
+}
+
+/* ≤ 768px */
+@media (max-width: 768px) {
+  .responsivePadding {
+    padding: 0 16px;
+  }
+}
+
+/* ≤ 425px */
+@media (max-width: 425px) {
+  .responsivePadding {
+    padding: 0 16px;
+  }
+}

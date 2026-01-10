@@ -2,6 +2,9 @@ import styles from "../../style/Resources.module.css";
 import { resourcesData } from "../../util/data";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import { Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
+
+
 
 import "swiper/css";
 import "swiper/css/pagination"
@@ -21,6 +24,13 @@ const Resources = () => {
                     slidesPerView={1}
                     spaceBetween={20}
                     // pagination={{ clickable: true }}
+
+                    loop={true}                 // ✅ infinite loop
+                    autoplay={{
+                        delay: 2500,              // ⏱ slide change time (ms)
+                        disableOnInteraction: false, // 👈 swipe ke baad bhi chalta rahe
+                        pauseOnMouseEnter: true,  // 🖱 hover par pause (optional)
+                    }}
                     breakpoints={{
                         0: {
                             slidesPerView: 1,

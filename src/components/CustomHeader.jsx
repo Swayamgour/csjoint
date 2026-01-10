@@ -13,7 +13,7 @@ function CustomHeader({ heading, text, textTwo, span, textThree }) {
 
             <section className="breed-section" style={{ backgroundImage: 'url(/assets/img/about/about-breed.webp)' }}>
 
-                <div style={{ padding: '0 60px' }}>
+                <div className='responsivePadding'>
                     <div className={styles.topBar}>
                         <img
                             src="/assets/logo/logo.png"
