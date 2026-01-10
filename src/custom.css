@@ -1294,3 +1294,247 @@ p {
         font-size: 12px;
     }
 }
+
+
+/* ==========================================
+   GLOBAL RESPONSIVE SAFETY
+========================================== */
+* {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+/* ==========================================
+   LARGE TABLETS (≤1200px)
+========================================== */
+@media (max-width: 1200px) {
+
+  h1 { font-size: 52px; line-height: 64px; }
+  h2 { font-size: 40px; line-height: 52px; }
+
+  .breed-content .breed-big-title {
+    font-size: 72px;
+    line-height: 70px;
+  }
+
+  .breed-content .breed-title {
+    font-size: 52px;
+    line-height: 64px;
+  }
+
+  .sct-title {
+    font-size: 52px;
+    line-height: 64px;
+  }
+
+  .journey-title {
+    font-size: 44px;
+  }
+
+  .team-card {
+    gap: 40px;
+    padding: 32px;
+  }
+}
+
+/* ==========================================
+   TABLETS (≤991px)
+========================================== */
+@media (max-width: 991px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  .container-fluid {
+    padding: 0 24px;
+  }
+
+  .breed-content {
+    padding-top: 70px;
+  }
+
+  .breed-content .breed-big-title {
+    font-size: 56px;
+    line-height: 60px;
+  }
+
+  .breed-content .breed-title {
+    font-size: 44px;
+    line-height: 54px;
+  }
+
+  .journey-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-timeline {
+    display: none;
+  }
+
+  .journey-swiper {
+    height: auto;
+  }
+
+  .team-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .team-detailed-content {
+    padding-left: 0;
+    height: auto;
+    max-height: none;
+  }
+
+  .team-detailed-content::before {
+    display: none;
+  }
+}
+
+/* ==========================================
+   MOBILE (≤768px)
+========================================== */
+@media (max-width: 768px) {
+
+  h1 { font-size: 36px; line-height: 44px; }
+  h2 { font-size: 30px; line-height: 40px; }
+  h3 { font-size: 24px; }
+
+  p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .breed-section {
+    min-height: auto;
+    padding-bottom: 40px;
+  }
+
+  .breed-content {
+    padding-top: 60px;
+  }
+
+  .breed-content .breed-big-title {
+    font-size: 42px;
+    line-height: 46px;
+  }
+
+  .breed-content .breed-title {
+    font-size: 34px;
+    line-height: 42px;
+  }
+
+  .breed-content .breed-text {
+    padding: 20px;
+  }
+
+  .decor-shape1 {
+    display: none;
+  }
+
+  .sectionspace100,
+  .sectionspace80 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .team-swiper {
+    height: auto;
+  }
+
+  .team-image img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .team-image h4 {
+    font-size: 18px;
+  }
+
+  .team-designation {
+    font-size: 13px;
+  }
+
+  .magazine-card-body {
+    height: 22rem;
+  }
+
+  .Hall-of-fame-card.large {
+    height: 320px;
+  }
+
+  .Hall-of-fame-card.small {
+    height: 220px;
+  }
+
+  .course-tab-card {
+    padding: 22px;
+  }
+
+  .course-tab-card-title {
+    font-size: 24px;
+  }
+
+  .enable-section {
+    padding: 60px 0;
+  }
+
+  .enable-title {
+    font-size: 32px;
+  }
+}
+
+/* ==========================================
+   SMALL PHONES (≤480px)
+========================================== */
+@media (max-width: 480px) {
+
+  .container-fluid {
+    padding: 0 16px;
+  }
+
+  .breed-content .breed-big-title {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .breed-content .breed-title {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .breed-content .breed-subtitle {
+    font-size: 14px;
+  }
+
+  .breed-content .breed-text p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .journey-title {
+    font-size: 30px;
+  }
+
+  .team-image img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .enable-item {
+    font-size: 11px;
+    padding: 12px;
+  }
+
+  .footer-logo {
+    width: 180px;
+  }
+
+  .footer-widget-title {
+    font-size: 20px;
+  }
+}

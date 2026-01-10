@@ -31,6 +31,7 @@ import HalfOfFame from './pages/HalfOfFame';
 import Courses from './pages/Courses';
 import GtoTrain from './pages/Home/GtoTrain';
 import ScrollToTop from './components/ScrollToTop';
+import SsbPage from './pages/SsbPage';
 // import About from './pages/About/About';
 // import More from './pages/More/More';
 
@@ -45,6 +46,7 @@ function App() {
         <Route path="/HalfOfFame" element={<HalfOfFame />} />
         <Route path="/Courses" element={<Courses />} />
         <Route path="/GtoTrain" element={<GtoTrain />} />
+        <Route path="/SsbPage" element={<SsbPage />} />
         {/* <Route path="/about" element={<About />} />
         <Route path="/more" element={<More />} /> */}
       </Routes>

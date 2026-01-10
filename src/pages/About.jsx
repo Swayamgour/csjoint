@@ -110,22 +110,23 @@ function About() {
 
 
             <section className="team-section container sectionspace80 ">
-                <div className="col-12 row">
-                    <div className="col-lg-9 col-9 ps-0">
+                <div className="row align-items-center gy-3">
+                    {/* TITLE */}
+                    <div className="col-12 col-lg-9 order-1 order-lg-1">
                         <div className="sct-title">
-                            <h2>
-                                CS joint services academy team
-                            </h2>
+                            <h2>CS joint services academy team</h2>
                         </div>
                     </div>
-                    <div className="col-lg-3 col-3 text-end pe-0">
-                        {/* <!-- arrows --> */}
-                        <div className="thm-sld-nav-btns">
+
+                    {/* ARROWS */}
+                    <div className="col-12 col-lg-3 order-2 order-lg-2 text-start text-lg-end">
+                        <div className="thm-sld-nav-btns d-flex justify-content-start justify-content-lg-end">
                             <div className="thm-sld-nav-prev">&#10094;</div>
                             <div className="thm-sld-nav-next">&#10095;</div>
                         </div>
                     </div>
                 </div>
+
 
                 <div className="swiper team-swiper">
                     <div className="swiper-wrapper">
@@ -290,7 +291,7 @@ function About() {
                     </div>
                 </div>
 
-                <div className="thm-sld-pagination"></div>
+                {/* <div className="thm-sld-pagination"></div> */}
             </section>
 
             {/* <From />

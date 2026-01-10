@@ -51,18 +51,6 @@
     width: 0px;
 }
 
-/* .courseList::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.05);
-}
-
-.courseList::-webkit-scrollbar-thumb {
-    background: rgba(210, 161, 0, 0.5);
-    border-radius: 10px;
-}
-
-.courseList::-webkit-scrollbar-thumb:hover {
-    background: rgba(210, 161, 0, 0.7);
-} */
 
 /* CARD STYLES */
 .courseCardHud {
@@ -320,13 +308,167 @@
         font-size: 32px;
     }
 
-    .previewOverlay {
+    /* .previewOverlay {
         left: 20px;
         right: 20px;
         bottom: 20px;
-    }
+    } */
 
     .previewOverlay h3 {
         font-size: 22px;
     }
+}
+
+
+/* =========================
+   EXTRA RESPONSIVE FIXES
+   (ADD ONLY – DO NOT REMOVE ABOVE)
+========================= */
+
+/* ---------- Large tablets ---------- */
+@media (max-width: 1200px) {
+  .content {
+    gap: 40px;
+  }
+
+  .previewOverlay h1 {
+    font-size: 26px;
+  }
+
+  .previewOverlay p {
+    font-size: 20px;
+  }
+}
+
+/* ---------- Tablets ---------- */
+@media (max-width: 1024px) {
+  .courseList {
+    height: 260px;
+  }
+
+  .courseCardHud {
+    padding: 16px;
+  }
+
+  .courseCardHudCon {
+    padding: 24px;
+  }
+
+  .previewOverlay {
+    width: 90%;
+  }
+
+  .previewOverlay p {
+    font-size: 18px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .courseList {
+    height: auto;
+    max-height: 360px;
+  }
+
+  .courseCardHud {
+    margin-bottom: 16px;
+  }
+
+  .courseCardHud .number {
+    font-size: 44px;
+  }
+
+  .courseCardHud h3 {
+    font-size: 18px;
+  }
+
+  .courseCardHud p {
+    font-size: 13px;
+  }
+
+  .preview {
+    height: 320px;
+    opacity: 0.75;
+  }
+
+  /* .previewOverlay {
+    position: absolute;
+    top: auto;
+    bottom: 20px;
+    left: 16px;
+    right: 16px;
+    width: auto;
+  } */
+
+  .previewOverlay h1 {
+    font-size: 22px;
+  }
+
+  .previewOverlay p {
+    font-size: 15px;
+  }
+
+  .previewButton {
+    padding: 8px 18px;
+    font-size: 11px;
+  }
+}
+
+/* ---------- Small phones ---------- */
+@media (max-width: 480px) {
+  .headingOfSSb {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .courseCardHudCon {
+    padding: 20px;
+  }
+
+  .courseCardHud .number {
+    font-size: 36px;
+  }
+
+  .preview {
+    height: 260px;
+  }
+
+  .previewOverlay h1 {
+    font-size: 18px;
+  }
+
+  .previewOverlay p {
+    font-size: 14px;
+  }
+
+  .courseTag {
+    font-size: 12px;
+    padding: 4px 12px;
+  }
+}
+
+
+
+
+/* FIX: Preview not showing on mobile */
+@media (max-width: 1200px) {
+  .preview {
+    height: 320px;   /* 👈 REQUIRED */
+    min-height: 320px;
+    width: 100%;
+    opacity: 0.75;
+  }
+}
+@media (max-width: 768px) {
+  .preview {
+    height: 320px;   /* 👈 REQUIRED */
+    min-height: 320px;
+    width: 100%;
+    opacity: 0.75;
+  }
 }

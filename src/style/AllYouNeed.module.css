@@ -121,3 +121,120 @@
 .btn:hover {
     background: rgba(210, 161, 0, 0.15);
 }
+
+
+
+/* =========================
+   RESPONSIVE ADD-ONS
+   (DO NOT REMOVE ABOVE CODE)
+========================= */
+
+/* ---------- Large screens down ---------- */
+@media (max-width: 1200px) {
+  .heading {
+    font-size: 64px;
+    line-height: 80px;
+  }
+
+  .content {
+    padding: 60px;
+  }
+
+  .infoBox {
+    padding: 32px 36px;
+  }
+}
+
+/* ---------- Tablets ---------- */
+@media (max-width: 1024px) {
+  .contentMain {
+    justify-content: center;
+  }
+
+  .content {
+    width: 100%;
+    align-items: center;
+    padding: 50px 40px;
+    height: auto;
+  }
+
+  .heading {
+    font-size: 52px;
+    line-height: 64px;
+    text-align: center;
+  }
+
+  .infoBox {
+    max-width: 720px;
+  }
+
+  .leftImage {
+    width: 26%;
+    height: 22%;
+    top: 14%;
+    left: -6%;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .section {
+    min-height: auto;
+  }
+
+  .content {
+    padding: 40px 20px;
+    align-items: center;
+  }
+
+  .heading {
+    font-size: 36px;
+    line-height: 46px;
+    margin-top: 20px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .infoBox {
+    padding: 24px 20px;
+  }
+
+  .infoBox p {
+    font-size: 15px;
+  }
+
+  .btn {
+    margin-top: 10px;
+  }
+
+  /* foreground image fade on mobile */
+  .leftImage {
+    width: 40%;
+    height: 30%;
+    top: 8%;
+    left: -10%;
+    opacity: 0.35;
+  }
+}
+
+/* ---------- Small phones ---------- */
+@media (max-width: 480px) {
+  .heading {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .infoBox p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .btn {
+    font-size: 11px;
+    padding: 8px 20px;
+  }
+
+  .leftImage {
+    display: none; /* 👈 clutter remove only on very small screens */
+  }
+}

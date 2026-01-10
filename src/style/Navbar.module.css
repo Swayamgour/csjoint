@@ -494,11 +494,11 @@
     }
 
     .heroSection {
-        height: 90vh;
+        height: 70vh;
     }
 
     .topBar {
-        padding: 20px 0;
+        padding: 20px 10px;
     }
 
     .logo {
@@ -564,5 +564,129 @@
 
     .number {
         font-size: 64px;
+    }
+
+
+    .header {
+        position: static;
+        transform: none;
+        margin-top: 20px;
+    }
+
+    .heroSection {
+        height: 60vh;
+    }
+}
+
+
+/* =========================
+   CIRCLE RESPONSIVE ADD-ON
+   (DO NOT REMOVE ANYTHING ABOVE)
+========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .circleWrapper {
+        width: 300px;
+        height: 310px;
+        margin-left: 0;
+    }
+
+    .wrapper {
+        width: 300px;
+        height: 300px;
+    }
+
+    .circle {
+        width: 260px;
+        height: 260px;
+    }
+
+    .dot {
+        width: 14px;
+        height: 14px;
+        right: -8px;
+    }
+
+    .number {
+        font-size: 72px;
+    }
+
+    .plus {
+        font-size: 28px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .circleWrapper {
+        width: 260px;
+        height: 270px;
+    }
+
+    .wrapper {
+        width: 260px;
+        height: 260px;
+    }
+
+    .circle {
+        width: 220px;
+        height: 220px;
+    }
+
+    .dot {
+        width: 12px;
+        height: 12px;
+        right: -6px;
+    }
+
+    .number {
+        font-size: 56px;
+    }
+
+    .plus {
+        font-size: 22px;
+        transform: translateY(-20px);
+    }
+
+    .circleOutSideContent {
+        font-size: 16px;
+        max-width: 220px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .circleWrapper {
+        width: 220px;
+        height: 230px;
+    }
+
+    .wrapper {
+        width: 220px;
+        height: 220px;
+    }
+
+    .circle {
+        width: 180px;
+        height: 180px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        right: -5px;
+    }
+
+    .number {
+        font-size: 44px;
+    }
+
+    .plus {
+        font-size: 18px;
+    }
+
+    .circleOutSideContent {
+        font-size: 14px;
     }
 }

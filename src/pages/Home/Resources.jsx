@@ -25,6 +25,9 @@ const Resources = () => {
                         0: {
                             slidesPerView: 1,
                         },
+                        560: {
+                            slidesPerView: 2,
+                        },
                         768: {
                             slidesPerView: 2,
                         },

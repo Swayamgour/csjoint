@@ -14,7 +14,10 @@ const Mentors = () => {
 
                 <div className={styles.headingContainer}>
                     <h2 className='headingOfSSb pl'>Our mentors</h2>
-                    <img src="/assets/Group16.png" />
+                    <div className={styles.headingContainerImg}>
+                        <img src="/assets/Group16.png" />
+
+                    </div>
                 </div>
 
                 <div className={styles.cardsWrapper}>
