@@ -66,18 +66,14 @@ button {
     --white: #ffffff;
 
     /* Gradients */
-    --gradient-overlay: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.3),
-        rgba(0, 0, 0, 0.3)
-    );
+    --gradient-overlay: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3));
 
-    --gradient-dark: linear-gradient(
-        291.97deg,
-        #0b0b0b 0.67%,
-        rgba(31, 31, 31, 0.3) 50%,
-        #0b0b0b 99.33%
-    );
+    --gradient-dark: linear-gradient(291.97deg,
+            #0b0b0b 0.67%,
+            rgba(31, 31, 31, 0.3) 50%,
+            #0b0b0b 99.33%);
 
     --gradient-gold: linear-gradient(90deg, #e0c214 0%, #d2a100 100%);
 
@@ -211,6 +207,7 @@ p {
 }
 
 @media (max-width: 768px) {
+
     h1,
     .sct-title {
         font-size: 42px;
@@ -250,26 +247,21 @@ p {
     linear-gradient(0deg, rgba(0, 0, 0, 0.464), rgba(0, 0, 0, 0.026)),
     linear-gradient(291.97deg, #000000b8 0.110%, rgba(31,31,31,0.3) 50%, rgb(3, 3, 3) 139.33%); */
     background:
-        /* Top-left dark vignette */ radial-gradient(
-            60% 60% at 0% 0%,
+        /* Top-left dark vignette */
+        radial-gradient(60% 60% at 0% 0%,
             rgba(0, 0, 0, 0.85) 0%,
             rgba(0, 0, 0, 0.45) 35%,
-            rgba(0, 0, 0, 0.05) 65%
-        ),
+            rgba(0, 0, 0, 0.05) 65%),
         /* Bottom-right dark vignette */
-            radial-gradient(
-                60% 60% at 100% 100%,
-                rgba(0, 0, 0, 0.85) 0%,
-                rgba(0, 0, 0, 0.45) 35%,
-                rgba(0, 0, 0, 0.05) 65%
-            ),
+        radial-gradient(60% 60% at 100% 100%,
+            rgba(0, 0, 0, 0.85) 0%,
+            rgba(0, 0, 0, 0.45) 35%,
+            rgba(0, 0, 0, 0.05) 65%),
         /* Diagonal cinematic wash */
-            linear-gradient(
-                315deg,
-                rgba(0, 0, 0, 0.55) 0%,
-                rgba(0, 0, 0, 0.25) 45%,
-                rgba(0, 0, 0, 0.45) 100%
-            );
+        linear-gradient(315deg,
+            rgba(0, 0, 0, 0.55) 0%,
+            rgba(0, 0, 0, 0.25) 45%,
+            rgba(0, 0, 0, 0.45) 100%);
     z-index: 1;
 }
 
@@ -721,15 +713,12 @@ p {
     color: var(--theme-color);
 }
 
-.team-accordion
-    .accordion-button:not(.collapsed)
-    ~ .accordion-collapse
-    .accordion-body {
+.team-accordion .accordion-button:not(.collapsed)~.accordion-collapse .accordion-body {
     padding-top: 10px;
     border-radius: 0px;
 }
 
-.team-accordion .accordion-button:not(.collapsed) ~ .accordion-header::before {
+.team-accordion .accordion-button:not(.collapsed)~.accordion-header::before {
     background: var(--theme-color);
 }
 
@@ -754,16 +743,12 @@ p {
 }
 
 .enquiry-form-section {
-    background: radial-gradient(
-            circle at top left,
+    background: radial-gradient(circle at top left,
             rgba(202, 162, 77, 0.15),
-            transparent 45%
-        ),
-        radial-gradient(
-            circle at bottom right,
+            transparent 45%),
+        radial-gradient(circle at bottom right,
             rgba(202, 162, 77, 0.12),
-            transparent 45%
-        ),
+            transparent 45%),
         #0b0b0b;
 }
 
@@ -970,13 +955,11 @@ p {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.7) 0%,
-        rgba(0, 0, 0, 0.45) 40%,
-        rgba(0, 0, 0, 0.15) 70%,
-        rgba(0, 0, 0, 0) 100%
-    );
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.7) 0%,
+            rgba(0, 0, 0, 0.45) 40%,
+            rgba(0, 0, 0, 0.15) 70%,
+            rgba(0, 0, 0, 0) 100%);
     z-index: 1;
 }
 
@@ -1068,17 +1051,15 @@ p {
 .course-mobile-select .form-select {
     background: #000;
     color: #c6c5af;
-    border: 1px solid rgba(255,255,255,.2);
+    border: 1px solid rgba(255, 255, 255, .2);
 }
 
 .course-tab-card {
     border: 2px solid rgba(255, 255, 255, 0.2);
     padding: 32px;
-    background: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.193),
-        rgba(0, 0, 0, 0.193)
-    );
+    background: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.193),
+            rgba(0, 0, 0, 0.193));
     box-shadow: 10px 10px 10px #0000006c;
 }
 
@@ -1176,17 +1157,45 @@ p {
    BORDER PATH ANIMATION
 ================================ */
 @keyframes borderOrbit {
-  0%   { top: -4px; left: -3px; }
-  25%  { top: -4px; left: calc(100% - 6px); }
+    0% {
+        top: -4px;
+        left: -3px;
+    }
 
-  26%  { top: 0%; left: calc(100% - 6px); }
-  50%  { top: calc(100% - 6px); left: calc(100% - 6px); }
+    25% {
+        top: -4px;
+        left: calc(100% - 6px);
+    }
 
-  51%  { top: calc(100% - 6px); left: calc(100% - 6px); }
-  75%  { top: calc(100% - 6px); left: -3px; }
+    26% {
+        top: 0%;
+        left: calc(100% - 6px);
+    }
 
-  76%  { top: calc(100% - 8px); left: -3px; }
-  100% { top: -6px; left: -3px; }
+    50% {
+        top: calc(100% - 6px);
+        left: calc(100% - 6px);
+    }
+
+    51% {
+        top: calc(100% - 6px);
+        left: calc(100% - 6px);
+    }
+
+    75% {
+        top: calc(100% - 6px);
+        left: -3px;
+    }
+
+    76% {
+        top: calc(100% - 8px);
+        left: -3px;
+    }
+
+    100% {
+        top: -6px;
+        left: -3px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1200,11 +1209,9 @@ p {
 ================================ */
 /* gto enable section  */
 .GTO-enable-section {
-    background: radial-gradient(
-            circle at right,
+    background: radial-gradient(circle at right,
             rgba(120, 100, 60, 0.25),
-            transparent 55%
-        ),
+            transparent 55%),
         radial-gradient(circle at left, rgba(0, 0, 0, 0.9), #000 60%);
     color: var(--theme-white);
 }
@@ -1263,17 +1270,13 @@ p {
 /*GTO  image section  */
 .GTO-img-section {
     inset: 0;
-    background: linear-gradient(
-            0deg,
+    background: linear-gradient(0deg,
             rgba(0, 0, 0, 0.464),
-            rgba(0, 0, 0, 0.026)
-        ),
-        linear-gradient(
-            291.97deg,
+            rgba(0, 0, 0, 0.026)),
+        linear-gradient(291.97deg,
             #000000b8 0.11%,
             rgba(31, 31, 31, 0.3) 50%,
-            rgb(3, 3, 3) 139.33%
-        );
+            rgb(3, 3, 3) 139.33%);
 }
 
 .GTO-img-section .img-gradient-wrapper {
@@ -1292,20 +1295,18 @@ p {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-            135deg,
+    background: linear-gradient(135deg,
             rgba(0, 0, 0, 0.9) 0%,
-            /* 🔥 increase here */ rgba(0, 0, 0, 0.7) 25%,
+            /* 🔥 increase here */
+            rgba(0, 0, 0, 0.7) 25%,
             rgba(0, 0, 0, 0.35) 45%,
-            transparent 60%
-        ),
-        linear-gradient(
-            315deg,
+            transparent 60%),
+        linear-gradient(315deg,
             rgba(0, 0, 0, 0.9) 0%,
-            /* 🔥 increase here */ rgba(0, 0, 0, 0.7) 25%,
+            /* 🔥 increase here */
+            rgba(0, 0, 0, 0.7) 25%,
             rgba(0, 0, 0, 0.35) 45%,
-            transparent 60%
-        );
+            transparent 60%);
     pointer-events: none;
 }
 
@@ -1318,6 +1319,7 @@ p {
 .what-is-not-text-box {
     border: 2px solid rgba(255, 255, 255, 0.25);
 }
+
 .what-is-not-img {
     padding: 32px;
     background: #141414;
@@ -1325,10 +1327,12 @@ p {
     align-items: center;
     justify-content: center;
 }
+
 .what-is-not-text {
     padding: 32px 40px;
     background-color: #0b0b0b;
 }
+
 .what-is-not-text ul li {
     font-size: 16px;
     margin-bottom: 15px;
@@ -1348,6 +1352,79 @@ p {
 
 .bottom-banner-text p {
     font-weight: 600;
+}
+
+
+/* FAQ -Accordion css */
+.faq-accordion .accordion-item {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.faq-accordion .accordion-header {
+    line-height: 35px;
+    font-weight: 600;
+}
+
+/* Button */
+.faq-accordion .accordion-button {
+    background: transparent;
+    color: #d6d2c4;
+    font-size: 18px;
+    padding: 12px 0;
+    font-weight: 600;
+    box-shadow: none;
+    position: relative;
+
+}
+
+.faq-accordion .accordion-button::after {
+    display: none;
+}
+
+/* Custom Chevron */
+.faq-accordion .accordion-button::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #cfc9b5;
+    border-bottom: 2px solid #cfc9b5;
+    transform: translateY(-50%) rotate(45deg);
+    transition: transform 0.3s ease;
+}
+
+.faq-accordion .accordion-button:not(.collapsed)::before {
+    transform: translateY(-50%) rotate(-135deg);
+}
+
+/* Active gold dot */
+.faq-accordion .accordion-button:not(.collapsed)::after {
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    background: #b89b3e;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+/* Body */
+.faq-accordion .accordion-body {
+    padding: 0 0 25px 0;
+    color: #bfbfbf;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Focus & hover cleanup */
+.accordion-button:focus {
+    box-shadow: none;
 }
 
 /* ================================
@@ -1400,6 +1477,7 @@ p {
     .sct-title {
         font-size: 52px;
         line-height: 64px;
+        margin-bottom: 45px;
     }
 
     .journey-title {
@@ -1410,10 +1488,13 @@ p {
         gap: 40px;
         padding: 32px;
     }
+
     .magazine-card-body {
         height: 23rem;
     }
 }
+
+
 
 /* ==========================================
    TABLETS (≤991px)
@@ -1425,6 +1506,12 @@ p {
 
     .container-fluid {
         padding: 0 24px;
+    }
+
+    .sct-title {
+        font-size: 45px;
+        line-height: 50px;
+        margin-bottom: 35px;
     }
 
     .breed-content {
@@ -1518,6 +1605,7 @@ p {
     .breed-content .breed-text {
         padding: 20px;
     }
+
     .decor-shape1 {
         top: 150px;
     }
@@ -1563,7 +1651,7 @@ p {
 
     .course-tab-card .course-tab-card-title {
         font-size: 24px;
-        line-height:35px;
+        line-height: 35px;
     }
 
     .enable-section {
@@ -1573,9 +1661,17 @@ p {
     .enable-title {
         font-size: 32px;
     }
-    .what-is-not-text{
-      padding:30px 22px;
+
+    .what-is-not-text {
+        padding: 30px 22px;
     }
+
+    .sct-title {
+        font-size: 35px;
+        line-height: 40px;
+        margin-bottom: 30px;
+    }
+
 }
 
 /* ==========================================
@@ -1587,11 +1683,12 @@ p {
         height: 25rem;
     }
 }
+
 /* ==========================================
    SMALL PHONES (≤480px)
 ========================================== */
 @media (max-width: 480px) {
-   h1 {
+    h1 {
         font-size: 30px;
         line-height: 40px;
     }
@@ -1604,9 +1701,11 @@ p {
     h3 {
         font-size: 24px;
     }
-    
+
     .sct-title {
         margin-bottom: 20px;
+        line-height: 35px;
+        font-size: 30px;
     }
 
     .sectionspace100,
@@ -1622,25 +1721,26 @@ p {
     .breed-content .breed-big-title {
         font-size: 30px;
         line-height: 34px;
-        margin-bottom:15px;
+        margin-bottom: 15px;
     }
 
     .breed-content .breed-title {
         font-size: 28px;
         line-height: 30px;
-        margin-bottom:15px;
+        margin-bottom: 15px;
     }
 
     .breed-content .breed-subtitle {
         font-size: 15px;
         line-height: 25px;
-        margin-bottom:20px;
+        margin-bottom: 20px;
     }
 
     .breed-content .breed-text p {
         font-size: 15px;
         line-height: 25px;
     }
+
     .magazine-card-body {
         height: 22rem;
     }

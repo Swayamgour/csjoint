@@ -9,20 +9,21 @@
 .title {
     font-size: 48px;
     margin-bottom: 40px;
-    font-weight: 700;
-    background: linear-gradient(90deg, #d2a100, #f0c75e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-weight: 00;
+
     text-shadow: 0 2px 10px rgba(210, 161, 0, 0.2);
+    text-align: center;
+    color: var(--white);
+    font-family: var(--font1);
 }
 
 .tabs {
     display: flex;
     gap: 40px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
     margin-bottom: 40px;
     padding-bottom: 10px;
+    justify-content: center;
 }
 
 .tab {
@@ -59,22 +60,25 @@
 
 .content {
     display: flex;
-    gap: 80px;
+    justify-content: center;
+    /* 👈 ADD */
+    align-items: center;
+    /* 👈 ADD */
 }
+
 
 .mapWrapper {
-    flex: 1;
-    min-width: 500px;
+    flex: none;
+    /* 👈 CHANGE */
+    width: 100%;
+    max-width: 900px;
+    /* 👈 MAP LIMIT */
+    display: flex;
+    justify-content: center;
 }
 
-.mapContainer {
-    position: relative;
-    background: rgba(30, 30, 30, 0.5);
-    border-radius: 16px;
-    padding: 30px;
-    border: 1px solid rgba(210, 161, 0, 0.2);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-}
+
+
 
 /* .svg {
     width: 100%;
@@ -318,14 +322,8 @@
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-    .content {
-        flex-direction: column;
-        gap: 40px;
-    }
 
-    .mapWrapper {
-        min-width: auto;
-    }
+
 
     .index {
         flex: none;
@@ -360,13 +358,8 @@
         font-size: 24px;
     }
 
-    .content {
-        gap: 30px;
-    }
 
-    .mapContainer {
-        padding: 15px;
-    }
+
 
     .stats {
         grid-template-columns: 1fr;
@@ -389,20 +382,32 @@
 }
 
 
-.mapWrapper {
-    flex: 1;
-    min-width: 0;   /* IMPORTANT for flex */
-}
 
 
 .mapContainer {
-    position: relative;
-    background: rgba(30, 30, 30, 0.5);
-    border-radius: 16px;
-    padding: 30px;
-    border: 1px solid rgba(210, 161, 0, 0.2);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* 👈 CENTER SVG */
+    align-items: center;
+}
 
-    /* 🔑 ADD THIS */
-    min-height: 520px;
+
+
+
+.state {
+    fill: #4a4a42;
+    stroke: #777;
+    stroke-width: 1;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    opacity: 0.25;
+    /* 👈 DEFAULT DIM */
+}
+
+.activeState {
+    fill: #d2a100;
+    stroke: #f0c75e;
+    opacity: 1;
+    filter: drop-shadow(0 0 18px rgba(210, 161, 0, 0.6));
 }
