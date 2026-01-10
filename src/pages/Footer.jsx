@@ -37,6 +37,7 @@ function Footer() {
                         <li onClick={() => navigate("/HalfOfFame")}>Hall of Fame</li>
                         <li onClick={() => navigate("/Courses")}>Courses</li>
                         <li onClick={() => navigate("/GtoTrain")}>GTO Training</li>
+                        <li onClick={() => navigate("/SsbPage")}>SSB</li>
                     </ul>
 
                     {/* SOCIAL ICONS */}

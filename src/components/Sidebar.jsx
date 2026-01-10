@@ -84,6 +84,15 @@ const Sidebar = ({ open, onClose }) => {
                     >
                         GTX™
                     </NavLink>
+                    <NavLink
+                        to="/SsbPage"
+                        onClick={onClose}
+                        className={({ isActive }) =>
+                            isActive ? styles.active : ""
+                        }
+                    >
+                        SSB
+                    </NavLink>
 
 
                 </nav>
