@@ -690,3 +690,10 @@
         font-size: 14px;
     }
 }
+
+@media (max-width: 380px) {
+
+    .divider {
+        display: none;
+    }
+}

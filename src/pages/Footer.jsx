@@ -40,27 +40,35 @@ function Footer() {
                     </ul>
 
                     {/* SOCIAL ICONS */}
-                    <div className={styles.socials}>
-                        <i className="fa fa-youtube-play"></i>
-                        <i className="fa fa-linkedin-square"></i>
-                        <i className="fa fa-instagram"></i>
-                        <i className="fa fa-facebook"></i>
-                    </div>
+
                 </div>
 
                 {/* CONTACT */}
                 <div className={styles.contact}>
                     <h4>Contact Us</h4>
 
-                    <p>
-                        <i className="fa fa-whatsapp"></i> +91 84204 22821
-                    </p>
-                    <p>
-                        <i className="fa fa-phone"></i> +91 90246 67319
-                    </p>
-                    <p>
-                        <i className="fa fa-envelope"></i> info@ssbwithisv.in
-                    </p>
+                    <div className={styles.contactRow}>
+                        <p>
+                            <i className="fa fa-whatsapp"></i> +91 84204 22821
+                        </p>
+                        <p>
+                            <i className="fa fa-phone"></i> +91 90246 67319
+                        </p>
+                    </div>
+
+                    <div className={styles.contactRow}>
+                        <p>
+                            <i className="fa fa-envelope"></i> info@ssbwithisv.in
+                        </p>
+
+                        <div className={styles.socials}>
+                            <i className="fa fa-youtube-play"></i>
+                            <i className="fa fa-linkedin-square"></i>
+                            <i className="fa fa-instagram"></i>
+                            <i className="fa fa-facebook"></i>
+                        </div>
+                    </div>
+
 
                     <span className={styles.copy}>
                         © Copyright 2026 All Rights Reserved

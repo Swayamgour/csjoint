@@ -23,34 +23,27 @@ const Resources = () => {
                 <Swiper
                     slidesPerView={1}
                     spaceBetween={20}
-                    // pagination={{ clickable: true }}
 
-                    loop={true}                 // ✅ infinite loop
+                    loop={true}
                     autoplay={{
-                        delay: 2500,              // ⏱ slide change time (ms)
-                        disableOnInteraction: false, // 👈 swipe ke baad bhi chalta rahe
-                        pauseOnMouseEnter: true,  // 🖱 hover par pause (optional)
+                        delay: 1500,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
                     }}
+
+                    modules={[Autoplay]}   // ✅ THIS IS REQUIRED
+
                     breakpoints={{
-                        0: {
-                            slidesPerView: 1,
-                        },
-                        560: {
-                            slidesPerView: 2,
-                        },
-                        768: {
-                            slidesPerView: 2,
-                        },
-                        1024: {
-                            slidesPerView: 3,
-                        },
-                        1420: {
-                            slidesPerView: 5,
-                        },
+                        0: { slidesPerView: 1 },
+                        560: { slidesPerView: 2 },
+                        768: { slidesPerView: 2 },
+                        1024: { slidesPerView: 3 },
+                        1420: { slidesPerView: 5 },
                     }}
-                    // modules={[Pagination]}
+
                     className={styles.mySwiper}
                 >
+
 
                     {resourcesData.map((item) => (
                         <SwiperSlide>

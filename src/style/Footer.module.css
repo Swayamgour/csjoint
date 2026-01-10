@@ -54,7 +54,7 @@
 .socials {
     margin-top: 18px;
     display: flex;
-    gap: 16px;
+    gap: 20px;
 }
 
 .socials i {
@@ -88,14 +88,14 @@
 @media (max-width: 600px) {
     .container {
         grid-template-columns: 1fr 1fr;
-        gap: 30px;
+        gap: 10px;
         padding: 0 20px;
     }
 
     /* LOGO – FULL WIDTH TOP */
     .logoBox {
         grid-column: 1 / -1;
-        justify-content: center;
+        justify-content: flex-start;
         margin-bottom: 20px;
     }
 
@@ -105,17 +105,44 @@
     }
 
     /* CONTACT – FULL WIDTH BOTTOM */
-    /* .contact {
+    .contact {
         grid-column: 1 / -1;
         margin-top: 30px;
-        text-align: center;
-    } */
+        text-align: start;
+    }
 
     .socials {
         justify-content: flex-start;
+        margin: 0;
     }
 
     .contact p {
-        justify-content: center;
+        margin: 0;
+        /* justify-content: center; */
+    }
+}
+
+@media (max-width: 600px) {
+
+    .footer {
+       padding: 10px 0;
+    }
+
+    .contactRow {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        flex-wrap: wrap;
+        /* 👈 safe for small screens */
+    }
+
+    .contactRow p {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .copy {
+        text-align: center;
+        margin-top: 20px;
     }
 }
