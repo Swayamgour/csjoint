@@ -190,7 +190,7 @@ p {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 90vh;
+    min-height: 100vh;
     padding-bottom: 50px;
 }
 
@@ -974,7 +974,7 @@ p {
     overflow-y: hidden;
     overflow-x: auto;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
     padding-top: 10px;
     margin-bottom: 2rem;
 }
@@ -1008,6 +1008,7 @@ p {
     font-weight: 600;
     opacity: 1;
     border-bottom: 2px solid var(--theme-color);
+    padding-bottom: 10px;
 }
 
 .course-nav-tabs .nav-link.active::after {

@@ -2,6 +2,7 @@ import React from 'react'
 import CustomHeader from '../components/CustomHeader'
 import From from './From'
 import Footer from './Footer'
+import CustomButton from '../components/CustomButton'
 
 function HalfOfFame() {
 
@@ -172,10 +173,10 @@ function HalfOfFame() {
                     </div>
                 </div>
 
-                <div className="col-12 row mx-auto mt-5 text-center" >
+                <div className="col-12 row mx-auto mt-5 text-center">
                     <div className="col-sm-4 col-3"></div>
-                    <div className="col-sm-4 col-6">
-                        <a href="javascript:void(0)" className="thm-btn mx-auto">Load More</a>
+                    <div className="col-sm-4 col-6 mx-auto d-flex justify-content-center text-center">
+                        <CustomButton text='Load More' />
                     </div>
                     <div className="col-sm-4 col-3 text-end">
                         <span className="bottom-paginate">1 of 30</span>

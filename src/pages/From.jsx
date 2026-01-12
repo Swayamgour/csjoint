@@ -1,9 +1,11 @@
 import React from 'react'
 import CustomButton from '../components/CustomButton'
+import Background from '../components/Background'
 
 function From() {
     return (
         <section className="enquiry-form-section sectionspace80">
+            <Background />
             <div className="container">
                 <div className="sct-title">
                     <h2>Enquire with us</h2>

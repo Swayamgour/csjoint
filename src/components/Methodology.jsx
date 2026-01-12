@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "../../src/style/Methodology.module.css";
 import DaySchedule from "./DaySchedule";
+import Background from "./Background";
 
 const DATA = {
     stage1: {
@@ -57,6 +58,7 @@ const Methodology = () => {
     return (
         <>
             <section className={styles.section}>
+                  <Background />
                 <div className={styles.wrapper}>
                     {/* TITLE */}
                     <h2 className={styles.title}>

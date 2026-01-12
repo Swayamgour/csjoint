@@ -1,3 +1,4 @@
+import CustomButton from "../../components/CustomButton";
 import styles from "../../style/AllYouNeed.module.css";
 
 const AllYouNeed = () => {
@@ -28,7 +29,9 @@ const AllYouNeed = () => {
                             personal interviews, the SSB process.
                         </p>
 
-                        <button className={styles.btn}>KNOW MORE</button>
+
+                        <CustomButton text={'KNOW MORE'} />
+                        {/* <button className={styles.btn}>KNOW MORE</button> */}
                     </div>
                 </div>
             </div>

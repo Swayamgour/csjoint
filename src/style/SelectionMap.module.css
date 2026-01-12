@@ -62,9 +62,15 @@
     display: flex;
     justify-content: center;
     /* 👈 ADD */
-    align-items: center;
+    align-items: flex-end;
+    position: relative;
+
     /* 👈 ADD */
+
+
 }
+
+
 
 
 .mapWrapper {
@@ -75,7 +81,29 @@
     /* 👈 MAP LIMIT */
     display: flex;
     justify-content: center;
+    /* position: absolute; */
+
 }
+
+.SelectionMapCon {
+    position: absolute;
+    right: 10%;
+    bottom: 15%;
+    /* top: 10p; */
+    /* top: 10%; */
+
+    /* margin-bottom: -50px; */
+}
+
+.SelectionMapCon p {
+    padding: 0;
+    margin: 5px;
+    /* font-family: var(--font1); */
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+
+}
+
+
 
 
 
@@ -374,6 +402,33 @@
     .legendCode {
         margin-right: 0;
     }
+
+
+    .SelectionMapCon {
+        position: absolute;
+        right: 1%;
+        bottom: 1%;
+        /* top: 10p; */
+        /* top: 10%; */
+
+        /* margin-bottom: -50px; */
+    }
+
+    .SelectionMapCon p {
+        padding: 0;
+        margin: 1px;
+        font-size: 8px;
+        padding: 1px;
+        line-height: 15px;
+    }
+
+    .SelectionMapCon h2 {
+        padding: 0;
+        /* margin: 5px; */
+        font-size: 14px;
+
+    }
+
 }
 
 .svg {

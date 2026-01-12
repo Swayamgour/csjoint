@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "../style/SelectionMap.module.css";
 import IndiaSVG from "./IndiaSVG";
+import { style } from "framer-motion/client";
 
 export default function SelectionMap() {
     const [activeTab, setActiveTab] = useState("army");
@@ -38,8 +39,18 @@ export default function SelectionMap() {
                                 activeTab={activeTab}
                                 hoveredRegion={hoveredRegion}
                                 setHoveredRegion={setHoveredRegion}
+                                // text={'kjhgf'}
                             />
                         </div>
+                    </div>
+
+                    <div className={styles.SelectionMapCon}>
+                        <h2>index</h2>
+                        <p>31|31 - Selection Center North , Jalandhar</p>
+                        <p>31|31 - Selection Center North , Jalandhar</p>
+                        <p>31|31 - Selection Center North , Jalandhar</p>
+                        <p>31|31 - Selection Center North , Jalandhar</p>
+                        <p>31|31 - Selection Center North , Jalandhar</p>
                     </div>
 
 
@@ -47,7 +58,7 @@ export default function SelectionMap() {
             </section>
 
 
-            <section style={{background:'radial-gradient(circle at top left, #3b2f12, #000)'}} className="FAQ-section sectionspace80">
+            <section  className="FAQ-section sectionspace80">
                 <div className="container">
                     <div className="sct-title">
                         <h2>Frequently Asked Questions</h2>
@@ -128,7 +139,9 @@ export default function SelectionMap() {
                             </div>
                         </div>
                     </div>
+
                 </div>
+
             </section>
         </>
 

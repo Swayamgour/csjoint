@@ -6,6 +6,7 @@ import styles from '../../style/RogerThat.module.css'
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import { useRef } from "react";
+import CustomButton from "../../components/CustomButton";
 
 const RogerThat = () => {
     const array = [
@@ -97,8 +98,9 @@ const RogerThat = () => {
             </div>
 
             {/* CTA */}
-            <div className={styles.cta}>
-                <button className={styles.ctaBtn}>VISIT OUR CHANNEL</button>
+            <div className='col-12 text-center d-flex justify-content-center'>
+                {/* <button className={styles.ctaBtn}></button> */}
+                <CustomButton text={'VISIT OUR CHANNEL'} />
             </div>
         </section>
     );
