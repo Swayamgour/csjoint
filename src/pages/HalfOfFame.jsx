@@ -1,5 +1,7 @@
 import React from 'react'
 import CustomHeader from '../components/CustomHeader'
+import From from './From'
+import Footer from './Footer'
 
 function HalfOfFame() {
 
@@ -185,7 +187,8 @@ function HalfOfFame() {
 
 
 
-
+            <From />
+            <Footer />
 
 
 

@@ -35,8 +35,11 @@ function CustomHeader({ heading, text, textTwo, span, textThree }) {
 
                 <div className="breed-content container">
                     <div className="col-12 row mx-auto">
-                        <div className="col-xl-10">
+                        <div className='col-xl-12'>
                             <h1 className="breed-big-title">{heading}{span && <sup>{span}</sup>}</h1>
+
+                        </div>
+                        <div className="col-xl-7">
                             {textThree && <h1 className="breed-title">{textThree}</h1>}
 
                             {text && <p className="breed-subtitle">

@@ -13,3 +13,51 @@ h5 {
   margin: 0;
   padding: 0;
 }
+
+
+:root {
+  /* Primary Theme */
+  --theme-color: #715c20;
+
+  /* Secondary / Accents */
+  --secondary-color: #e3c607;
+
+  /* Neutral Colors */
+  --theme-white: #c6c5af;
+
+  --dark-gray: #1f1f1f;
+  --gray: #3b3930;
+  --light-gray: #f2f0e1;
+  --white: #ffffff;
+
+  /* Gradients */
+  --gradient-overlay: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3));
+
+  --gradient-dark: linear-gradient(291.97deg,
+      #0b0b0b 0.67%,
+      rgba(31, 31, 31, 0.3) 50%,
+      #0b0b0b 99.33%);
+
+  --gradient-gold: linear-gradient(90deg, #e0c214 0%, #d2a100 100%);
+
+  /* Spacing Scale */
+  --space-20: 20px;
+  --space-40: 40px;
+  --space-60: 60px;
+  --space-80: 80px;
+  --space-100: 100px;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* Transition */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.4s ease;
+
+  /* font family */
+  --font-family: "Inter", sans-serif;
+}

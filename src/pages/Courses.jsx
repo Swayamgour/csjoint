@@ -1,5 +1,7 @@
 import React from 'react'
 import CustomHeader from '../components/CustomHeader'
+import From from './From'
+import Footer from './Footer'
 
 function Courses() {
 
@@ -21,7 +23,7 @@ function Courses() {
 
                     <div className="course-mobile-select d-md-none mb-3">
                         <div className="form-group">
-                            <label for="course" className="form-label  mb-1" style={{color:'var(--theme-white)'}}>Select Course:-</label>
+                            <label for="course" className="form-label  mb-1" style={{ color: 'var(--theme-white)' }}>Select Course:-</label>
                             <select className="form-select" id="courseTabSelect">
                                 <option value="#c1">10 days Services Selection Board Hackathon</option>
                                 <option value="#c2">Introduction to SSB & PPDT</option>
@@ -182,7 +184,8 @@ function Courses() {
                     </div>
                 </div>
             </section>
-
+            <From />
+            <Footer />
 
 
 

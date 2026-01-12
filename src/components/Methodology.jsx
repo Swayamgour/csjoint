@@ -117,7 +117,7 @@ const Methodology = () => {
                 </div>
             </section>
 
-            <DaySchedule />
+          
         </>
     );
 };

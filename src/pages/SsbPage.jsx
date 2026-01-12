@@ -3,6 +3,9 @@ import CustomHeader from '../components/CustomHeader'
 import Methodology from '../components/Methodology'
 import TipsToExcel from '../components/TipsToExcel'
 import SelectionMap from '../components/SelectionMap'
+import DaySchedule from '../components/DaySchedule'
+import From from './From'
+import Footer from './Footer'
 
 function SsbPage() {
 
@@ -15,8 +18,14 @@ function SsbPage() {
         <>
             <CustomHeader heading={data.heading} textTwo={data.textTwo} />
             <Methodology />
+            <DaySchedule />
             <TipsToExcel />
             <SelectionMap />
+
+            {/* <From /> */}
+            <Footer />
+
+
 
         </>
     )

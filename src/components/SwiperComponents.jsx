@@ -21,61 +21,87 @@ const SwiperComponents = () => {
 
     return (
         <section className={styles.section}>
-            <h2 className={styles.heading}>Our journey</h2>
+            {/* <h2 className={styles.heading}></h2> */}
+            <section className="team-section container  ">
 
-            <div className={styles.wrapper}>
-                {/* TIMELINE */}
-                <div className={styles.timeline}>
-                    <div className={styles.baseLine}></div>
 
-                    <div
-                        className={styles.progressLine}
-                        style={{
-                            height: `${(activeIndex / (journeyData.length - 1)) * 100}%`,
-                        }}
-                    />
+                <div className="row flex-column flex-md-row align-items-center gy-3">
 
-                    {journeyData.map((_, i) => (
-                        <span
-                            key={i}
-                            className={`${styles.dot} ${i <= activeIndex ? styles.active : ""
-                                }`}
-                            style={{ top: `${(i / (journeyData.length - 1)) * 100}%` }}
-                        />
-                    ))}
+
+                    <div className="col-12 col-lg-9 order-1 order-lg-1">
+                        <div className="sct-title">
+                            <h2>Our journey</h2>
+                        </div>
+
+                    </div>
+
                 </div>
 
-                {/* SWIPER */}
-                <Swiper
-                    direction="vertical"
-                    slidesPerView={1}
-                    mousewheel={{
-                        forceToAxis: true,
-                        sensitivity: 1,
-                        releaseOnEdges: true, // 🔥 YAHI MAIN FIX HAI
-                    }}
-                    modules={[Mousewheel]}
-                    onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-                    className={styles.swiper}
-                >
+                <div className="row col-12 mx-auto">
+                    <div className="col-xl-11 col-lg-10 mx-auto">
+                        <div className={styles.wrapper}>
+                            {/* TIMELINE */}
+                            <div className={styles.timeline}>
+                                <div className={styles.baseLine}></div>
 
-                    {journeyData.map((item, i) => (
-                        <SwiperSlide key={i}>
-                            <div className={styles.slide}>
-                                <span className={styles.date}>{item.date}</span>
-                                <h3>{item.title}</h3>
-                                <p>{item.desc}</p>
+                                <div
+                                    className={styles.progressLine}
+                                    style={{
+                                        height: `${(activeIndex / (journeyData.length - 1)) * 100}%`,
+                                    }}
+                                />
 
-                                <div className={styles.imageBox}>
-                                    <img src={item.image} alt={item.title} />
-                                </div>
+                                {journeyData.map((_, i) => (
+                                    <span
+                                        key={i}
+                                        className={`${styles.dot} ${i <= activeIndex ? styles.active : ""
+                                            }`}
+                                        style={{ top: `${(i / (journeyData.length - 1)) * 100}%` }}
+                                    />
+                                ))}
                             </div>
 
+                            {/* SWIPER */}
+                            <Swiper
+                                direction="vertical"
+                                slidesPerView={1}
+                                mousewheel={{
+                                    forceToAxis: true,
+                                    sensitivity: 1,
+                                    releaseOnEdges: true, // 🔥 YAHI MAIN FIX HAI
+                                }}
+                                modules={[Mousewheel]}
+                                onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+                                className={styles.swiper}
+                            >
 
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            </div>
+                                {journeyData.map((item, i) => (
+                                    <SwiperSlide key={i}>
+                                        <div className={styles.slide}>
+                                            <span className={styles.date}>{item.date}</span>
+                                            <h3>{item.title}</h3>
+                                            <p>{item.desc}</p>
+
+                                            <div className={styles.imageBox}>
+                                                <img src={item.image} alt={item.title} />
+                                            </div>
+                                        </div>
+
+
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+
+
+
+
+
         </section>
     );
 };

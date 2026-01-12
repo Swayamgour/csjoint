@@ -50,8 +50,7 @@ function App() {
         {/* <Route path="/about" element={<About />} />
         <Route path="/more" element={<More />} /> */}
       </Routes>
-      <From />
-      <Footer />
+  
     </BrowserRouter>
   );
 }

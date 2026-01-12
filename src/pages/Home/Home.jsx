@@ -25,8 +25,8 @@ function Home() {
             <Resources />
             <RogerThat />
             <AllYouNeed />
-            {/* <From />
-            <Footer /> */}
+            <From />
+            <Footer />
         </>
     );
 }

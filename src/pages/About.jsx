@@ -62,7 +62,10 @@ function About() {
                                     <div className="col-xl-3 col-lg-4 col-md-5">
                                         {/* <!-- LEFT IMAGE --> */}
                                         <div className="team-image">
+                                            <div className='teamImgDiv'>
+
                                             <img src="/assets/img/about/founder.png" alt="Image" />
+                                            </div>
                                             <span className="team-designation">Group Testing Officer</span>
                                             <h4>Lt. Commander Nikhil Kumar Chandrakala (Retd.)</h4>
                                         </div>
@@ -216,8 +219,8 @@ function About() {
                 {/* <div className="thm-sld-pagination"></div> */}
             </section>
 
-            {/* <From />
-            <Footer /> */}
+            <From />
+            <Footer />
 
 
         </>

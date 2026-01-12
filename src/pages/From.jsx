@@ -1,4 +1,5 @@
 import React from 'react'
+import CustomButton from '../components/CustomButton'
 
 function From() {
     return (
@@ -31,8 +32,9 @@ function From() {
                             <textarea placeholder="Write Your Message"></textarea>
                         </div>
 
-                        <div style={{marginBottom:'20px'}} className="col-12 text-center">
-                            <button type="submit" className="enquiry-submit-btn">SUBMIT</button>
+                        <div style={{marginBottom:'20px'}} className="col-12 text-center d-flex justify-content-center">
+                            {/* <button type="submit" className="enquiry-submit-btn">SUBMIT</button> */}
+                            <CustomButton text='Submit' />
                         </div>
                     </div>
                 </form>

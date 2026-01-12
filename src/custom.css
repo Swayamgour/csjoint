@@ -50,52 +50,7 @@ button {
 /* =====================================
    2. ROOT VARIABLES (THEME SYSTEM)
 ===================================== */
-:root {
-    /* Primary Theme */
-    --theme-color: #715c20;
 
-    /* Secondary / Accents */
-    --secondary-color: #e3c607;
-
-    /* Neutral Colors */
-    --theme-white: #c6c5af;
-
-    --dark-gray: #1f1f1f;
-    --gray: #3b3930;
-    --light-gray: #f2f0e1;
-    --white: #ffffff;
-
-    /* Gradients */
-    --gradient-overlay: linear-gradient(0deg,
-            rgba(0, 0, 0, 0.3),
-            rgba(0, 0, 0, 0.3));
-
-    --gradient-dark: linear-gradient(291.97deg,
-            #0b0b0b 0.67%,
-            rgba(31, 31, 31, 0.3) 50%,
-            #0b0b0b 99.33%);
-
-    --gradient-gold: linear-gradient(90deg, #e0c214 0%, #d2a100 100%);
-
-    /* Spacing Scale */
-    --space-20: 20px;
-    --space-40: 40px;
-    --space-60: 60px;
-    --space-80: 80px;
-    --space-100: 100px;
-
-    /* Border Radius */
-    --radius-sm: 6px;
-    --radius-md: 12px;
-    --radius-lg: 20px;
-
-    /* Transition */
-    --transition-fast: 0.2s ease;
-    --transition-medium: 0.4s ease;
-
-    /* font family */
-    --font-family: "Inter", sans-serif;
-}
 
 /* =====================================
    3. TYPOGRAPHY SYSTEM
@@ -232,7 +187,6 @@ p {
     position: relative;
     color: var(--theme-white);
     overflow: hidden;
-    /* padding: 100px 0 100px 0; */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -273,7 +227,7 @@ p {
 }
 
 .breed-content .breed-big-title {
-    font-size: 100px;
+    font-size: 64px;
     line-height: 80px;
     font-weight: 400;
     margin-bottom: 20px;
@@ -620,16 +574,34 @@ p {
     box-shadow: 10px 10px 5px var(--dark-gray);
 }
 
-.team-image img {
+.team-image .teamImgDiv {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    padding: 3px;
-    object-fit: cover;
+    padding: 5px;
+
     border: 2px solid #e6e1cf;
     text-align: center;
     margin: auto;
+    overflow: hidden;
+   
+
 }
+
+.team-image .teamImgDiv img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+     transition: all ease 0.3s;
+     border-radius: 50%;
+
+}
+
+
+.team-image .teamImgDiv:hover img {
+    transform: scale(1.05);
+}
+
 
 .team-image h4 {
     margin-top: 5px;
@@ -730,6 +702,7 @@ p {
 .team-accordion ul {
     padding-left: 15px;
     list-style: disc !important;
+    text-align: left;
 }
 
 .team-accordion li {
@@ -1251,14 +1224,14 @@ p {
     border-radius: 2px;
 }
 
-.enable-image-wrap::before {
+/* .enable-image-wrap::before {
     content: "";
     position: absolute;
     inset: 0;
     background: linear-gradient(to left, rgba(0, 0, 0, 0.85), transparent 45%),
         linear-gradient(to right, rgba(0, 0, 0, 0.55), transparent 65%);
     z-index: 1;
-}
+} */
 
 .enable-image-wrap img {
     width: 100%;
@@ -1617,7 +1590,7 @@ p {
     }
 
     .team-swiper {
-        height: 660px;
+        height: 680px;
     }
 
     .team-image img {

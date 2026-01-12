@@ -1,5 +1,7 @@
 import React from 'react'
 import CustomHeader from '../../components/CustomHeader'
+import From from '../From'
+import Footer from '../Footer'
 
 function GtoTrain() {
 
@@ -93,7 +95,7 @@ function GtoTrain() {
             </section>
 
 
-          
+
 
             <section className="GTO-img-section">
                 <div className="container-fluid px-0">
@@ -139,16 +141,20 @@ function GtoTrain() {
                         <div className="col-lg-9 mx-auto">
                             <div className="bottom-banner-text text-center">
                                 <div className="sct-title mb-4">
-                                    <h2>Built with experience, <br/>used with responsibility</h2>
+                                    <h2>Built with experience, <br />used with responsibility</h2>
                                 </div>
                                 <p className='text-center'>
-                                    Created by an ex-GTO, GTX™ blends real assessment insight with modern technology   <br/>staying fully aligned with the spirit and integrity of the SSB process.
+                                    Created by an ex-GTO, GTX™ blends real assessment insight with modern technology   <br />staying fully aligned with the spirit and integrity of the SSB process.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+
+
+            <From />
+            <Footer />
 
 
         </>
