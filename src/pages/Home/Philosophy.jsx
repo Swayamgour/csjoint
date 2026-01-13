@@ -1,89 +1,144 @@
-import { useState } from "react";
-// import "./PhilosophySection.css";
+import { useState, useEffect } from "react";
+import "../../style/PhilosophySection.css";
 
 const PhilosophySection = () => {
-    const [isHovered, setIsHovered] = useState(false);
+    const [isActive, setIsActive] = useState(false);
     const [activeCircle, setActiveCircle] = useState(null);
+    const [isAnimating, setIsAnimating] = useState(false);
 
     const circles = [
         {
             id: "manasa",
-            title: "Manasa",
-            content:
-                "Exhibiting clarity of thought, sound judgment, and a strong sense of purpose.",
+            title: "Manasa (Thoughts)",
+            desc: "Exhibiting clarity of thought, sound judgment, and a strong sense of purpose.",
+            color: "#e0c214"
         },
         {
             id: "vacha",
-            title: "Vacha",
-            content:
-                "Exhibiting clarity of communication, truthful expression, and effective articulation.",
+            title: "Vacha (Speech)",
+            desc: "Exhibiting clarity of communication, truthful expression, and effective articulation.",
+            color: "#d4b416"
         },
         {
             id: "karmana",
-            title: "Karmana",
-            content:
-                "Exhibiting decisive action, leadership, and consistent ethical behavior.",
+            title: "Karmana (Action)",
+            desc: "Exhibiting decisive action, leadership, and consistent ethical behavior.",
+            color: "#c9a818"
         },
     ];
 
-    const isSplit = isHovered || activeCircle;
+    const handleActivate = () => {
+        if (isAnimating) return;
+        setIsAnimating(true);
+
+        requestAnimationFrame(() => {
+            setTimeout(() => {
+                setIsActive(true);
+                setIsAnimating(false);
+            }, 400);
+        });
+    };
+
+
+    const handleDeactivate = () => {
+        setIsAnimating(true);
+        setActiveCircle(null);
+        setTimeout(() => {
+            setIsActive(false);
+            setIsAnimating(false);
+        }, 300);
+    };
 
     return (
-        <section className={`philosophy-section ${isSplit ? "split" : "centered"}`}>
-           
-            {/* LEFT */}
-            <div
-                className="circles-container"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => {
-                    if (!activeCircle) setIsHovered(false);
-                }}
-            >
-                {/* INITIAL CIRCLE */}
-                <div className={`initial-circle ${isSplit ? "hidden" : "visible"}`}>
-                    <div className="circle-glow"></div>
-                    <p>Limitless & Fearless</p>
-                </div>
+        <section className="philosophy-root">
 
-                {/* THREE CIRCLES */}
-                <div className={`three-circles ${isSplit ? "visible" : "hidden"}`}>
-                    {circles.map((circle) => (
-                        <div
-                            key={circle.id}
-                            className={`circle ${circle.id}
-                ${activeCircle === circle.id ? "active" : ""}
-                ${activeCircle && activeCircle !== circle.id ? "dim" : ""}
-              `}
-                            onClick={() => setActiveCircle(circle.id)}
-                        >
-                            <span>{circle.title}</span>
-                        </div>
-                    ))}
-                </div>
+            {/* TOP TEXT */}
+            <div className="top-text">
+                <h2>
+                    When the Manasa-Vacha-Karmana synchronizes, the human being becomes
+                    <span> Limitless & Fearless</span>
+                </h2>
+                <p>
+                    The recruitment of officers in the Indian Armed Forces through the
+                    Services Selection Board (SSB) evaluates thought, speech, and action
+                    together. The principle of Manasa-Vacha-Karmana—the alignment of
+                    thought, speech, and action—is central to this evaluation.
+                </p>
             </div>
 
-            {/* RIGHT CONTENT */}
-            {/* {isHovered && */}
-                {/* <div className="content-panel">
-                    {!activeCircle ? (
-                        <div className="default-content">
-                            <h3>Limitless & Fearless</h3>
-                            <p>
-                                When Manasa, Vacha and Karmana align, a human being becomes
-                                limitless and fearless.
-                            </p>
+            {/* MAIN AREA */}
+            <div className="main-area">
+
+                {/* LEFT – CIRCLES */}
+                <div className="circle-area">
+
+                    {/* SINGLE CIRCLE with smooth exit */}
+                    {!isActive && (
+                        // <div
+                        //     className={`single-circle ${isAnimating ? 'exiting' : ''}`}
+                        //     onMouseEnter={handleActivate}
+                        // >
+                        //     Limitless & Fearless
+                        // </div>
+
+                        <div
+                            className={`glow-wrapper ${isAnimating ? 'exiting' : ''}`}
+                            onMouseEnter={handleActivate}
+                        >
+                            <div className="glow-circle">
+                                <span>Limitless &amp; Fearless</span>
+                            </div>
                         </div>
-                    ) : (
-                        <div className="circle-content">
-                            <h2>
-                                {circles.find((c) => c.id === activeCircle)?.title}
-                            </h2>
-                            <p>
-                                {circles.find((c) => c.id === activeCircle)?.content}
-                            </p>
+
+                    )}
+
+                    {/* VENN DIAGRAM with smooth entrance */}
+                    {isActive && (
+                        <div className="venn-container">
+                            <div
+                                className="venn"
+                                onMouseLeave={handleDeactivate}
+                            >
+                                {circles.map((c) => (
+                                    <div
+                                        key={c.id}
+                                        className={`venn-circle ${c.id}
+                                      ${activeCircle === c.id ? "focus" : ""}
+                                      ${activeCircle && activeCircle !== c.id ? "dim" : ""}
+                                    `}
+                                        onMouseEnter={() => setActiveCircle(c.id)}
+                                    >
+                                        <span>{c.id.charAt(0).toUpperCase() + c.id.slice(1)}</span>
+                                    </div>
+                                ))}
+
+                                {/* Intersection areas */}
+                                <div className="intersection intersection-1"></div>
+                                <div className="intersection intersection-2"></div>
+                                <div className="intersection intersection-3"></div>
+                            </div>
                         </div>
                     )}
-                </div> */}
+                </div>
+
+                {/* RIGHT – STATIC CONTENT with smooth entrance */}
+                {isActive && (
+                    <div className="text-area">
+                        {circles.map((c) => (
+                            <div
+                                key={c.id}
+                                className={`text-block ${activeCircle === c.id ? "active" : ""
+                                    }`}
+                                onMouseEnter={() => setActiveCircle(c.id)}
+                            >
+                                <h3>{c.title}</h3>
+                                <p>{c.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                )}
+
+            </div>
         </section>
     );
 };

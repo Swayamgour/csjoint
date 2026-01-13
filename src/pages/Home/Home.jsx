@@ -16,7 +16,7 @@ function Home() {
         <>
             <Navbar />
             <OurMentor />
-            {/* <Philosophy /> */}
+            <Philosophy />
             <OurCourses />
 
             <UniquePedagogy />

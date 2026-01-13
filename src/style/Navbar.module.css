@@ -485,6 +485,14 @@
     .circleSectionCenterCon {
         padding: 40px 20px 80px;
     }
+
+    .text {
+        color: #C6C5AF;
+        font-weight: 200;
+        display: flex;
+        align-items: center;
+        font-size: 11px;
+    }
 }
 
 /* Mobile */
