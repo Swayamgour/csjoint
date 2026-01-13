@@ -1,22 +1,17 @@
 import React, { useState } from "react";
 import styles from "../style/Navbar.module.css";
 import { IoMenu } from "react-icons/io5";
-import CircularCard from "../components/CircularCard";
-import CustomButton from "../components/CustomButton";
+
 import Sidebar from "../components/Sidebar";
 
 function Navbar() {
-    const array = [
-        { number: "180", title: "Candidates Recommended" },
-        { number: "90", title: "Years of Domain Expertise" },
-        { number: "4", title: "Years of Proven Track Record" },
-    ];
 
     const [open, setOpen] = useState(false);
 
     return (
         <div className={styles.pageWrapper}>
             <div className={styles.pageWrapperMain}>
+                {/* <div className={styles.}></div> */}
                 {/* HERO SECTION */}
                 <section className={styles.heroSection}>
                     <div className={styles.topBar}>
@@ -27,6 +22,8 @@ function Navbar() {
                         />
                         <IoMenu className={styles.menuIcon} onClick={() => setOpen(true)} />
                     </div>
+
+                    
 
                     <header className={styles.header}>
                         <div className={styles.subtitle}>CRAFTING THE FUTURE OF</div>
@@ -40,58 +37,20 @@ function Navbar() {
                             Integrated SSB Virtuosos
                         </div>
                     </header>
+
+                    <div className={styles.Divider}>
+
+                    </div>
+                   
                 </section>
 
                 <Sidebar open={open} onClose={() => setOpen(false)} />
 
                 {/* CIRCLE SECTION */}
-                <section className={styles.circleSection}>
-                    <div className={styles.circleSectionCenterCon}>
-                        <div className={styles.circleSectionContainer}>
-                            {array.map((e, index) => (
-                                <CircularCard
-                                    key={index}
-                                    number={e.number}
-                                    title={e.title}
-                                />
-                            ))}
-                        </div>
 
-                        <div>
-                            <h1 className={styles.headingOfSSb}>
-                                <span>What is</span>
-                                <span style={{ color: "#3b3930" }}>
-                                    SSB with ISV?
-                                </span>
-                            </h1>
-
-                            <p className={styles.titleOfSecondSection}>
-                                India’s first online SSB mentoring platform with a
-                                proprietary digital GTO training experience (GTX ™).
-                            </p>
-
-                            <p className={styles.titleOfThirdSection}>
-                                <span className={styles.text}>
-                                    Handholding till recommendation
-                                </span>
-                                <span className={styles.divider}>/</span>
-                                <span className={styles.text}>
-                                    Over 50% candidates recommended
-                                </span>
-                                <span className={styles.divider}>/</span>
-                                <span className={styles.text}>
-                                    Virtual GTO Training Experience
-                                </span>
-                            </p>
-                            <div style={{marginTop:'30px'}}>
-
-                                <CustomButton text="Sign Up Now" />
-                            </div>
-
-                        </div>
-                    </div>
-                </section>
             </div>
+
+
         </div>
     );
 }

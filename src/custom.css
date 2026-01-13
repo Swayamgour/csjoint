@@ -15,7 +15,7 @@ html {
 
 body {
     min-height: 100vh;
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-heading);
     background: #141414;
     color: #0b0b0b;
     line-height: 1.6;
@@ -61,7 +61,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-heading);
     font-weight: 400;
     color: var(--theme-white);
 }
@@ -584,7 +584,7 @@ p {
     text-align: center;
     margin: auto;
     overflow: hidden;
-   
+
 
 }
 
@@ -592,8 +592,8 @@ p {
     object-fit: cover;
     height: 100%;
     width: 100%;
-     transition: all ease 0.3s;
-     border-radius: 50%;
+    transition: all ease 0.3s;
+    border-radius: 50%;
 
 }
 

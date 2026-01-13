@@ -3,26 +3,28 @@
 ========================= */
 .pageWrapper {
     position: relative;
-    /* width: 100%; */
-    /* min-height: 200vh; */
-    /* hero + circle */
 
-    /* 🔥 ONE GIF FOR BOTH SECTIONS */
     background-image: url("../../public/assets/bg/bg.gif");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 
     color: #fff;
-    padding: 0px 60px;
+    /*  */
+
+    /* margin-bottom: 50px; */
+    /* height: 100vh; */
 }
 
 .pageWrapperMain {
     /* background-color: transparent; */
     /* background-color: rgba(0, 0, 0, 0.4); */
-    background-color: rgb(98 91 91 / 30%);
+    /* background-color: rgb(98 91 91 / 30%); */
     /* gray + transparent */
     /* dark gray */
+    /* padding: 0px 60px; */
+    /* border-bottom: 1px solid white; */
+
 }
 
 /* =========================
@@ -30,7 +32,16 @@
 ========================= */
 .heroSection {
     position: relative;
-    height: 80vh;
+    height: 100vh;
+
+}
+
+.Divider {
+    position: absolute;
+    bottom: 10%;
+    border: 1px solid var(--gray);
+    height: 1px;
+    width: 100%;
 }
 
 /* Top Bar */
@@ -162,7 +173,9 @@
 ========================= */
 .circleSection {
     position: relative;
-    background: rgba(0, 0, 0, 0.6);
+
+    padding: 20px 60px;
+    /* background: rgba(0, 0, 0, 0.6); */
 }
 
 .circleSectionContainer {
@@ -173,7 +186,7 @@
 }
 
 .circleSectionCenterCon {
-    padding: 20px 40px 100px;
+    padding: 0px 40px 100px;
 }
 
 
@@ -305,18 +318,14 @@
 /* Gold dot (starts at right) */
 .dot {
     position: absolute;
-    right: -10px;
-    top: 50%;
+    right: 23px;
+    top: 81%;
     transform: translateY(-50%);
-
     width: 16px;
     height: 16px;
     border-radius: 50%;
     background: #b89b3c;
-
-    box-shadow:
-        0 0 10px rgba(184, 155, 60, 0.8),
-        0 0 20px rgba(184, 155, 60, 0.5);
+    box-shadow: 0 0 10px rgba(184, 155, 60, 0.8), 0 0 20px rgba(184, 155, 60, 0.5);
 }
 
 /* Center text */
@@ -346,25 +355,7 @@
 }
 
 
-.headingOfSSb {
 
-    font-family: 'Kelson';
-    font-family: "Kelson", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 78px;
-    line-height: 100px;
-    /* identical to box height, or 128% */
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    color: #C6C5AF;
-    margin-bottom: 20px;
-
-
-
-}
 
 .titleOfSecondSection {
 
@@ -488,7 +479,7 @@
 
     .text {
         color: #C6C5AF;
-        font-weight: 200;
+        font-weight: 400;
         display: flex;
         align-items: center;
         font-size: 11px;

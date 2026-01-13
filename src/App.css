@@ -41,7 +41,7 @@
   line-height: 28px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color:var(--secondary-color) ;
+  color: var(--secondary-color);
 
   /* background: linear-gradient(262.12deg,
       #D2A100 -2.23%,
@@ -73,10 +73,10 @@
 
 .headingOfSSb {
 
-  font-family: 'Kelson';
-  font-family: "Kelson", sans-serif;
+ 
+  font-family: var(--font-heading);
   font-style: normal;
-  font-weight: 400;
+  /* font-weight: 400; */
   font-size: 78px;
   line-height: 100px;
   /* identical to box height, or 128% */
@@ -85,7 +85,11 @@
   gap: 10px;
 
   color: #C6C5AF;
-  /* margin-bottom: 20px; */
+  margin: 50px 0;
+
+
+
+
 
 
 
@@ -296,4 +300,13 @@
   .responsivePadding {
     padding: 0 16px;
   }
+}
+
+/* Glow.module.css */
+.glow {
+  position: absolute;
+  background: rgba(158, 131, 52, 0.5);
+  filter: blur(150px);
+  border-radius: 50%;
+  pointer-events: none;
 }

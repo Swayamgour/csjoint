@@ -10,11 +10,13 @@ import AllYouNeed from "./AllYouNeed";
 import Footer from "../Footer";
 import From from "../From";
 import Navbar from "../Navbar";
+import CircleBox from "./CircleBox";
 
 function Home() {
     return (
         <>
             <Navbar />
+            <CircleBox />
             <OurMentor />
             <Philosophy />
             <OurCourses />

@@ -1,13 +1,16 @@
 import { motion, useAnimationControls } from "framer-motion";
 import styles from "../style/Navbar.module.css";
 import { useRef } from "react";
+import useCountUp from "./useCountUp";
 
 export default function CircleStat({ number, title }) {
     const controls = useAnimationControls();
     const hasViewed = useRef(false);
 
+    const { ref, count } = useCountUp(Number(number), 2000);
+
     const runAnimation = async () => {
-        await controls.set({ rotate: 0 }); // reset
+        await controls.set({ rotate: 10 }); // reset
         controls.start({
             rotate: 360,
             transition: { duration: 1, ease: "easeInOut" },
@@ -32,8 +35,8 @@ export default function CircleStat({ number, title }) {
                         <div className={styles.dot}></div>
                     </motion.div>
 
-                    <div className={styles.center}>
-                        <span className={styles.number}>{number}</span>
+                    <div ref={ref} className={styles.center}>
+                        <span className={styles.number}>{count}</span>
                         <span className={styles.plus}>+</span>
                     </div>
                 </motion.div>
@@ -43,3 +46,7 @@ export default function CircleStat({ number, title }) {
         </div>
     );
 }
+
+
+
+
