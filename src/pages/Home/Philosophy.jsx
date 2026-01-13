@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "../../style/PhilosophySection.css";
+import Heading from "../../components/Heading";
 
 const PhilosophySection = () => {
     const [isActive, setIsActive] = useState(false);
@@ -54,11 +55,20 @@ const PhilosophySection = () => {
 
             {/* TOP TEXT */}
             <div className="top-text">
-                <h2>
+                <div className="d-flex justify-content-center headingOfMargin">
+
+                    <Heading h1={'Mentoring'} t1='philosophy' />
+                </div>
+                <p className="ConceptofManasa">Concept of Manasa - Vacha – Karmana</p>
+                {/* <h2>
                     When the Manasa-Vacha-Karmana synchronizes, the human being becomes
                     <span> Limitless & Fearless</span>
-                </h2>
-                <p>
+                </h2> */}
+
+                <p className="recruitmentManasa">
+                    When the Manasa-Vacha-Karmana synchronizes, the human being becomes Limitless & Fearless
+                </p>
+                <p className="recruitmentManasa">
                     The recruitment of officers in the Indian Armed Forces through the
                     Services Selection Board (SSB) evaluates thought, speech, and action
                     together. The principle of Manasa-Vacha-Karmana—the alignment of

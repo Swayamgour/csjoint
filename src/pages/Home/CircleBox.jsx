@@ -18,11 +18,11 @@ function CircleBox() {
     return (
         <section className={styles.circleSection}>
             {/* <Glow  */}
-            <Glow
+            {/* <Glow
                 size="clamp(180px, 30vw, 320px)"
                 top="clamp(150px, 40vh, 300px)"
                 left="clamp(55%, 60vw, calc(50% + 320px))"
-            />
+            /> */}
 
             <div className={styles.circleSectionCenterCon}>
                 <div className={styles.circleSectionContainer}>
@@ -42,8 +42,10 @@ function CircleBox() {
                             SSB with ISV?
                         </span>
                     </h1> */}
+                    <div className='headingOfMargin'>
+                        <Heading h1='What is' t1='SSB with ISV?' />
 
-                    <Heading h1='What is' t1='SSB with ISV?' />
+                    </div>
 
                     <p className={styles.titleOfSecondSection}>
                         India’s first online SSB mentoring platform with a

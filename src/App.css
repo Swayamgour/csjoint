@@ -73,7 +73,7 @@
 
 .headingOfSSb {
 
- 
+
   font-family: var(--font-heading);
   font-style: normal;
   /* font-weight: 400; */
@@ -85,7 +85,7 @@
   gap: 10px;
 
   color: #C6C5AF;
-  margin: 50px 0;
+  /* margin: 50px 0; */
 
 
 
@@ -115,6 +115,10 @@
   padding: 20px 0;
 }
 
+.pl {
+  padding-left: 80px;
+}
+
 
 
 /* ================= RESPONSIVE HEADING & COMMON ================= */
@@ -126,12 +130,23 @@
     line-height: 84px;
   }
 
+  .pl {
+    padding-left: 60px;
+  }
+
   .commonPadding {
     padding: 20px 32px 80px;
   }
 }
 
 /* -------- Tablets -------- */
+@media (max-width: 1024px) {
+  .pl {
+    padding-left: 45px;
+  }
+
+}
+
 @media (max-width: 992px) {
   .headingOfSSb {
     font-size: 52px;
@@ -158,6 +173,10 @@
 
 
     /* 👈 VERY IMPORTANT */
+  }
+
+  .pl {
+    padding-left: 20px;
   }
 
   .commonPadding {

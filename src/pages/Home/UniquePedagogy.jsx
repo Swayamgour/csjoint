@@ -1,4 +1,5 @@
 import CustomButton from "../../components/CustomButton";
+import Heading from "../../components/Heading";
 import styles from "../../style/UniquePedagogy.module.css";
 
 const UniquePedagogy = () => {
@@ -8,11 +9,12 @@ const UniquePedagogy = () => {
 
             {/* <div className={styles.top}> */}
             {/* <div className={styles.left}> */}
-            <div className={styles.UniquePedagogyHeading}>
+            <div className="pl">
 
-                <h2 className="headingOfSSb">
-                    Unique pedagogy: <span>GTX™</span>
-                </h2>
+                {/* <h2 className="headingOfSSb">
+                     <span></span>
+                </h2> */} 
+                <Heading  h1={'Unique pedagogy:'} t1='GTX™' />
             </div>
             {/* </div> */}
             {/* </div> */}

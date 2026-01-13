@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import styles from '../../style/OurCourses.module.css';
 import CustomButton from '../../components/CustomButton';
 import { coursesData } from '../../util/data';
+import Heading from '../../components/Heading';
 
 const Courses = () => {
     const [activeCard, setActiveCard] = useState(0); // First card active by default
@@ -58,9 +59,10 @@ const Courses = () => {
         <section className={styles.coursesSection}>
             {/* Header */}
             <div className={styles.header}>
-                <h2 className='headingOfSSb'>
+                {/* <h2 className='headingOfSSb'>
                     Our courses
-                </h2>
+                </h2> */}
+                <Heading h1='Our Courses' />
                 <CustomButton text='Know More' />
             </div>
 

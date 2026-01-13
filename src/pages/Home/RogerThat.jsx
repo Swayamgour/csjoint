@@ -7,6 +7,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import { useRef } from "react";
 import CustomButton from "../../components/CustomButton";
+import Heading from "../../components/Heading";
 
 const RogerThat = () => {
     const array = [
@@ -28,9 +29,10 @@ const RogerThat = () => {
             {/* HEADER */}
             <div className={styles.header}>
                 <div>
-                    <h2 className={styles.title}>
-                        <span>ROGER That</span> with NKC
-                    </h2>
+
+                    <div className="headingOfMargin">
+                        <Heading h1={'ROGER That'} t1='with NKC' />
+                    </div>
                     <p className={styles.subTitle}>Our Official Podcast channel</p>
                     <p className={styles.description}>
                         Roger That with NKC is Lt. Commander Nikhil Kumar Chandrakala’s military
@@ -98,7 +100,7 @@ const RogerThat = () => {
             </div>
 
             {/* CTA */}
-            <div className='col-12 text-center d-flex justify-content-center'>
+            <div className='col-12 text-center d-flex justify-content-center mt-4'>
                 {/* <button className={styles.ctaBtn}></button> */}
                 <CustomButton text={'VISIT OUR CHANNEL'} />
             </div>

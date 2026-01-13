@@ -1,50 +1,47 @@
 import React from "react";
 import styles from "../../style/OurMentor.module.css";
 import { mentorsData } from '../../util/data'
+import Heading from "../../components/Heading";
 
 const Mentors = () => {
-
-    console.log(mentorsData)
-
-
     return (
         <section className={styles.mentorsSection}>
-            <div className="" >
-
-
+            <div className="">
                 <div className={styles.headingContainer}>
-                    <h2 className='headingOfSSb pl'>Our mentors</h2>
+                    <Heading h1='Our mentors' />
                     <div className={styles.headingContainerImg}>
-                        <img src="/assets/Group16.png" />
-
+                        <img src="/assets/Group16.png" alt="Decoration" />
                     </div>
                 </div>
 
                 <div className={styles.cardsWrapper}>
-                    {mentorsData?.map((mentor) => (
+                    {mentorsData.map((mentor) => (
                         <div key={mentor.id} className={styles.mentorCard}>
+
                             <div className={styles.imageWrapper}>
-                                <img src={mentor.image} alt={mentor.role} />
+                                <div className={styles.imageMask}>
+                                    <img
+                                        src={mentor.image}
+                                        alt={mentor.role}
+                                        className={styles.mentorImage}
+                                    />
+                                </div>
                             </div>
 
                             <p className={styles.role}>{mentor.role}</p>
-
                             <h3 className={styles.name}>{mentor.name}</h3>
 
                             <p className={styles.description}>
                                 {mentor.description.map((line, i) => (
-                                    <span key={i}>
-                                        {line}
-                                        <br />
-                                    </span>
+                                    <span key={i}>{line}<br /></span>
                                 ))}
                             </p>
+
                         </div>
                     ))}
-
                 </div>
-            </div>
 
+            </div>
         </section>
     );
 };

@@ -24,17 +24,30 @@
     animation: fadeInUp 0.8s ease-out 0.1s both;
 }
 
-.top-text h2 {
-    font-size: 32px;
-    font-weight: 400;
+.recruitmentManasa {
+    font-size: 20px;
+    font-weight: 100;
     line-height: 1.4;
     margin-bottom: 20px;
     color: var(--white);
+    margin-top: 20px;
+    text-align: center;
     /* background: linear-gradient(90deg, #eaeaea 60%, #e0c214 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text; */
 }
+
+.ConceptofManasa {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+}
+
+
 
 /* .top-text h2 span {
     color: #e0c214;
@@ -54,15 +67,6 @@
     animation: shimmer 3s infinite;
 }
 
-.top-text p {
-    margin-top: 20px;
-    font-size: 16px;
-    color: #bcbcbc;
-    line-height: 1.7;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 /* MAIN */
 .main-area {

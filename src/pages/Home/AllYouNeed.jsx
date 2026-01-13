@@ -19,6 +19,7 @@ const AllYouNeed = () => {
                             know  <br /> about SSB
                         </span>
                     </h2>
+                    
 
                     <div className={styles.infoBox}>
                         <p>

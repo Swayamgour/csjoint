@@ -2,7 +2,7 @@
 export const mentorsData = [
     {
         id: 1,
-        image: "/assets/team-6.png",
+        image: "/assets/team-8.png",
         role: "Interviewing Officer",
         name: "Commodore Pankaj Singh (Retd.)",
         description: [
@@ -13,7 +13,7 @@ export const mentorsData = [
     },
     {
         id: 2,
-        image: "/assets/founder.png",
+        image: "/assets/team-9.jpg",
         role: "Group Testing Officer",
         name: "Lt. Commander Nikhil Kumar Chandrakala (Retd.)",
         description: [

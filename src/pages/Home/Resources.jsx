@@ -9,15 +9,20 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination"
 import CustomButton from "../../components/CustomButton";
+import Heading from "../../components/Heading";
 
 const Resources = () => {
     return (
         <section className={styles.resourcesSection}>
             {/* HEADING */}
-            <h2 className={styles.heading}>
+            {/* <h2 className={styles.heading}>
                 Resources for <span>SSB preparation</span>
-            </h2>
+            </h2> */}
 
+            <div className="headingOfMargin  pl">
+                <Heading h1='Resources for' t1='SSB preparation' />
+
+            </div>
             {/* SCROLL LIST */}
             <div className={styles.cardsWrapper}>
                 <Swiper
