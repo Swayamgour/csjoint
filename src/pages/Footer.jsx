@@ -10,14 +10,29 @@ function Footer() {
 
 
             <div className="bottom-contact-box-wrapper">
-                <div className="bottom-contact-box">
-                    <i className="fa fa-phone"></i>
-                </div>
 
-                <div className="bottom-contact-box">
+                {/* CALL */}
+                <a
+                    href="tel:+919024667319"
+                    className="bottom-contact-box"
+                    aria-label="Call us"
+                >
+                    <i className="fa fa-phone"></i>
+                </a>
+
+                {/* WHATSAPP */}
+                <a
+                    href="https://wa.me/918420422821"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bottom-contact-box"
+                    aria-label="Chat on WhatsApp"
+                >
                     <i className="fa fa-whatsapp"></i>
-                </div>
+                </a>
+
             </div>
+
 
 
             <div className={styles.container}>
@@ -62,13 +77,31 @@ function Footer() {
                     <h4>Contact Us</h4>
 
                     <div className={styles.contactRow}>
-                        <p>
-                            <i className="fa fa-whatsapp"></i> +91 84204 22821
-                        </p>
-                        <p>
-                            <i className="fa fa-phone"></i> +91 90246 67319
-                        </p>
+
+                        {/* WhatsApp */}
+                        <a
+                            href="https://wa.me/918420422821"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.contactItem}
+                        >
+                            <p>
+                                <i className="fa fa-whatsapp"></i> +91 84204 22821
+                            </p>
+                        </a>
+
+                        {/* Phone Call */}
+                        <a
+                            href="tel:+919024667319"
+                            className={styles.contactItem}
+                        >
+                            <p>
+                                <i className="fa fa-phone"></i> +91 90246 67319
+                            </p>
+                        </a>
+
                     </div>
+
 
                     <div className={styles.contactRow}>
                         <p>

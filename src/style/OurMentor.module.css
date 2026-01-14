@@ -118,17 +118,14 @@
 }
 
 .name {
-  font-family: var(--font1);
+  /* font-family: var(--font1); */
   font-size: 18px;
   font-weight: 500;
   color: #ffffff;
   text-align: center;
   width: 230px;
 
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
+ 
 
   line-height: 22px;
   height: 44px;

@@ -15,8 +15,10 @@
     display: grid;
     grid-template-columns: 1.2fr auto 1fr;
     gap: 40px;
-    padding: 0px 100px 60px;
+    padding: 30px 100px 60px;
     position: relative;
+    /* align-items: center; */
+    /* justify-content: center; */
 }
 
 
@@ -35,7 +37,7 @@
 
 .left p,
 .right p {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.7;
     color: #c6c5af;
     font-family: var(--font1);

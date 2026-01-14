@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  user-select: nonea;
+  user-select: none;
 }
 
 
@@ -46,6 +46,9 @@ div {
   --light-gray: #f2f0e1;
   --white: #ffffff;
 
+  --gray: #747266;
+  --white: #C6C5AF;
+
   /* Gradients */
   --gradient-overlay: linear-gradient(0deg,
       rgba(0, 0, 0, 0.3),
@@ -79,7 +82,7 @@ div {
   /* --font-heading:  */
 
   --font-heading: "HeadingFont", sans-serif;
-
+  --font1: "HeadingFont", sans-serif;
   --font-Preragraph: "Preragraph", sans-serif;
 }
 
@@ -91,6 +94,19 @@ body {
   /* overflow-x: hidden; */
 }
 
-p {
-  font-family: var(--font-Preragraph);
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  color: var(--theme-white);
 }

@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import CustomHeader from '../components/CustomHeader'
 import From from './From'
 import Footer from './Footer'
 import CustomButton from '../components/CustomButton'
+import axios from "axios";
+import { useNavigate } from 'react-router-dom'
 
 function Magnize() {
 
@@ -15,32 +17,86 @@ function Magnize() {
 
     }
 
+
+    const [magazines, setMagazines] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [downloadBtn, setDownloadBtn] = useState(true);
+
+
+    const fetchAllMagazinePdfs = async () => {
+        try {
+            const res = await axios.get(
+                "https://api.ssbwithisv.in/api/allMagazinePdfs"
+            );
+
+            return res.data; // success response
+        } catch (error) {
+            console.error("Error fetching magazine PDFs:", error);
+            throw error;
+        }
+    };
+
+
+
+
+
+    useEffect(() => {
+        const loadMagazines = async () => {
+            try {
+                const data = await fetchAllMagazinePdfs();
+                setMagazines(data.data || data); // depending on API structure
+            } catch (error) {
+                console.log("Failed to load magazines");
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        loadMagazines();
+    }, []);
+
+    // console.log(magazines)
+
+    // import axios from "axios";
+
+    const token = localStorage.getItem('accessToken')
+    console.log(token)
+
+    const navigate = useNavigate()
+
+    const downloadPdf = async (pdfPath) => {
+        if (!token) {
+            navigate('/login')
+
+        } else {
+
+            setDownloadBtn(false)
+            const url = `https://api.ssbwithisv.in/${pdfPath}`;
+
+            const res = await axios.get(url, {
+                responseType: "blob",
+            });
+
+            if (res) {
+                setDownloadBtn(true)
+            }
+
+            const blob = new Blob([res.data], { type: "application/pdf" });
+            const link = document.createElement("a");
+
+            link.href = window.URL.createObjectURL(blob);
+            link.download = "magazine.pdf";
+            link.click();
+        }
+    };
+
+
+
+
+
+
     return (
         <>
-
-
-
-
-            {/* <section className="breed-section" style=" background-image: url(/assets/img/about/about-breed.webp);">
-
-                <div className="breed-overlay"></div>
-
-                <div className="breed-content container">
-                    <div className="col-12 row mx-auto">
-                        <div className="col-xl-10">
-                            <h1 className="breed-title"></h1>
-
-                            <p className="breed-subtitle">
-                            </p>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div className="decor-shape1">
-                    <img src="/assets/img/shape/Group_11.png" alt="Shape1" />
-                </div>
-            </section> */}
 
             <CustomHeader heading={data?.heading} text={data?.text} />
 
@@ -62,77 +118,38 @@ function Magnize() {
                     </div>
                 </div>
                 <div className="col-12 mx-auto row g-4">
-                    <div className="col-lg-4 col-md-6 col-sm-6">
-                        <div className="card magazine-card">
-                            <div className="card-header magazine-card-head">
-                                <div className="card-title magazine-card-title">Integrated SSB Virtuosos Club</div>
-                            </div>
-                            <div className="card-body magazine-card-body">
-                                <img src="/assets/img/about/journey-slider.png" className="magazine-card-img" alt="Magazine Image" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6 col-sm-6">
-                        <div className="card magazine-card">
-                            <div className="card-header magazine-card-head">
-                                <div className="card-title magazine-card-title">Integrated SSB Virtuosos Club</div>
-                            </div>
-                            <div className="card-body magazine-card-body">
-                                <img src="/assets/img/about/journey-slider.png" className="magazine-card-img" alt="Magazine Image" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6 col-sm-6">
-                        <div className="card magazine-card">
-                            <div className="card-header magazine-card-head">
-                                <div className="card-title magazine-card-title">Integrated SSB Virtuosos Club</div>
-                            </div>
-                            <div className="card-body magazine-card-body">
-                                <img src="/assets/img/about/journey-slider.png" className="magazine-card-img" alt="Magazine Image" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6 col-sm-6">
-                        <div className="card magazine-card">
-                            <div className="card-header magazine-card-head">
-                                <div className="card-title magazine-card-title">Integrated SSB Virtuosos Club</div>
-                            </div>
-                            <div className="card-body magazine-card-body">
-                                <img src="/assets/img/about/journey-slider.png" className="magazine-card-img" alt="Magazine Image" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6 col-sm-6">
-                        <div className="card magazine-card">
-                            <div className="card-header magazine-card-head">
-                                <div className="card-title magazine-card-title">Integrated SSB Virtuosos Club</div>
-                            </div>
-                            <div className="card-body magazine-card-body">
-                                <img src="/assets/img/about/journey-slider.png" className="magazine-card-img" alt="Magazine Image" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6 col-sm-6">
-                        <div className="card magazine-card">
-                            <div className="card-header magazine-card-head">
-                                <div className="card-title magazine-card-title">Integrated SSB Virtuosos Club</div>
-                            </div>
-                            <div className="card-body magazine-card-body">
-                                <img src="/assets/img/about/journey-slider.png" className="magazine-card-img" alt="Magazine Image" />
-                            </div>
-                        </div>
-                    </div>
+                    {magazines?.map((item, index) => (
+                        <div className="col-lg-4 col-md-6 col-sm-6" key={item._id || index}>
+                            <div className="card magazine-card">
 
+                                {/* HOVER DOWNLOAD BUTTON */}
+                                <div className="magazine-hover">
+
+
+                                    <CustomButton text={downloadBtn ? 'Download PDF' : "Loading...."} onClick={() => downloadPdf(item.pdfFilePath)} />
+                                </div>
+
+                                <div className="card-header magazine-card-head">
+                                    <div className="card-title magazine-card-title">
+                                        {item?.pdfTitle}
+                                    </div>
+                                </div>
+
+                                <div className="card-body magazine-card-body">
+                                    <img
+                                        src={`https://api.ssbwithisv.in/${item?.magazineFrontImage}`}
+                                        className="magazine-card-img"
+                                        alt="Magazine Image"
+                                    />
+                                </div>
+
+                            </div>
+                        </div>
+                    ))}
                 </div>
-                <div className="col-12 row mx-auto mt-5 text-center">
-                    <div className="col-sm-4 col-3"></div>
-                    <div className="col-sm-4 col-6 mx-auto d-flex justify-content-center text-center">
-                        <CustomButton text='Load More' />
-                    </div>
-                    <div className="col-sm-4 col-3 text-end">
-                        <span className="bottom-paginate">1 of 30</span>
-                    </div>
-                </div>
+
+
+
             </section>
 
 

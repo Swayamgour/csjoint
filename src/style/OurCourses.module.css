@@ -214,18 +214,24 @@
 
 .previewOverlay h1 {
     color: #ffffff;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     font-size: 30px;
     font-weight: 500;
     letter-spacing: 1px;
     font-family: var(--font1);
+    text-align: center;
+    line-height: 32px;
 }
 
 .previewOverlay p {
-    font-size: 25px;
-    line-height: 1.6;
-    color: #c6c5af;
+    /* font-size: 20px; */
+    /* line-height: 1.6; */
+    color: white;
     margin-bottom: 25px;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 200;
+
 }
 
 /* COURSE TAG */

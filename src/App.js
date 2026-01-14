@@ -35,6 +35,7 @@ import SsbPage from './pages/SsbPage';
 import Background from '../src/components/Background';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
+import { Toaster } from 'react-hot-toast';
 // import About from './pages/About/About';
 // import More from './pages/More/More';
 
@@ -42,6 +43,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+       <Toaster position="center" reverseOrder={false} />
     
       <Routes>
         <Route path="/" element={<Home />} />

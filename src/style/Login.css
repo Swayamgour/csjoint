@@ -108,6 +108,7 @@
             transparent 70%);
     filter: blur(35px);
     opacity: 0;
+    z-index: 1;
 }
 
 
@@ -143,3 +144,35 @@
 }
 
 /* </style> */
+
+.input-with-btn {
+    position: relative;
+    width: 100%;
+}
+
+.input-with-btn input {
+    padding-right: 130px;
+    /* space for button */
+}
+
+.otp-btn {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: calc(100% - 12px);
+    padding: 0 18px;
+    background: #f4c430;
+    border: none;
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    z-index: 999;
+}
+
+.otp-btn:disabled {
+    background: #555;
+    color: #ccc;
+    cursor: not-allowed;
+}

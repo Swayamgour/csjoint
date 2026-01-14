@@ -502,9 +502,19 @@
     }
 
     .text-block p {
-       
+
         width: 100%;
     }
+
+    .ConceptofManasa {
+        font-size: 16px;
+    }
+
+    .recruitmentManasa {
+        font-size: 16px;
+    }
+
+
 
 }
 

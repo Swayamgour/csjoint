@@ -32,8 +32,10 @@ export const coursesData = [
         title: "10 days Services Selection Board Hackathon",
         sessions: "10",
         hours: "40",
-        description:
-            "Full SSB Course that covers intricate details of the 05 day assessment procedure",
+        description: `1. SSB Hackathon 
+Full SSB Course that covers intricate details of the 05 day assessment procedure
+`,
+
         image: "/assets/course-1.jpg", // right side preview image
     },
     {
@@ -43,7 +45,7 @@ export const coursesData = [
         sessions: "01",
         hours: "05",
         description:
-            "A comprehensive introduction to SSB including PPDT and Stage 1 process",
+            "2. A comprehensive introduction to SSB including PPDT and Stage 1 process",
         image: "/assets/course-2.jpg",
     },
     {
@@ -53,7 +55,7 @@ export const coursesData = [
         sessions: "08",
         hours: "32",
         description:
-            "Focused preparation for psychological tests conducted during SSB selection",
+            "3. Focused preparation for psychological tests conducted during SSB selection",
         image: "/assets/course-3.jpg",
     },
 ];

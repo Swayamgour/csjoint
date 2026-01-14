@@ -139,10 +139,31 @@ const Sidebar = ({ open, onClose }) => {
 
 
                     {/* Contact */}
-                    <div className={styles.contact}>
+                    {/* <div className={styles.contact}>
                         <div> <i className="fa fa-whatsapp"></i> +91 84204 22821</div>
                         <div> <i className="fa fa-phone"></i> +91 90246 67319</div>
+                    </div> */}
+
+                    <div className={styles.contact}>
+                        {/* WhatsApp */}
+                        <a
+                            href="https://wa.me/918420422821"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.contactItem}
+                        >
+                            <i className="fa fa-whatsapp"></i> +91 84204 22821
+                        </a>
+
+                        {/* Phone Call */}
+                        <a
+                            href="tel:+919024667319"
+                            className={styles.contactItem}
+                        >
+                            <i className="fa fa-phone"></i> +91 90246 67319
+                        </a>
                     </div>
+
                 </div>
             </aside>
         </>

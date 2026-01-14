@@ -120,9 +120,9 @@ const Courses = () => {
                     <div className={styles.previewOverlay}>
                        
 
-                        <h1>{coursesData[activeCard]?.title}</h1>
+                        <h1 >{coursesData[activeCard]?.title}</h1>
 
-                        <p>
+                        <p style={{fontWeight:'200'}}>
                             {coursesData[activeCard]?.description ||
                                 "Full SSB Course that covers intricate details of the 05 day assessment procedure"}
                         </p>

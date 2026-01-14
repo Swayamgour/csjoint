@@ -1,8 +1,8 @@
 import React from 'react'
 
-function CustomButton({ text }) {
+function CustomButton({ text, onClick }) {
     return (
-        <button className='ctaButton'>
+        <button className='ctaButton' onClick={onClick}>
             <span className='ctaText'>{text}</span>
         </button>
     )

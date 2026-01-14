@@ -48,8 +48,7 @@ function CircleBox() {
                     </div>
 
                     <p className={styles.titleOfSecondSection}>
-                        India’s first online SSB mentoring platform with a
-                        proprietary digital GTO training experience (GTX ™).
+                        India’s first online SSB mentoring platform with a proprietary digital GTO training experience (GTX ™). A unit of CS Joint Services Academy (CSJSA), led by veterans of the Indian Armed Forces, SSB with ISV is a venture that comes with a promise to guide and prepare aspiring officers for success in the Services Selection Board.
                     </p>
 
                     <p className={styles.titleOfThirdSection}>
