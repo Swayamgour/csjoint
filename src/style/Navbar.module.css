@@ -455,6 +455,16 @@
 ========================= */
 
 /* Tablets */
+@media (max-width: 1400px) {
+    .text {
+        color: #C6C5AF;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        font-size: 11px;
+    }
+}
+
 @media (max-width: 1024px) {
     .title {
         font-size: 64px;
