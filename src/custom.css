@@ -1741,3 +1741,36 @@ p {
         font-size: 20px;
     }
 }
+
+
+.bottom-contact-box-wrapper {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    display: flex;
+    gap: 26px;
+    z-index: 15;
+}
+
+.bottom-contact-box {
+    width: 45px;
+    height: 45px;
+    border: 3px solid rgba(215, 215, 200, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.bottom-contact-box i {
+    font-size: 24px;
+    color: var(--theme-white);
+}
+
+.bottom-contact-box:hover {
+    border-color: var(--secondary-color);
+}
+
+.bottom-contact-box:hover i {
+    color: var(--secondary-color);
+}

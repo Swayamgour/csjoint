@@ -7,6 +7,19 @@ function Footer() {
 
     return (
         <footer className={styles.footer}>
+
+
+            <div className="bottom-contact-box-wrapper">
+                <div className="bottom-contact-box">
+                    <i className="fa fa-phone"></i>
+                </div>
+
+                <div className="bottom-contact-box">
+                    <i className="fa fa-whatsapp"></i>
+                </div>
+            </div>
+
+
             <div className={styles.container}>
 
                 {/* LOGO */}

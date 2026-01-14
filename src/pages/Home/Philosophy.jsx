@@ -11,19 +11,22 @@ const PhilosophySection = () => {
         {
             id: "manasa",
             title: "Manasa (Thoughts)",
-            desc: "Exhibiting clarity of thought, sound judgment, and a strong sense of purpose.",
+            desc: "Exhibiting clarity of thought, sound judgment, and a strong sense of purpose. ",
+            desc2: "Tested through psychological assessments that explore your inner beliefs, motivations, and mental resilience.",
             color: "#e0c214"
         },
         {
             id: "vacha",
             title: "Vacha (Speech)",
-            desc: "Exhibiting clarity of communication, truthful expression, and effective articulation.",
+            desc: "Exhibiting clarity of thought, sound judgment, and a strong sense of purpose. ",
+            desc2: 'Tested through psychological assessments that explore your inner beliefs, motivations, and mental resilience.',
             color: "#d4b416"
         },
         {
             id: "karmana",
             title: "Karmana (Action)",
-            desc: "Exhibiting decisive action, leadership, and consistent ethical behavior.",
+            desc: "Exhibiting clarity of thought, sound judgment, and a strong sense of purpose. ",
+            desc2: 'Tested through psychological assessments that explore your inner beliefs, motivations, and mental resilience.',
             color: "#c9a818"
         },
     ];
@@ -143,6 +146,7 @@ const PhilosophySection = () => {
                             >
                                 <h3>{c.title}</h3>
                                 <p>{c.desc}</p>
+                                <p>{c.desc2}</p>
                             </div>
                         ))}
                     </div>

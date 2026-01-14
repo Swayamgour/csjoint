@@ -113,6 +113,15 @@ const Sidebar = ({ open, onClose }) => {
                         >
                             Contact US
                         </NavLink>
+                        <NavLink
+                            to="/login"
+                            onClick={onClose}
+                            className={({ isActive }) =>
+                                isActive ? styles.active : ""
+                            }
+                        >
+                            Login
+                        </NavLink>
 
 
                     </nav>

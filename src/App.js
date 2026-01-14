@@ -34,6 +34,7 @@ import ScrollToTop from './components/ScrollToTop';
 import SsbPage from './pages/SsbPage';
 import Background from '../src/components/Background';
 import Contact from './pages/Contact';
+import Login from './pages/Login';
 // import About from './pages/About/About';
 // import More from './pages/More/More';
 
@@ -51,6 +52,7 @@ function App() {
         <Route path="/GtoTrain" element={<GtoTrain />} />
         <Route path="/SsbPage" element={<SsbPage />} />
         <Route path="/ContactUS" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
         {/* <Route path="/about" element={<About />} />
         <Route path="/more" element={<More />} /> */}
       </Routes>

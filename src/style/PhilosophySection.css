@@ -335,6 +335,7 @@
     line-height: 1.7;
     color: #cfcfcf;
     margin: 0;
+    width: 80%;
 }
 
 /* ANIMATIONS */
@@ -499,6 +500,12 @@
     .manasa {
         left: 70px;
     }
+
+    .text-block p {
+       
+        width: 100%;
+    }
+
 }
 
 .single-circle {
