@@ -38,9 +38,9 @@ function Navbar() {
                         </div>
                     </header>
 
-                    <div className={styles.Divider}>
+                    {/* <div className={styles.Divider}>
 
-                    </div>
+                    </div> */}
                    
                 </section>
 

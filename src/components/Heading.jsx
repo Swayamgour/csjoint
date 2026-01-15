@@ -1,42 +1,42 @@
-// Heading.jsx
-import React, { useEffect, useRef } from "react";
-import "../style/heading.css";
+import { useEffect, useRef } from "react";
+import '../style/heading.css'
 
-function Heading({ h1, t1 }) {
+/* 🔹 Helper: split text into chars */
+const splitText = (text) =>
+    text.split("").map((char, i) => (
+        <span key={i} className="char">
+            {char === " " ? "\u00A0" : char}
+        </span>
+    ));
+
+export default function Heading({ h1, t1 }) {
     const headingRef = useRef(null);
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    headingRef.current.classList.add("play-sweep");
-                } else {
-                    // 👇 viewport se bahar gaya → reset
-                    headingRef.current.classList.remove("play-sweep");
-                }
-            },
-            { threshold: 0.5 }
-        );
+        const el = headingRef.current;
+        if (!el) return;
 
-        if (headingRef.current) observer.observe(headingRef.current);
+        const onAnimationEnd = (e) => {
+            if (e.target.classList.contains("highlight")) {
+                el.classList.add("sweep-done");
+            }
+        };
 
-        return () => observer.disconnect();
+        el.addEventListener("animationend", onAnimationEnd);
+        return () => el.removeEventListener("animationend", onAnimationEnd);
     }, []);
 
-    const splitText = (text) =>
-        text.split("").map((char, i) => (
-            <span key={i} className="char">
-                {char === " " ? "\u00A0" : char}
-            </span>
-        ));
-
     return (
-        <h1 ref={headingRef} className="headingOfSSb">
-            <span className="word highlight">{splitText(h1)}</span>
+        <h1 ref={headingRef} className="headingOfSSb play-sweep">
+            <span className="word highlight first">
+                {splitText(h1)}
+            </span>
 
-            {t1 && <span className="word highlight">{splitText(t1)}</span>}
+            {t1 && (
+                <span className="word highlight second">
+                    {splitText(t1)}
+                </span>
+            )}
         </h1>
     );
 }
-
-export default Heading;

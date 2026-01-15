@@ -4,6 +4,7 @@ import CircularCard from "../../components/CircularCard";
 import CustomButton from "../../components/CustomButton";
 import Glow from '../../components/Glow';
 import Heading from '../../components/Heading';
+import { useNavigate } from 'react-router-dom';
 
 function CircleBox() {
 
@@ -13,6 +14,13 @@ function CircleBox() {
         { number: "4", title: "Years of Proven Track Record" },
     ];
 
+
+    const navigate = useNavigate()
+
+
+    const handelLogin = () => {
+        navigate('/login')
+    }
 
 
     return (
@@ -66,7 +74,7 @@ function CircleBox() {
                     </p>
                     <div style={{ marginTop: '30px' }}>
 
-                        <CustomButton text="Sign Up Now" />
+                        <CustomButton text="Sign Up Now" onClick={handelLogin} />
                     </div>
 
                 </div>

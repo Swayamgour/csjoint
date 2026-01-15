@@ -1,4 +1,4 @@
-/* BASE HEADING */
+/* ================= BASE HEADING ================= */
 .headingOfSSb {
     font-family: var(--font-heading, system-ui);
     font-size: 5rem;
@@ -6,8 +6,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    /* margin: 50px 0; */
     color: var(--white);
+    /* default white */
 }
 
 .headingOfMargin {
@@ -19,49 +19,59 @@
     display: inline-flex;
 }
 
-/* CHAR (NO ANIMATION HERE) */
+/* CHAR */
 .char {
     display: inline-block;
 }
 
-/* HIGHLIGHT STYLE */
+/* ================= HIGHLIGHT (NEW SWEEP) ================= */
 .highlight {
-    background-image: linear-gradient(90deg,
-            #3b3930 0%,
-            #ffffff 45%,
-            #3b3930 55%,
-            #3b3930 100%);
+    color: var(--white);
+    /* 👈 default visible */
 
-    background-size: 250% 100%;
-    background-position: 0% 0%;
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0.35) 35%,
+            rgba(255, 255, 255, 1) 50%,
+            rgba(255, 255, 255, 0.35) 65%);
+
+    background-size: 200% 100%;
+    background-position: 200% 0%;
 
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0.35);
 }
 
-/* 🔥 PLAY SWEEP – ONLY WHEN IN VIEW */
+/* 🔥 PLAY SWEEP */
 .play-sweep .highlight {
-    animation: sweepText 3s ease-in-out 1;
+    animation: sweep-left-right 1.8s ease-in-out forwards;
 }
 
-/* SWEEP KEYFRAME */
-@keyframes sweepText {
-    0% {
-        background-position: 0% 0%;
+/* LEFT → RIGHT SWEEP */
+@keyframes sweep-left-right {
+    from {
+        background-position: 200% 0%;
     }
 
-    50% {
-        background-position: 100% 0%;
-    }
-
-    100% {
+    to {
         background-position: 0% 0%;
     }
+}
+
+/* ================= AFTER ANIMATION ================= */
+.sweep-done .highlight {
+    background: none;
+}
+
+/* Final colors */
+.sweep-done .first {
+    color: var(--white);
+}
+
+.sweep-done .second {
+    color: rgba(255, 255, 255, 0.55);
 }
 
 /* ================= RESPONSIVE ================= */
-
 @media (max-width: 1200px) {
     .headingOfSSb {
         font-size: 4rem;
@@ -71,32 +81,25 @@
 @media (max-width: 1024px) {
     .headingOfSSb {
         font-size: 3.2rem;
-        /* margin: 30px 0; */
     }
 
     .headingOfMargin {
         margin: 30px 0;
     }
-
 }
 
 @media (max-width: 768px) {
     .headingOfSSb {
         font-size: 2.4rem;
-        /* text-align: center;
-        justify-content: center; */
     }
 }
 
 @media (max-width: 480px) {
     .headingOfSSb {
         font-size: 1.6rem;
-        /* margin: 12px 0; */
-
     }
 
     .headingOfMargin {
         margin: 12px 0;
     }
-
 }

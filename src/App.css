@@ -1,13 +1,5 @@
-
-
-
 .ctaButton {
-  /* position: relative; */
-  /* width: 183px; */
-  /* height: 44px; */
-
   background: rgba(17, 16, 21, 0.4);
-  /* border: 1px solid rgba(198, 197, 175, 0.35); */
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
 
@@ -19,74 +11,23 @@
   overflow: hidden;
   padding: 6px 24px;
   border: 2px solid rgba(210, 161, 0, 0.45);
-
-}
-
-
-
-/* Text */
-.ctaText {
-  position: relative;
-  font-family: 'Kelson', sans-serif;
-  ;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 28px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  font-family: var(--cta);
   color: var(--secondary-color);
+  font-size: 18px;
 
-  /* background: linear-gradient(262.12deg,
-      #D2A100 -2.23%,
-      #E0C214 48.89%,
-      #D2A100 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text; */
-  /* text-decoration: ; */
 }
+
+
+
+
 
 .ctaButton:hover {
-  /* box-shadow: 0 0 20px rgba(210, 161, 0, 0.6);/ */
-  /*  */
-
   background-color: var(--secondary-color);
-
-
+  color: black;
 }
 
-.ctaText:hover {
-  color: var(--dark-gray);
-}
-
-/* .ctaButton:hover::before {
-  filter: blur(70px);
-} */
 
 
-.headingOfSSb {
-
-
-  font-family: var(--font-heading);
-  font-style: normal;
-  /* font-weight: 400; */
-  font-size: 78px;
-  line-height: 100px;
-  /* identical to box height, or 128% */
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  color: #C6C5AF;
-  /* margin: 50px 0; */
-
-
-
-
-
-
-
-}
 
 .commonPadding {
   padding: 20px 40px 100px;
@@ -118,10 +59,7 @@
 
 /* -------- Large laptops -------- */
 @media (max-width: 1200px) {
-  .headingOfSSb {
-    font-size: 64px;
-    line-height: 84px;
-  }
+
 
   .pl {
     padding-left: 60px;
@@ -141,11 +79,7 @@
 }
 
 @media (max-width: 992px) {
-  .headingOfSSb {
-    font-size: 52px;
-    line-height: 70px;
-    gap: 8px;
-  }
+ 
 
   .commonPadding {
     padding: 20px 24px 70px;
@@ -158,15 +92,7 @@
 
 /* -------- Mobile -------- */
 @media (max-width: 768px) {
-  .headingOfSSb {
-    font-size: 40px;
-    line-height: 54px;
-    flex-wrap: wrap;
-
-
-
-    /* 👈 VERY IMPORTANT */
-  }
+  
 
   .pl {
     padding-left: 20px;
@@ -191,10 +117,7 @@
 
 /* -------- Small mobile -------- */
 @media (max-width: 480px) {
-  .headingOfSSb {
-    font-size: 32px;
-    line-height: 44px;
-  }
+
 
   .commonPadding {
     padding: 12px 12px 50px;
@@ -219,11 +142,7 @@
 }
 
 @media (max-width: 480px) {
-  .headingOfSSb {
-    font-size: 32px;
-    line-height: 44px;
-  }
-
+ 
   .commonPadding {
     padding: 12px 12px 50px;
   }
@@ -247,11 +166,7 @@
 }
 
 @media (max-width: 480px) {
-  .headingOfSSb {
-    font-size: 32px;
-    line-height: 44px;
-  }
-
+ 
   .commonPadding {
     padding: 12px 12px 50px;
   }

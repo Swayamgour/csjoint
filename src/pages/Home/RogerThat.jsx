@@ -23,6 +23,14 @@ const RogerThat = () => {
     const prevRef = useRef(null);
     const nextRef = useRef(null);
 
+    // const handelSendUrl = () => {
+    //     https://www.youtube.com/@rogerthatwithnkc
+    // }
+
+    const handelSendUrl = () => {
+        window.open("https://www.youtube.com/@rogerthatwithnkc", "_blank");
+    };
+
 
     return (
         <section className={styles.section}>
@@ -30,8 +38,8 @@ const RogerThat = () => {
             <div className={styles.header}>
                 <div>
 
-                    <div className="headingOfMargin">
-                        <Heading h1={'ROGER That'} t1='with NKC' />
+                    <div style={{ marginTop: '0' }} className="headingOfMargin">
+                        <Heading h1={'Roger That'} t1='with NKC' />
                     </div>
                     <p className={styles.subTitle}>Our Official Podcast channel</p>
                     <p className={styles.description}>
@@ -100,7 +108,7 @@ const RogerThat = () => {
             {/* CTA */}
             <div className='col-12 text-center d-flex justify-content-center mt-4'>
                 {/* <button className={styles.ctaBtn}></button> */}
-                <CustomButton text={'VISIT OUR CHANNEL'} />
+                <CustomButton text={'VISIT OUR CHANNEL'} onClick={handelSendUrl} />
             </div>
         </section>
     );

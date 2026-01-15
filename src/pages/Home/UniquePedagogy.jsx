@@ -1,8 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import CustomButton from "../../components/CustomButton";
 import Heading from "../../components/Heading";
 import styles from "../../style/UniquePedagogy.module.css";
 
 const UniquePedagogy = () => {
+
+
+    const navigate = useNavigate()
     return (
         <section className={styles.wrapper}>
             {/* TOP CONTENT */}
@@ -11,9 +15,7 @@ const UniquePedagogy = () => {
             {/* <div className={styles.left}> */}
             <div className="pl mb">
 
-                {/* <h2 className="headingOfSSb">
-                     <span></span>
-                </h2> */}
+
                 <Heading h1={'Unique pedagogy:'} t1='GTX™' />
             </div>
             {/* </div> */}
@@ -41,7 +43,7 @@ const UniquePedagogy = () => {
             <div className={styles.imageSection}></div>
 
             <div className={styles.KnowMoreBtn}>
-                <CustomButton text='KNOW MORE' />
+                <CustomButton text='KNOW MORE' onClick={() => navigate('/GtoTrain')} />
             </div>
         </section >
     );

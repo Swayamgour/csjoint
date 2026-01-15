@@ -30,6 +30,13 @@ div {
 }
 
 
+@font-face {
+  font-family: "cta";
+  src: url("../public/font/Monoform-Medium.ttf") format("woff2");
+
+}
+
+
 
 :root {
   /* Primary Theme */
@@ -84,6 +91,7 @@ div {
   --font-heading: "HeadingFont", sans-serif;
   --font1: "HeadingFont", sans-serif;
   --font-Preragraph: "Preragraph", sans-serif;
+  --cta: "cta"
 }
 
 

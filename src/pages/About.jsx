@@ -9,7 +9,7 @@ function About() {
 
     const data =
     {
-        heading: 'About US',
+        heading: 'About us',
 
         text: ' The Integrated SSB Virtuosos, a unit of CS Joint Services Academy (CSJSA), was was setup on 04 July 2021 with a goal to shape India’s youth and fuel their aspirations to join Indian Armed Forces in the Officer Cadre.',
         textTwo: ` We’re not just an academy, we’re a close-knit mentoring community. At CSJSA, every aspirant is personally guided by Lt Cdr Nikhil, whose experience assessing over 12,500 SSB candidates shapes our focused,
@@ -36,7 +36,7 @@ function About() {
                     {/* TITLE */}
                     <div className="col-12 col-lg-9 order-1 order-lg-1">
                         <div className="sct-title">
-                            <h2>CS joint services academy team</h2>
+                            <h2>CS Joint Services Academy team</h2>
                         </div>
                     </div>
 

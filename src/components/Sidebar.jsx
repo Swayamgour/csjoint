@@ -102,7 +102,7 @@ const Sidebar = ({ open, onClose }) => {
                                 isActive ? styles.active : ""
                             }
                         >
-                            SSB
+                            About SSB
                         </NavLink>
                         <NavLink
                             to="/ContactUS"

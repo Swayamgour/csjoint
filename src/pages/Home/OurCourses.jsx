@@ -3,6 +3,7 @@ import styles from '../../style/OurCourses.module.css';
 import CustomButton from '../../components/CustomButton';
 import { coursesData } from '../../util/data';
 import Heading from '../../components/Heading';
+import { useNavigate } from 'react-router-dom';
 
 const Courses = () => {
     const [activeCard, setActiveCard] = useState(0); // First card active by default
@@ -50,6 +51,8 @@ const Courses = () => {
         }
     };
 
+    const navigate = useNavigate()
+
     // Click on indicator dot
     const handleIndicatorClick = (index) => {
         handleCardClick(index);
@@ -63,7 +66,7 @@ const Courses = () => {
                     Our courses
                 </h2> */}
                 <Heading h1='Our Courses' />
-                <CustomButton text='Know More' />
+                <CustomButton text='Know More' onClick={()=>navigate('/Courses') } />
             </div>
 
             {/* Content */}
@@ -118,17 +121,17 @@ const Courses = () => {
                 {/* RIGHT IMAGE PANEL */}
                 <div className={styles.preview}>
                     <div className={styles.previewOverlay}>
-                       
+
 
                         <h1 >{coursesData[activeCard]?.title}</h1>
 
-                        <p style={{fontWeight:'200'}}>
+                        <p style={{ fontWeight: '200' }}>
                             {coursesData[activeCard]?.description ||
                                 "Full SSB Course that covers intricate details of the 05 day assessment procedure"}
                         </p>
 
                         {/* Additional details for active course */}
-                       
+
 
                         {/* <CustomButton text='Enroll Now' /> */}
                     </div>

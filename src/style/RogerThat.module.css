@@ -1,11 +1,11 @@
 .section {
     /* width: 100%; */
     min-height: 100vh;
-    padding: 80px 100px;
-    background: linear-gradient(270deg,
+    padding: 60px 80px;
+    /* background: linear-gradient(270deg,
             #111015 0%,
             #111111 50%,
-            #111015 100%);
+            #111015 100%); */
     color: #c6c5af;
     font-family: var(--font1);
 }

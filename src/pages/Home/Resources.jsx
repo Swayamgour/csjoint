@@ -10,8 +10,11 @@ import "swiper/css";
 import "swiper/css/pagination"
 import CustomButton from "../../components/CustomButton";
 import Heading from "../../components/Heading";
+import { useNavigate } from "react-router-dom";
 
 const Resources = () => {
+
+    const navigate = useNavigate()
     return (
         <section className={styles.resourcesSection}>
             {/* HEADING */}
@@ -19,7 +22,7 @@ const Resources = () => {
                 Resources for <span>SSB preparation</span>
             </h2> */}
 
-            <div className="headingOfMargin  pl">
+            <div style={{ marginTop: '0' }} className="headingOfMargin  pl">
                 <Heading h1='Resources for' t1='SSB preparation' />
 
             </div>
@@ -69,7 +72,7 @@ const Resources = () => {
             </div>
 
             <div className="KnowMoreBtn">
-                <CustomButton text='EXPLORE MORE' />
+                <CustomButton text='EXPLORE MORE' onClick={() => navigate('/SsbPage')} />
             </div>
         </section>
     );
