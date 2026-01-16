@@ -122,12 +122,22 @@ const RogerThat = () => {
 
                             {/* VIDEO */}
                             {activeVideo === e.id && (
+                                // <iframe
+                                //     src={`https://www.youtube.com/embed/${getVideoId(e.link)}?autoplay=1`}
+                                //     frameBorder="0"
+                                //     allow="autoplay; encrypted-media"
+                                //     allowFullScreen
+                                // />
+
                                 <iframe
                                     src={`https://www.youtube.com/embed/${getVideoId(e.link)}?autoplay=1`}
                                     frameBorder="0"
                                     allow="autoplay; encrypted-media"
                                     allowFullScreen
-                                />
+                                >
+
+                                </iframe>
+
                             )}
                         </div>
                     </SwiperSlide>
