@@ -1,125 +1,140 @@
 .section {
-    position: relative;
-    min-height: 100vh;
-    overflow: hidden;
-    font-family: var(--font1);
-    color: #f2f0e1;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: var(--font1);
+  color: #f2f0e1;
 }
 
 /* BACKGROUND IMAGE (FULL WIDTH) */
 .bgImage {
-    position: absolute;
-    inset: 0;
-    background:
-        linear-gradient(180deg,
-            rgba(0, 0, 0, 0.55),
-            rgba(0, 0, 0, 0.85)),
-        url("../../public/assets/unsplash_5Mj4PO7KIFc.png") center / cover no-repeat;
-    z-index: 1;
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg,
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.85)),
+    url("../../public/assets/unsplash_5Mj4PO7KIFc.png") center / cover no-repeat;
+  z-index: 1;
 }
 
 /* LEFT IMAGE (FOREGROUND SOLDIERS) */
 .leftImage {
-    position: absolute;
-    top: 10%;
-    left: -4%;
-    width: 20%;
-    height: 15%;
-    background:
+  position: absolute;
+  top: 10%;
+  left: -4%;
+  width: 20%;
+  height: 15%;
+  background:
 
-        url("../../public/assets/Group161.png") center / cover no-repeat;
-    z-index: 2;
+    url("../../public/assets/Group161.png") center / cover no-repeat;
+  z-index: 2;
 }
 
 /* CONTENT WRAPPER */
 
 .contentMain {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 
 }
 
 
 
 .content {
-    position: relative;
-    z-index: 3;
-    height: 90vh;
-    padding: 80px;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: ; */
-    align-items: flex-start;
-    width: fit-content;
+  position: relative;
+  z-index: 3;
+  height: 90vh;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: ; */
+  align-items: flex-start;
+  width: fit-content;
 }
 
 /* HEADING */
 .heading {
-    /* font-size: 64px;
+  /* font-size: 64px;
     font-weight: 300;
     text-align: start; */
 
-    margin-top: 40px;
-    margin-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 
-    /* font-family: Kelson; */
-    font-weight: 400;
-    font-style: Regular;
-    font-size: 80px;
-    /* leading-trim: NONE; */
-    line-height: 100px;
-    letter-spacing: 0%;
-    vertical-align: middle;
-    /* font-family: var(--); */
-    color: var(--white);
+  /* font-family: Kelson; */
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 80px;
+  /* leading-trim: NONE; */
+  line-height: 100px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  /* font-family: var(--); */
+  color: var(--white);
 
 }
 
 .heading span {
-    color: var(--gray);
+  color: var(--gray);
 }
 
 /* INFO BOX */
 .infoBox {
-    max-width: 640px;
-    padding: 36px 42px;
-    background: linear-gradient(180deg,
-            rgba(0, 0, 0, 0.65),
-            rgba(0, 0, 0, 0.35));
-    border: 1px solid rgba(198, 197, 175, 0.35);
-    backdrop-filter: blur(10px);
+  max-width: 640px;
+  padding: 36px 42px;
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.35));
+  border: 1px solid rgba(198, 197, 175, 0.35);
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+.sectionGlowTwo {
+  position: absolute;
+  inset: -30%;
+  pointer-events: none;
+  filter: blur(100px);
+  background: radial-gradient(circle at 20% 50%,
+      rgba(244, 196, 48, 0.25),
+      transparent 90%);
+  width: 250px;
+  height: 250px;
+  top: 20%;
+  left: 60%;
 }
 
 .infoBox p {
 
-    color: var(--white);
-    margin-bottom: 24px;
+  color: var(--white);
+  margin-bottom: 24px;
 
-    font-family: var(--font1);
-    font-weight: 400;
-    font-style: Regular;
-    font-size: 18px;
-    /* leading-trim: NONE; */
-    line-height: 150%;
-    letter-spacing: 0%;
+  font-family: var(--font1);
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  /* leading-trim: NONE; */
+  line-height: 150%;
+  letter-spacing: 0%;
 
 }
 
 /* BUTTON */
 .btn {
-    padding: 10px 26px;
-    border: 1px solid #d2a100;
-    background: transparent;
-    color: #d2a100;
-    font-size: 12px;
-    letter-spacing: 1.5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  padding: 10px 26px;
+  border: 1px solid #d2a100;
+  background: transparent;
+  color: #d2a100;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background: rgba(210, 161, 0, 0.15);
+  background: rgba(210, 161, 0, 0.15);
 }
 
 
@@ -235,6 +250,7 @@
   }
 
   .leftImage {
-    display: none; /* 👈 clutter remove only on very small screens */
+    display: none;
+    /* 👈 clutter remove only on very small screens */
   }
 }

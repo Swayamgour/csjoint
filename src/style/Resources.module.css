@@ -8,9 +8,24 @@
             #111015 100%);
     font-family: var(--font1);
     padding: 60px 0;
+    position: relative;
 
 
     /* padding-top: 100px; */
+}
+
+.sectionGlowTwo {
+    position: absolute;
+    inset: -30%;
+    pointer-events: none;
+    filter: blur(100px);
+    background: radial-gradient(circle at 20% 50%,
+            rgba(244, 196, 48, 0.25),
+            transparent 90%);
+    width: 350px;
+    height: 250px;
+    top: 10%;
+    left: 75%;
 }
 
 /* HEADING */

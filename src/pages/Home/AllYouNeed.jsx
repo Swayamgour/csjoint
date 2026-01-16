@@ -22,6 +22,8 @@ const AllYouNeed = () => {
 
 
                     <div className={styles.infoBox}>
+                        <div className={styles.sectionGlowTwo}></div>
+
                         <p>
                             The Services Selection Board (SSB) is not an exam, it is a five-day leadership assessment designed to identify officer-like qualities in candidates aspiring to identify shades of Officer-Like-Qualities in candidates aspiring to join the Indian Armed Forces in the officer cadre. From psychological test and group situational tasks to personal interviews, the SSB process
                         </p>
