@@ -12,6 +12,8 @@ function Courses() {
     return (
         <>
 
+        
+
 
 
             <CustomHeader heading={data.heading} text={data.text} />
