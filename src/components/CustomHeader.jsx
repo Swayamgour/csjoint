@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Sidebar from './Sidebar';
 
 
-function CustomHeader({ heading, text, textTwo, span, textThree }) {
+function CustomHeader({ heading, text, textTwo, span, textThree, color }) {
 
     const navigate = useNavigate()
 
@@ -16,7 +16,7 @@ function CustomHeader({ heading, text, textTwo, span, textThree }) {
 
             <section className="breed-section" style={{ backgroundImage: 'url(/assets/img/about/about-breed.webp)' }}>
 
-                <div className='responsivePadding'>
+                <div className=''>
                     <div className={styles.topBar}>
                         <img
                             src="/assets/logo/logo.png"
@@ -36,7 +36,8 @@ function CustomHeader({ heading, text, textTwo, span, textThree }) {
                 <div className="breed-content container">
                     <div className="col-12 row mx-auto">
                         <div className='col-xl-12'>
-                            <h1 className="breed-big-title">{heading}{span && <sup>{span}</sup>}</h1>
+                            {color && <h1 style={{ color: 'var(--secondary-color)' }} className="breed-big-title">{heading}{span && <span className="sup-text">{span}</span>}</h1>}
+                            {!color && <h1 className="breed-big-title">{heading}{span && <sup>{span}</sup>}</h1>}
 
                         </div>
                         <div className="col-xl-7">

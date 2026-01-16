@@ -72,7 +72,7 @@ const Resources = () => {
             </div>
 
             <div className="KnowMoreBtn">
-                <CustomButton text='EXPLORE MORE' onClick={() => navigate('/SsbPage')} />
+                <CustomButton text='EXPLORE MORE' onClick={() => navigate('/Magazine')} />
             </div>
         </section>
     );

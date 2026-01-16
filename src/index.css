@@ -36,6 +36,12 @@ div {
 
 }
 
+@font-face {
+  font-family: "pre";
+  src: url("../public/font/Kelson-Light.otf") format("woff2");
+
+}
+
 
 
 :root {
@@ -91,7 +97,8 @@ div {
   --font-heading: "HeadingFont", sans-serif;
   --font1: "HeadingFont", sans-serif;
   --font-Preragraph: "Preragraph", sans-serif;
-  --cta: "cta"
+  --cta: "cta";
+  --pre: "pre";
 }
 
 

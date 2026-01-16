@@ -9,9 +9,9 @@ import { useNavigate } from 'react-router-dom';
 function CircleBox() {
 
     const array = [
-        { number: "180", title: "Candidates Recommended" },
-        { number: "90", title: "Years of Domain Expertise" },
-        { number: "4", title: "Years of Proven Track Record" },
+        { number: "180", title: "Candidates Recommended", timeDel: '2' },
+        { number: "90", title: "Years of Domain Expertise", timeDel: '4' },
+        { number: "4", title: "Years of Proven Track Record", timeDel: '6' },
     ];
 
 
@@ -39,6 +39,7 @@ function CircleBox() {
                             key={index}
                             number={e.number}
                             title={e.title}
+                            timeDel={e.timeDel}
                         />
                     ))}
                 </div>

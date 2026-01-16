@@ -30,35 +30,73 @@ export const coursesData = [
         id: 1,
         number: "01",
         title: "10 days Services Selection Board Hackathon",
+        white: "10 days ",
+        gray: "Services Selection Board",
+        white2: "Hackathon",
         sessions: "10",
         hours: "40",
-        description: `1. SSB Hackathon 
-Full SSB Course that covers intricate details of the 05 day assessment procedure
-`,
-
-        image: "/assets/course-1.jpg", // right side preview image
+        description: `1. SSB Hackathon
+Full SSB Course that covers intricate details of the 05 day assessment procedure`,
+        image: "/assets/course-1.jpg",
     },
+
     {
         id: 2,
         number: "02",
         title: "Introduction to SSB & PPDT, Stage 1 Process",
+        white: "Introduction",
+        gray: "to SSB & PPDT, Stage",
+        white2: "1 Process",
         sessions: "01",
         hours: "05",
         description:
-            "2. A comprehensive introduction to SSB including PPDT and Stage 1 process",
+            "2. A comprehensive introduction to SSB including PPDT and complete Stage 1 screening process",
         image: "/assets/course-2.jpg",
     },
+
     {
         id: 3,
         number: "03",
         title: "Psychology Test Preparation Program",
+        white: "Psychology",
+        gray: "Test Preparation",
+        white2: "Program",
         sessions: "08",
         hours: "32",
         description:
-            "3. Focused preparation for psychological tests conducted during SSB selection",
+            "3. Focused preparation for psychological tests including TAT, WAT, SRT and SD conducted during SSB selection",
+        image: "/assets/course-3.jpg",
+    },
+
+    {
+        id: 4,
+        number: "04",
+        title: "Interview Theory Course and Mock Interview",
+        white: "Interview Theory ",
+        gray: "Course and Mock",
+        white2: "Interview",
+        sessions: "02",
+        hours: "04",
+        description:
+            "4. In-depth interview theory covering officer-like qualities along with one-on-one mock interview practice and expert feedback",
+        image: "/assets/course-3.jpg",
+    },
+
+    {
+        id: 5,
+        number: "05",
+        title: "Group Testing Course",
+        white: "Group ",
+        gray: "Testing",
+        white2: "Course",
+        sessions: "05",
+        hours: "15",
+        description:
+            "5. Complete preparation for GTO tasks including group discussions, group planning exercise, outdoor tasks and command tasks",
         image: "/assets/course-3.jpg",
     },
 ];
+
 
 
 export const resourcesData = [

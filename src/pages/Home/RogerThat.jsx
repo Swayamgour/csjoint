@@ -5,16 +5,16 @@ import "swiper/css/pagination";
 import styles from '../../style/RogerThat.module.css'
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import CustomButton from "../../components/CustomButton";
 import Heading from "../../components/Heading";
 
 const RogerThat = () => {
     const array = [
-        { id: "1", img: "/assets/rebot1.png" },
-        { id: "2", img: "/assets/robot2.png" },
-        { id: "3", img: "/assets/rebot1.png" },
-        { id: "4", img: "/assets/robot2.png" },
+        { id: "1", img: "/assets/robot2.png", link: 'https://youtu.be/NGAHJlsmG7s?si=DT6gxCsC2UTnbkHa' },
+        { id: "2", img: "/assets/hq720.avif", link: 'https://youtu.be/_ZFpDTrM60E?si=lmdwDKmC2vs4WT0s' },
+        { id: "3", img: "/assets/hq7201.avif", link: 'https://youtu.be/_ZFpDTrM60E?si=T8sWXk7PQ0khT8G0' },
+        { id: "4", img: "/assets/hq720.webp", link: 'https://youtu.be/nOqEUXMhAyQ?si=aRfuo9xTFVCJmyZC' },
     ];
 
 
@@ -23,12 +23,21 @@ const RogerThat = () => {
     const prevRef = useRef(null);
     const nextRef = useRef(null);
 
+
+    const swiperRef = useRef(null);
+    const [activeVideo, setActiveVideo] = useState(null);
+
     // const handelSendUrl = () => {
     //     https://www.youtube.com/@rogerthatwithnkc
     // }
 
     const handelSendUrl = () => {
         window.open("https://www.youtube.com/@rogerthatwithnkc", "_blank");
+    };
+
+
+    const getVideoId = (url) => {
+        return url.split("youtu.be/")[1]?.split("?")[0];
     };
 
 
@@ -42,7 +51,7 @@ const RogerThat = () => {
                         <Heading h1={'Roger That'} t1='with NKC' />
                     </div>
                     <p className={styles.subTitle}>Our Official Podcast channel</p>
-                    <p className={styles.description}>
+                    <p style={{ fontWeight: 'lighter' }} className={styles.description}>
                         Roger That with NKC is Lt. Commander Nikhil Kumar Chandrakala’s military leadership and strategy channel focused on deconstructing real stories from the Indian Armed Forces, unpacking leadership principles, & unpacking leadership principles with curated experience based insights from an ex-GTO and Warship Captain.
                     </p>
                 </div>
@@ -56,20 +65,16 @@ const RogerThat = () => {
 
             {/* SWIPER */}
             <Swiper
+                onSwiper={(swiper) => (swiperRef.current = swiper)}
+
                 slidesPerView={2}
                 spaceBetween={40}
-
-                loop={true}   // 👈 boolean rakho (string nahi)
+                loop={true}
 
                 autoplay={{
-                    delay: 2500,                 // ⏱ 2.5 sec
-                    disableOnInteraction: false, // 👆 swipe ke baad bhi chalta rahe
-                    pauseOnMouseEnter: true,     // 🖱 hover par pause (optional)
-                }}
-
-                pagination={{
-                    el: ".roger-pagination",
-                    clickable: true,
+                    delay: 2500,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
                 }}
 
                 navigation={{
@@ -87,17 +92,48 @@ const RogerThat = () => {
                     1024: { slidesPerView: 2 },
                 }}
 
-                modules={[Pagination, Navigation, Autoplay]}
+                modules={[Navigation, Autoplay, Pagination]}
                 className={styles.mySwiper}
             >
 
+
+
                 {array.map((e) => (
                     <SwiperSlide key={e.id}>
-                        <div className={styles.card}>
-                            <img src={e.img} alt={e.id} />
+                        <div className={styles.videoCard}>
+
+                            {/* IMAGE */}
+                            {activeVideo !== e.id && (
+                                <>
+                                    <img src={e.img} alt={e.id} />
+
+                                    {/* HOVER OVERLAY */}
+                                    <div
+                                        className={styles.overlay}
+                                        onClick={() => {
+                                            setActiveVideo(e.id);
+                                            swiperRef.current?.autoplay.stop(); // 🛑 stop auto scroll
+                                        }}
+                                    >
+                                        <span className={styles.playIcon}>▶</span>
+                                    </div>
+                                </>
+                            )}
+
+                            {/* VIDEO */}
+                            {activeVideo === e.id && (
+                                <iframe
+                                    src={`https://www.youtube.com/embed/${getVideoId(e.link)}?autoplay=1`}
+                                    frameBorder="0"
+                                    allow="autoplay; encrypted-media"
+                                    allowFullScreen
+                                />
+                            )}
                         </div>
                     </SwiperSlide>
                 ))}
+                {/* </Swiper> */}
+
             </Swiper>
 
             {/* CUSTOM PAGINATION */}
@@ -110,7 +146,7 @@ const RogerThat = () => {
                 {/* <button className={styles.ctaBtn}></button> */}
                 <CustomButton text={'VISIT OUR CHANNEL'} onClick={handelSendUrl} />
             </div>
-        </section>
+        </section >
     );
 };
 

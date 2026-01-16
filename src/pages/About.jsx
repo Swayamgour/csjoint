@@ -1,11 +1,26 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import From from './From'
 import Footer from './Footer'
 import CustomHeader from '../components/CustomHeader'
 import SwiperComponents from '../components/SwiperComponents'
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
+import styles from '../style/RogerThat.module.css'
+
 // import 
 
 function About() {
+
+
+    const prevRef = useRef(null);
+    const nextRef = useRef(null);
+
 
     const data =
     {
@@ -18,6 +33,51 @@ function About() {
 
 
     }
+
+    const teamData = [
+        {
+            id: "member-1",
+            image: "/assets/img/about/founder.png",
+            designation: "Group Testing Officer",
+            name: "Lt. Commander Nikhil Kumar Chandrakala (Retd.)",
+            sections: [
+                {
+                    id: "ssb",
+                    title: "SSB Assessor Background",
+                    content: [
+                        "Trained at DIPR & NSB, Coimbatore",
+                        "Certified Group Testing Officer",
+                        "Youngest Panelist in SSB history",
+                        "Assessed 12,500+ candidates",
+                    ],
+                },
+                {
+                    id: "navy",
+                    title: "Navy Background",
+                    content: [
+                        "Indian Navy Officer",
+                        "Leadership roles",
+                        "Operational experience",
+                    ],
+                },
+            ],
+        },
+
+        {
+            id: "member-2",
+            image: "/assets/img/about/founder.png",
+            designation: "Group Testing Officer",
+            name: "Lt. Commander Nikhil Kumar Chandrakala (Retd.)",
+            sections: [
+                {
+                    id: "education",
+                    title: "Educational Background",
+                    text: "Academic qualifications supporting assessment expertise.",
+                },
+            ],
+        },
+    ];
+
     return (
         <>
 
@@ -35,188 +95,154 @@ function About() {
 
                     {/* TITLE */}
                     <div className="col-12 col-lg-9 order-1 order-lg-1">
-                        <div className="sct-title">
+                        <div style={{marginBottom:'0'}} className="sct-title">
                             <h2>CS Joint Services Academy team</h2>
                         </div>
                     </div>
 
                     {/* ARROWS */}
-                    {/* <div className="col-12 col-lg-3 order-2 order-lg-2 text-start text-lg-end">
+
+
+                    {/* <div className="col-12 col-lg-3 order-2 order-lg-2 text-start text-lg-end"> */}
+
                         <div className="thm-sld-nav-btns d-flex justify-content-start justify-content-lg-end">
-                            <div className="thm-sld-nav-prev">&#10094;</div>
-                            <div className="thm-sld-nav-next">&#10095;</div>
+
+                            <div ref={prevRef} className={styles.arrow}>
+                                <IoIosArrowBack />
+                            </div>
+                            <div ref={nextRef} className={styles.arrow}>
+                                <IoIosArrowForward />
+                            </div>
                         </div>
-                    </div> */}
+                    {/* </div> */}
+
                 </div>
 
 
-                <div className="swiper team-swiper">
-                    <div className="swiper-wrapper">
 
-                        {/* <!-- SLIDE --> */}
-                        <div className="swiper-slide team-slide">
 
+
+
+                {/* <div className="team-swiper-wrapper">
+
+                    CUSTOM BUTTONS
+                    <div className="team-swiper-btn prev-btn">←</div>
+                    <div className="team-swiper-btn next-btn">→</div> */}
+
+                <Swiper
+                    slidesPerView={1}
+                    spaceBetween={40}
+                    loop={true}
+
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
+                    }}
+
+                    pagination={{
+                        el: ".roger-pagination",
+                        clickable: true,
+                    }}
+
+                    navigation={{
+                        prevEl: prevRef.current,
+                        nextEl: nextRef.current,
+                    }}
+
+                    onBeforeInit={(swiper) => {
+                        swiper.params.navigation.prevEl = prevRef.current;
+                        swiper.params.navigation.nextEl = nextRef.current;
+                    }}
+
+                    breakpoints={{
+                        0: { slidesPerView: 1 },
+                        1024: { slidesPerView: 1 },
+                        1420: { slidesPerView: 1 },
+                        1520: { slidesPerView: 1 },
+                    }}
+
+                    modules={[Pagination, Navigation, Autoplay]}
+                    className={styles.mySwiper}
+                >
+
+
+                    {teamData.map((member, slideIndex) => (
+                        <SwiperSlide key={member.id} className="team-slide">
                             <div className="team-card">
-
                                 <div className="col-12 row mx-auto">
+
+                                    {/* LEFT */}
                                     <div className="col-xl-3 col-lg-4 col-md-5">
-                                        {/* <!-- LEFT IMAGE --> */}
                                         <div className="team-image">
-                                            <div className='teamImgDiv'>
-
-                                            <img src="/assets/img/about/founder.png" alt="Image" />
+                                            <div className="teamImgDiv">
+                                                <img src={member.image} alt={member.name} />
                                             </div>
-                                            <span className="team-designation">Group Testing Officer</span>
-                                            <h4>Lt. Commander Nikhil Kumar Chandrakala (Retd.)</h4>
+                                            <span className="team-designation">{member.designation}</span>
+                                            <h4>{member.name}</h4>
                                         </div>
                                     </div>
+
+                                    {/* RIGHT */}
                                     <div className="col-xl-9 col-lg-8 col-md-7">
-                                        {/* <!-- RIGHT CONTENT --> */}
                                         <div className="team-detailed-content">
-                                            <div className="accordion team-accordion" id="teamAccordion">
+                                            <div className="accordion team-accordion">
 
-                                                {/* <!-- Item 1 --> */}
-                                                <div className="accordion-item">
-                                                    <div className="accordion-header">
-                                                        <button className="accordion-button" data-bs-toggle="collapse" data-bs-target="#bg1">
-                                                            SSB Assessor Background
-                                                        </button>
-                                                    </div>
-                                                    <div id="bg1" className="accordion-collapse collapse show" data-bs-parent="#teamAccordion">
-                                                        <div className="accordion-body">
-                                                            <ul>
-                                                                <li>Trained at DIPR & NSB, Coimbatore</li>
-                                                                <li>Certified Group Testing Officer</li>
-                                                                <li>Youngest Panelist in SSB history</li>
-                                                                <li>Assessed 12,500+ candidates</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                {member.sections.map((section, index) => {
+                                                    const collapseId = `collapse-${slideIndex}-${section.id}`;
 
-                                                {/* <!-- Item 2 --> */}
-                                                <div className="accordion-item">
-                                                    <div className="accordion-header">
-                                                        <button className="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#bg2">
-                                                            Navy Background
-                                                        </button>
-                                                    </div>
-                                                    <div id="bg2" className="accordion-collapse collapse" data-bs-parent="#teamAccordion">
-                                                        <div className="accordion-body">
-                                                            <ul>
-                                                                <li>Trained at DIPR & NSB, Coimbatore</li>
-                                                                <li>Certified Group Testing Officer</li>
-                                                                <li>Youngest Panelist in SSB history</li>
-                                                                <li>Assessed 12,500+ candidates</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                    return (
+                                                        <div className="accordion-item" key={section.id}>
+                                                            <div className="accordion-header">
+                                                                <button
+                                                                    className={`accordion-button ${index !== 0 ? "collapsed" : ""}`}
+                                                                    data-bs-toggle="collapse"
+                                                                    data-bs-target={`#${collapseId}`}
+                                                                >
+                                                                    {section.title}
+                                                                </button>
+                                                            </div>
 
-                                                {/* <!-- Item 3 --> */}
-                                                <div className="accordion-item">
-                                                    <div className="accordion-header">
-                                                        <button className="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#bg3">
-                                                            Educational Background
-                                                        </button>
-                                                    </div>
-                                                    <div id="bg3" className="accordion-collapse collapse" data-bs-parent="#teamAccordion">
-                                                        <div className="accordion-body">
-                                                            <p>Academic qualifications supporting assessment expertise.</p>
+                                                            <div
+                                                                id={collapseId}
+                                                                className={`accordion-collapse collapse ${index === 0 ? "show" : ""}`}
+                                                            >
+                                                                <div className="accordion-body">
+
+                                                                    {/* LIST CONTENT */}
+                                                                    {section.content && (
+                                                                        <ul>
+                                                                            {section.content.map((item, i) => (
+                                                                                <li key={i}>{item}</li>
+                                                                            ))}
+                                                                        </ul>
+                                                                    )}
+
+                                                                    {/* TEXT CONTENT */}
+                                                                    {section.text && <p>{section.text}</p>}
+
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </div>
+                                                    );
+                                                })}
+
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
-                        </div>
-
-                        {/* <!-- SLIDE --> */}
-                        <div className="swiper-slide team-slide">
-
-                            <div className="team-card">
-
-                                <div className="col-12 row mx-auto">
-                                    <div className="col-lg-3 col-md-4">
-                                        {/* <!-- LEFT IMAGE --> */}
-                                        <div className="team-image">
-                                            <img src="/assets/img/about/founder.png" alt="Image" />
-                                            <span className="team-designation">Group Testing Officer</span>
-                                            <h4>Lt. Commander Nikhil Kumar Chandrakala (Retd.)</h4>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-9 col-md-8">
-                                        {/* <!-- RIGHT CONTENT --> */}
-                                        <div className="team-detailed-content">
-                                            <div className="accordion team-accordion" id="teamAccordion">
-
-                                                {/* <!-- Item 1 --> */}
-                                                <div className="accordion-item">
-                                                    <div className="accordion-header">
-                                                        <button className="accordion-button" data-bs-toggle="collapse" data-bs-target="#bg1">
-                                                            SSB Assessor Background
-                                                        </button>
-                                                    </div>
-                                                    <div id="bg1" className="accordion-collapse collapse show" data-bs-parent="#teamAccordion">
-                                                        <div className="accordion-body">
-                                                            <ul>
-                                                                <li>Trained at DIPR & NSB, Coimbatore</li>
-                                                                <li>Certified Group Testing Officer</li>
-                                                                <li>Youngest Panelist in SSB history</li>
-                                                                <li>Assessed 12,500+ candidates</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                {/* <!-- Item 2 --> */}
-                                                <div className="accordion-item">
-                                                    <div className="accordion-header">
-                                                        <button className="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#bg2">
-                                                            Navy Background
-                                                        </button>
-                                                    </div>
-                                                    <div id="bg2" className="accordion-collapse collapse" data-bs-parent="#teamAccordion">
-                                                        <div className="accordion-body">
-                                                            <ul>
-                                                                <li>Trained at DIPR & NSB, Coimbatore</li>
-                                                                <li>Certified Group Testing Officer</li>
-                                                                <li>Youngest Panelist in SSB history</li>
-                                                                <li>Assessed 12,500+ candidates</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                {/* <!-- Item 3 --> */}
-                                                <div className="accordion-item">
-                                                    <div className="accordion-header">
-                                                        <button className="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#bg3">
-                                                            Educational Background
-                                                        </button>
-                                                    </div>
-                                                    <div id="bg3" className="accordion-collapse collapse" data-bs-parent="#teamAccordion">
-                                                        <div className="accordion-body">
-                                                            <p>Academic qualifications supporting assessment expertise.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
+                        </SwiperSlide>
+                    ))}
 
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                </Swiper>
 
-                    </div>
+                <div className={styles.paginationWrapper}>
+                    <div className="roger-pagination"></div>
                 </div>
 
-                {/* <div className="thm-sld-pagination"></div> */}
             </section>
 
             <From />

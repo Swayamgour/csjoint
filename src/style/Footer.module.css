@@ -149,3 +149,14 @@
     margin-top: 40px;
     padding-bottom: 10px;
 }
+
+.socials a {
+    color: inherit;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.socials a:hover {
+    transform: scale(1.15);
+    color: #d2a100;
+    /* ya jo theme color ho */
+}

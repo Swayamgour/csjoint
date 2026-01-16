@@ -66,7 +66,7 @@ const Courses = () => {
                     Our courses
                 </h2> */}
                 <Heading h1='Our Courses' />
-                <CustomButton text='Know More' onClick={()=>navigate('/Courses') } />
+                <CustomButton text='Know More' onClick={() => navigate('/Courses')} />
             </div>
 
             {/* Content */}
@@ -123,7 +123,14 @@ const Courses = () => {
                     <div className={styles.previewOverlay}>
 
 
-                        <h1 >{coursesData[activeCard]?.title}</h1>
+                       
+
+                        <h1 className={styles.courseTitle}>
+                            <span className={styles.white}>{coursesData[activeCard]?.white}</span>
+                            <span className={styles.gray}>{coursesData[activeCard]?.gray}</span>{" "}
+                            <span className={styles.white}>{coursesData[activeCard]?.white2}</span>
+                        </h1>
+
 
                         <p style={{ fontWeight: '200' }}>
                             {coursesData[activeCard]?.description ||

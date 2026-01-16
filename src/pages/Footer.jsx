@@ -51,7 +51,8 @@ function Footer() {
                     <h4>Useful Links</h4>
                     <ul>
                         <li onClick={() => navigate("/")}>Home</li>
-                        <li>What is SSB?</li>
+                        <li onClick={() => navigate('/SsbPage')}>What is SSB?</li>
+                        <li >Podcast</li>
                         <li >Privacy policy</li>
                     </ul>
                 </div>
@@ -60,12 +61,13 @@ function Footer() {
                 <div className={styles.links}>
                     <h4>Our Services</h4>
                     <ul>
-                        <li onClick={() => navigate("/About")}>About Us</li>
-                        <li onClick={() => navigate("/Magazine")}>Magazine</li>
-                        <li onClick={() => navigate("/HalfOfFame")}>Hall of Fame</li>
                         <li onClick={() => navigate("/Courses")}>Courses</li>
+                        <li onClick={() => navigate("/Magazine")}>Magazine</li>
+
+                        {/* <li onClick={() => navigate("/About")}>About Us</li>
+                        <li onClick={() => navigate("/HalfOfFame")}>Hall of Fame</li>
                         <li onClick={() => navigate("/GtoTrain")}>GTO Training</li>
-                        <li onClick={() => navigate("/SsbPage")}>SSB</li>
+                        <li onClick={() => navigate("/SsbPage")}>SSB</li> */}
                     </ul>
 
                     {/* SOCIAL ICONS */}
@@ -108,12 +110,51 @@ function Footer() {
                             <i className="fa fa-envelope"></i> info@ssbwithisv.in
                         </p>
 
-                        <div className={styles.socials}>
+                        {/* <div className={styles.socials}>
                             <i className="fa fa-youtube-play"></i>
                             <i className="fa fa-linkedin-square"></i>
                             <i className="fa fa-instagram"></i>
                             <i className="fa fa-facebook"></i>
+                        </div> */}
+
+                        <div className={styles.socials}>
+                            <a
+                                href="https://www.youtube.com/@ssbwithisv"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="YouTube"
+                            >
+                                <i className="fa fa-youtube-play"></i>
+                            </a>
+
+                            <a
+                                href="https://www.linkedin.com/company/ssbwithisv/posts"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="LinkedIn"
+                            >
+                                <i className="fa fa-linkedin-square"></i>
+                            </a>
+
+                            <a
+                                href="https://www.instagram.com/ssbwithisv/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Instagram"
+                            >
+                                <i className="fa fa-instagram"></i>
+                            </a>
+
+                            <a
+                                href="https://www.facebook.com/ssbwithisv/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Facebook"
+                            >
+                                <i className="fa fa-facebook"></i>
+                            </a>
                         </div>
+
                     </div>
 
 

@@ -12,7 +12,8 @@ function GtoTrain() {
                                     It offers aspirants a first-hand visual and mental experience of the tasks before they encounter them physically — building clarity, familiarity, and confidence.`,
 
         text: ' See the GTO ground before you step onto it.',
-        textThree: 'GTO Training Xperience'
+        textThree: 'GTO Training Xperience',
+        color: true
     }
     return (
         <>
@@ -20,7 +21,7 @@ function GtoTrain() {
 
 
 
-            <CustomHeader heading={data.heading} text={data.text} textTwo={data.textTwo} span={data.span} textThree={data.textThree} />
+            <CustomHeader heading={data.heading} text={data.text} textTwo={data.textTwo} span={data.span} textThree={data.textThree} color={data?.color} />
 
             <section className="GTO-pedagogical-section sectionspace80">
                 <div className="container">

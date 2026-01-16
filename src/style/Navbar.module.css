@@ -16,16 +16,7 @@
     /* height: 100vh; */
 }
 
-.pageWrapperMain {
-    /* background-color: transparent; */
-    /* background-color: rgba(0, 0, 0, 0.4); */
-    /* background-color: rgb(98 91 91 / 30%); */
-    /* gray + transparent */
-    /* dark gray */
-    /* padding: 0px 60px; */
-    /* border-bottom: 1px solid white; */
 
-}
 
 /* =========================
    HERO SECTION
@@ -74,24 +65,36 @@
     text-align: center;
 }
 
-.subtitle,
-.subtitleTwo {
-
-    font-weight: 200;
+.subtitle {
+    font-weight: 500;
     font-size: 28px;
     line-height: 38px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #ffffff;
+
+}
+
+/* .subtitle, */
+.subtitleTwo {
+
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 40px;
+    font-family: var(--pre);
 }
 
 .subtitle {
     margin-bottom: 16px;
 }
 
-.subtitleTwo {
+/* .subtitleTwo {
     margin-top: 20px;
-}
+} */
 
 .title {
 
@@ -360,7 +363,7 @@
 .titleOfSecondSection {
 
 
-    font-family: 'Kelson', sans-serif;
+    font-family: var(--font-heading);
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -503,9 +506,9 @@
 
 /* Mobile */
 @media (max-width: 768px) {
-    .pageWrapper {
+    /* .pageWrapper {
         padding: 0 16px;
-    }
+    } */
 
     .heroSection {
         height: 70vh;

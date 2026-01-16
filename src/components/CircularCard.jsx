@@ -3,17 +3,17 @@ import styles from "../style/Navbar.module.css";
 import { useRef } from "react";
 import useCountUp from "./useCountUp";
 
-export default function CircleStat({ number, title }) {
+export default function CircleStat({ number, title, timeDel }) {
     const controls = useAnimationControls();
     const hasViewed = useRef(false);
 
     const { ref, count } = useCountUp(Number(number), 2000);
 
-    const runAnimation = async () => {
+    const runAnimation = async (timeDel) => {
         await controls.set({ rotate: 10 }); // reset
         controls.start({
             rotate: 360,
-            transition: { duration: 1, ease: "easeInOut" },
+            transition: { duration: timeDel, ease: "easeInOut" },
         });
     };
 
@@ -26,7 +26,7 @@ export default function CircleStat({ number, title }) {
                     onViewportEnter={() => {
                         if (!hasViewed.current) {
                             hasViewed.current = true;
-                            runAnimation();
+                            runAnimation(timeDel);
                         }
                     }}
                     viewport={{ once: true }} // 👈 screen me ek hi baar

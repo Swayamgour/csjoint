@@ -20,7 +20,6 @@ function Home() {
             <OurMentor />
             <Philosophy />
             <OurCourses />
-
             <UniquePedagogy />
 
             {/* Resources for SSB preparation */}

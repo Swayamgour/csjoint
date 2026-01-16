@@ -1,105 +1,86 @@
-/* ================= BASE HEADING ================= */
+/* ================= RESET ================= */
 .headingOfSSb {
-    font-family: var(--font-heading, system-ui);
-    font-size: 5rem;
-    line-height: 1.2;
+    font-family: "Poppins", sans-serif;
+    font-size: 64px;
+    font-weight: 500;
     display: flex;
-    flex-wrap: wrap;
     gap: 12px;
-    color: var(--white);
-    /* default white */
+    white-space: nowrap;
+    color: transparent;
 }
 
-.headingOfMargin {
-    margin: 50px 0;
-}
-
-/* WORD */
+/* ================= WORD WRAPPER ================= */
 .word {
     display: inline-flex;
 }
 
-/* CHAR */
+/* ================= CHAR ================= */
 .char {
     display: inline-block;
+    background: inherit;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
-/* ================= HIGHLIGHT (NEW SWEEP) ================= */
-.highlight {
-    color: var(--white);
-    /* 👈 default visible */
-
+/* ================= SWEEP GRADIENT ================= */
+/* .play-sweep .highlight {
     background: linear-gradient(90deg,
-            rgba(255, 255, 255, 0.35) 35%,
-            rgba(255, 255, 255, 1) 50%,
-            rgba(255, 255, 255, 0.35) 65%);
+            #ffffff 0%,
+            #e0e0e0 30%,
+            #b0b0b0 50%,
+            #7a7a7a 70%,
+            #ffffff 100%);
+    background-size: 300% 100%;
+    background-position: 0% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
 
-    background-size: 200% 100%;
-    background-position: 200% 0%;
+    animation: sweepLeftRight 1.4s ease-out forwards;
+} */
+
+.play-sweep .highlight {
+    background: linear-gradient(90deg,
+            #7a7a7a 0%,
+            #b0b0b0 30%,
+            #e0e0e0 50%,
+            #ffffff 70%,
+            #7a7a7a 100%);
+
+    background-size: 300% 100%;
+    background-position: 0% 0;
 
     -webkit-background-clip: text;
     background-clip: text;
+
+    /* animation: sweepLeftRight 1.4s ease-out forwards; */
+    animation: sweepLeftRight 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
 }
 
-/* 🔥 PLAY SWEEP */
-.play-sweep .highlight {
-    animation: sweep-left-right 1.8s ease-in-out forwards;
-}
 
-/* LEFT → RIGHT SWEEP */
-@keyframes sweep-left-right {
+/* ================= ANIMATION ================= */
+@keyframes sweepLeftRight {
     from {
-        background-position: 200% 0%;
+        background-position: 0% 0;
     }
 
     to {
-        background-position: 0% 0%;
+        background-position: 100% 0;
     }
 }
 
 /* ================= AFTER ANIMATION ================= */
-.sweep-done .highlight {
+.sweep-done {
+    animation: none;
     background: none;
+    color: #ffffff;
 }
 
-/* Final colors */
-.sweep-done .first {
-    color: var(--white);
+.sweep-done .first .char {
+    color: #ffffff;
 }
 
-.sweep-done .second {
-    color: rgba(255, 255, 255, 0.55);
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 1200px) {
-    .headingOfSSb {
-        font-size: 4rem;
-    }
-}
-
-@media (max-width: 1024px) {
-    .headingOfSSb {
-        font-size: 3.2rem;
-    }
-
-    .headingOfMargin {
-        margin: 30px 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .headingOfSSb {
-        font-size: 2.4rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .headingOfSSb {
-        font-size: 1.6rem;
-    }
-
-    .headingOfMargin {
-        margin: 12px 0;
-    }
+.sweep-done .second .char {
+    color: #9a9a9a;
 }
