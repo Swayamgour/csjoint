@@ -61,6 +61,7 @@ const Courses = () => {
     return (
         <section className={styles.coursesSection}>
             {/* Header */}
+
             <div className={styles.header}>
                 {/* <h2 className='headingOfSSb'>
                     Our courses
@@ -85,6 +86,7 @@ const Courses = () => {
                                 }`}
                             onClick={() => handleCardClick(index)}
                         >
+                            <div className={styles.sectionGlow}></div>
                             <div className={styles.courseCardHudCon}>
                                 {/* Corner Brackets */}
                                 <div className={`${styles.corner} ${styles.tl}`}></div>
@@ -123,7 +125,7 @@ const Courses = () => {
                     <div className={styles.previewOverlay}>
 
 
-                       
+
 
                         <h1 className={styles.courseTitle}>
                             <span className={styles.white}>{coursesData[activeCard]?.white}</span>
@@ -144,6 +146,8 @@ const Courses = () => {
                     </div>
                 </div>
             </div>
+            <div className={styles.sectionGlowTwo}></div>
+
         </section>
     );
 };

@@ -181,6 +181,28 @@
     /* background: rgba(0, 0, 0, 0.6); */
 }
 
+
+
+.sectionGlow {
+    position: absolute;
+    inset: -30%;
+    width: 800px;
+    height: 800px;
+    top: 50%;
+    left: 30%;
+    pointer-events: none;
+    filter: blur(100px);
+    background: radial-gradient(circle at 70% 40%,
+            rgba(244, 196, 48, 0.35),
+            transparent 65%);
+}
+
+/* .section-glow {
+   
+} */
+
+
+
 .circleSectionContainer {
     display: flex;
     align-items: center;
