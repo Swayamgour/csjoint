@@ -25,14 +25,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './pages/Home/Home';
 import About from "./pages/About";
 import Magnize from './pages/Magnize';
-import From from './pages/From';
-import Footer from './pages/Footer';
+// import From from './pages/From';
+// import Footer from './pages/Footer';
 import HalfOfFame from './pages/HalfOfFame';
 import Courses from './pages/Courses';
 import GtoTrain from './pages/Home/GtoTrain';
 import ScrollToTop from './components/ScrollToTop';
 import SsbPage from './pages/SsbPage';
-import Background from '../src/components/Background';
+// import Background from '../src/components/Background';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import { Toaster } from 'react-hot-toast';
@@ -43,8 +43,8 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-       <Toaster position="center" reverseOrder={false} />
-    
+      <Toaster position="center" reverseOrder={false} />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />

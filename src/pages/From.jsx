@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import CustomButton from '../components/CustomButton'
-import emailjs from "emailjs-com";
+// import emailjs from "emailjs-com";
 import Background from '../components/Background'
+import axios from "axios";
+import toast from 'react-hot-toast';
+
 
 function From() {
 
@@ -20,30 +23,49 @@ function From() {
         });
     };
 
+    const [loading, setLoading] = useState(true)
 
 
-    const handleSubmit = (e) => {
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(false)
 
-        emailjs.send(
-            "YOUR_SERVICE_ID",
-            "YOUR_TEMPLATE_ID",
-            {
-                name: formData.name,
-                email: formData.email,
-                phone: formData.phone,
-                subject: formData.subject,
-                message: formData.message,
-            },
-            "YOUR_PUBLIC_KEY"
-        )
-            .then(() => {
-                alert("Query sent successfully!");
+        try {
+            const response = await axios.post(
+                "https://api.ssbwithisv.in/api/send-email",
+                {
+                    name: formData.name,
+                    email: formData.email,
+                    phone: formData.phone,
+                    subject: formData.subject,
+                    message: formData.message,
+                },
+                {
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                }
+            );
+
+            console.log(response.data);
+            toast.success("Email sent successfully!");
+            setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                subject: '',
+                message: ''
             })
-            .catch(() => {
-                alert("Something went wrong. Try again.");
-            });
+            setLoading(true)
+
+
+        } catch (error) {
+            console.error(error);
+            toast.error("Failed to send email");
+        }
     };
+
 
 
 
@@ -64,6 +86,7 @@ function From() {
                                 name="name"
                                 placeholder="Your Name"
                                 onChange={handleChange}
+                                value={formData.name}
                                 required
                             />
                         </div>
@@ -74,6 +97,8 @@ function From() {
                                 name="email"
                                 placeholder="Your Email"
                                 onChange={handleChange}
+                                value={formData.email}
+
                                 required
                             />
                         </div>
@@ -84,6 +109,8 @@ function From() {
                                 name="phone"
                                 placeholder="Your Contact Number"
                                 onChange={handleChange}
+                                value={formData.phone}
+
                                 required
                             />
                         </div>
@@ -94,6 +121,8 @@ function From() {
                                 name="subject"
                                 placeholder="Subject"
                                 onChange={handleChange}
+                                value={formData.subject}
+
                                 required
                             />
                         </div>
@@ -103,12 +132,14 @@ function From() {
                                 name="message"
                                 placeholder="Write Your Message"
                                 onChange={handleChange}
+                                value={formData.message}
+
                                 required
                             ></textarea>
                         </div>
 
                         <div className="col-12 text-center d-flex justify-content-center mb-4">
-                            <CustomButton text="Submit" />
+                            <CustomButton text={loading ? "Submit" : "Loading.."} />
                         </div>
 
                     </div>
