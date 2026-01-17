@@ -35,9 +35,10 @@ function CustomHeader({ heading, text, textTwo, span, textThree, color }) {
 
                 <div className="breed-content container">
                     <div className="col-12 row mx-auto">
+                        {color && <img src='/assets/img/about/Group_67.png' style={{ width: '200px' }} />}
                         <div className='col-xl-12'>
-                            {color && <h1 style={{ color: 'var(--secondary-color)' }} className="breed-big-title">{heading}{span && <span className="sup-text">{span}</span>}</h1>}
-                            {!color && <h1 className="breed-big-title">{heading}{span && <sup>{span}</sup>}</h1>}
+                            {color && heading && <h1 style={{ color: 'var(--secondary-color)' }} className="breed-big-title">{heading}{span && <span className="sup-text">{span}</span>}</h1>}
+                            {!color && heading && <h1 className="breed-big-title">{heading}{span && <sup>{span}</sup>}</h1>}
 
                         </div>
                         <div className="col-xl-7">

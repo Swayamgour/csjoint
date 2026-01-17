@@ -20,8 +20,8 @@ function GtoTrain() {
 
 
 
-
-            <CustomHeader heading={data.heading} text={data.text} textTwo={data.textTwo} span={data.span} textThree={data.textThree} color={data?.color} />
+           
+            <CustomHeader text={data.text} textTwo={data.textTwo} textThree={data.textThree} color={data?.color} />
 
             <section className="GTO-pedagogical-section sectionspace80">
                 <div className="container">
