@@ -84,3 +84,21 @@
 .sweep-done .second .char {
     color: #9a9a9a;
 }
+
+@media (max-width: 1024px) {
+    .headingOfSSb {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    .headingOfSSb {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .headingOfSSb {
+        font-size: 20px;
+    }
+}

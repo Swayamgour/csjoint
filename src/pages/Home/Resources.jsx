@@ -17,7 +17,7 @@ const Resources = () => {
     const navigate = useNavigate()
     return (
         <section className={styles.resourcesSection}>
-            <div className={styles.sectionGlowTwo}></div>
+            {/* <div className={styles.sectionGlowTwo}></div> */}
 
             {/* HEADING */}
             {/* <h2 className={styles.heading}>

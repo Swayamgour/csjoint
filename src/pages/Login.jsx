@@ -289,7 +289,7 @@ function Login() {
                         )}
 
                         <div className="col-lg-12 text-center mt-5 d-flex justify-content-center">
-                            <CustomButton text={submit ? "SUBMIT" : "Loading..."} onClick={handleSubmit} />
+                            <CustomButton text={submit ? "SUBMIT" : "LOADING..."} onClick={handleSubmit} />
                         </div>
                     </div>
 

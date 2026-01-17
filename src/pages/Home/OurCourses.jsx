@@ -86,7 +86,7 @@ const Courses = () => {
                                 }`}
                             onClick={() => handleCardClick(index)}
                         >
-                            <div className={styles.sectionGlow}></div>
+                            {/* <div className={styles.sectionGlow}></div> */}
                             <div className={styles.courseCardHudCon}>
                                 {/* Corner Brackets */}
                                 <div className={`${styles.corner} ${styles.tl}`}></div>
@@ -128,9 +128,9 @@ const Courses = () => {
 
 
                         <h1 className={styles.courseTitle}>
-                            <span className={styles.white}>{coursesData[activeCard]?.white}</span>
-                            <span className={styles.gray}>{coursesData[activeCard]?.gray}</span>{" "}
-                            <span className={styles.white}>{coursesData[activeCard]?.white2}</span>
+                            <span className={styles.white}>{coursesData[activeCard]?.title}</span>
+                            {/* <span className={styles.gray}>{coursesData[activeCard]?.gray}</span>{" "}
+                            <span className={styles.white}>{coursesData[activeCard]?.white2}</span> */}
                         </h1>
 
 
@@ -146,7 +146,7 @@ const Courses = () => {
                     </div>
                 </div>
             </div>
-            <div className={styles.sectionGlowTwo}></div>
+            {/* <div className={styles.sectionGlowTwo}></div> */}
 
         </section>
     );

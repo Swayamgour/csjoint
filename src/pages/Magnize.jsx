@@ -126,7 +126,7 @@ function Magnize() {
                                 <div className="magazine-hover">
 
 
-                                    <CustomButton text={downloadBtn ? 'Download PDF' : "Loading...."} onClick={() => downloadPdf(item.pdfFilePath)} />
+                                    <CustomButton text={downloadBtn ? 'Download PDF' : "LOADING..."} onClick={() => downloadPdf(item.pdfFilePath)} />
                                 </div>
 
                                 <div className="card-header magazine-card-head">

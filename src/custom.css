@@ -95,7 +95,7 @@ p {
     font-size: 18px;
     line-height: 28px;
     color: var(--theme-white);
-    font-family: var(--pre);
+    font-family: var(--font-heading);
     text-align: justify;
     hyphens: auto;
     -webkit-hyphens: auto;
@@ -309,16 +309,18 @@ p {
     z-index: 10;
     width: fit-content !important;
 }
-.breed-big-title{
+
+.breed-big-title {
     position: relative;
 }
+
 /* .thm-sld-pagination sup{
     font-size: 10px;
 } */
-.sup-text{
+.sup-text {
     position: absolute;
-    top:-22px;
-    font-size:20px;
+    top: -22px;
+    font-size: 20px;
     color: var(--secondary-color);
 }
 
@@ -613,18 +615,19 @@ p {
 
 }
 
-.teamImgDiv::after{
-    content:"";
+.teamImgDiv::after {
+    content: "";
     position: absolute;
-    height:100%;
-    width:100%;
-    top:5px;
-    right:5px;
+    height: 100%;
+    width: 100%;
+    top: 5px;
+    right: 5px;
     border: 3px solid #fff;
     border-radius: 50%;
     transition: all ease-in 0.3s;
 }
-.team-image:hover .teamImgDiv::after{
+
+.team-image:hover .teamImgDiv::after {
     top: 0;
     right: 0;
 }
@@ -633,7 +636,7 @@ p {
 
 .team-image:hover img {
     transform: scale(1.05);
-   filter: grayscale(0);
+    filter: grayscale(0);
 
 }
 
@@ -936,7 +939,7 @@ p {
 
 .magazine-card-body {
     padding: 0;
-    height: 27rem;
+    height: auto;
     overflow: hidden;
 }
 
@@ -1539,9 +1542,9 @@ p {
         padding: 32px;
     }
 
-    .magazine-card-body {
+    /* .magazine-card-body {
         height: 23rem;
-    }
+    } */
 }
 
 
@@ -1605,9 +1608,9 @@ p {
         display: none;
     }
 
-    .magazine-card-body {
+    /* .magazine-card-body {
         height: 21rem;
-    }
+    } */
 }
 
 /* ==========================================
@@ -1683,9 +1686,9 @@ p {
         font-size: 13px;
     }
 
-    .magazine-card-body {
+    /* .magazine-card-body {
         height: 18rem;
-    }
+    } */
 
     .Hall-of-fame-card.large {
         height: 320px;
@@ -1729,9 +1732,9 @@ p {
 ========================================== */
 
 @media (max-width: 576px) {
-    .magazine-card-body {
+    /* .magazine-card-body {
         height: 25rem;
-    }
+    } */
 }
 
 /* ==========================================
@@ -1791,9 +1794,9 @@ p {
         line-height: 25px;
     }
 
-    .magazine-card-body {
+    /* .magazine-card-body {
         height: 22rem;
-    }
+    } */
 
     .journey-title {
         font-size: 30px;
@@ -1873,4 +1876,3 @@ p {
         color: var(--theme-white);
     }
 }
-

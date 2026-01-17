@@ -32,7 +32,7 @@ function CircleBox() {
                 left="clamp(55%, 60vw, calc(50% + 320px))"
             /> */}
 
-            <div className={styles.sectionGlow}></div>
+            {/* <div className={styles.sectionGlow}></div> */}
             <div className={styles.circleSectionCenterCon}>
                 <div className={styles.circleSectionContainer}>
                     {array.map((e, index) => (

@@ -7,6 +7,32 @@ export default function SelectionMap() {
     const [activeTab, setActiveTab] = useState("army");
     const [hoveredRegion, setHoveredRegion] = useState(null);
 
+    const selectionCenters = {
+        army: [
+            "31 | 32 – Selection Centre North, Jalandhar",
+            "11 | 14 | 18 | 19 | 34 – Selection Centre East, Prayagraj",
+            "20 | 21 | 22 | 33 – Selection Centre Central, Bhopal",
+            "17 | 24 | 12 – Selection Centre South, Bangalore",
+        ],
+
+        airforce: [
+            "1 AFSB – Dehradun",
+            "2 AFSB – Mysore",
+            "3 AFSB – Gandhinagar",
+            "4 AFSB – Varanasi",
+            "5 AFSB – Guwahati",
+        ],
+
+        navy: [
+            "NSB I – Visakhapatnam",
+            "NSB II – Bhopal",
+            "NSB III – Kolkata",
+            // "NSB IV – Visakhapatnam",
+            "NSB V – Bangalore",
+        ],
+    };
+
+
     return (
         <>
             <section className={styles.section}>
@@ -39,26 +65,33 @@ export default function SelectionMap() {
                                 activeTab={activeTab}
                                 hoveredRegion={hoveredRegion}
                                 setHoveredRegion={setHoveredRegion}
-                                // text={'kjhgf'}
+                            // text={'kjhgf'}
                             />
                         </div>
                     </div>
 
+                    {/* <div className={styles.SelectionMapCon}>
+                        <h2>Index</h2> */}
+
                     <div className={styles.SelectionMapCon}>
-                        <h2>index</h2>
-                        <p>31|31 - Selection Center North , Jalandhar</p>
-                        <p>31|31 - Selection Center North , Jalandhar</p>
-                        <p>31|31 - Selection Center North , Jalandhar</p>
-                        <p>31|31 - Selection Center North , Jalandhar</p>
-                        <p>31|31 - Selection Center North , Jalandhar</p>
+                        <h2>Index</h2>
+
+                        {selectionCenters[activeTab]?.map((item, index) => (
+                            <p style={{marginTop:'5px'}} key={index} className={styles.indexItem}>
+                                {item}
+                            </p>
+                        ))}
                     </div>
+
+                    {/* </div> */}
+
 
 
                 </div>
             </section>
 
 
-            <section  className="FAQ-section sectionspace80">
+            <section className="FAQ-section sectionspace80">
                 <div className="container">
                     <div className="sct-title">
                         <h2>Frequently Asked Questions</h2>

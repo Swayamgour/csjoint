@@ -139,7 +139,7 @@ function From() {
                         </div>
 
                         <div className="col-12 text-center d-flex justify-content-center mb-4">
-                            <CustomButton text={loading ? "Submit" : "Loading.."} />
+                            <CustomButton text={loading ? "SUBMIT" : "LOADING..."} />
                         </div>
 
                     </div>
