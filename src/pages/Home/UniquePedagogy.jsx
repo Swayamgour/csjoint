@@ -52,6 +52,7 @@ const UniquePedagogy = () => {
                 muted
                 loop
                 playsInline
+                
             >
                 {/* <source src="/assets/BannerVideo.mp4" type="video/mp4" /> */}
                 <source src="/assets/BannerVideo.mp4" type="video/mp4" />
