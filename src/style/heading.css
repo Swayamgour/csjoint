@@ -1,0 +1,87 @@
+/* ================= BASE ================= */
+.headingOfSSb {
+    font-family: "Poppins", sans-serif;
+    font-size: 64px;
+    font-weight: 500;
+    /* line-height: 1.1; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    /* Base color jo background se match kare (Dark Gray) */
+    color: rgba(255, 255, 255, 0.15);
+}
+
+/* ================= THE LIGHT BEAM SWEEP ================= */
+.play-sweep .highlight {
+    background: linear-gradient(to right,
+            #ffffff 0%,
+            /* Jo area cross ho chuka hai (White) */
+            #ffffff 45%,
+            /* Beam ka start */
+            rgba(255, 255, 255, 1) 50%,
+            /* Brightest Point (The Beam) */
+            rgba(255, 255, 255, 0.15) 55%,
+            /* Beam ka end */
+            rgba(255, 255, 255, 0.15) 100%
+            /* Aage ka hissa jo abhi gray hai */
+        );
+
+    background-size: 250% 100%;
+    /* Size badhaya taaki beam travel kare */
+    background-position: 100% 0;
+    /* Start from right */
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* Text transparent rahega taaki gradient dikhe */
+
+    /* Animation speed thodi slow rakhi hai premium feel ke liye */
+    transition: background-position 2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Trigger State */
+.active.play-sweep .highlight {
+    background-position: 0% 0;
+}
+
+/* ================= FINAL STATE (Video Look) ================= */
+/* Jab animation khatam ho jaye */
+.sweep-done .first-part {
+    color: #ffffff;
+    transition: color 0.5s ease;
+}
+
+.sweep-done .second-part {
+    color: rgba(255, 255, 255, 0.4);
+    /* Video mein second line light gray hai */
+    transition: color 0.5s ease;
+}
+
+.sweep-done .highlight {
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+}
+
+.play-sweep .highlight {
+    transition: background-position 2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 1024px) {
+    .headingOfSSb {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    .headingOfSSb {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .headingOfSSb {
+        font-size: 30px;
+    }
+}
