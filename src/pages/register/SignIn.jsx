@@ -236,6 +236,7 @@ function SignIn() {
             <div className="thm-content-bg"></div>
             <div onClick={() => navigate(-1)} className='arrow_button'>
                 <BiArrowBack />
+                
             </div>
 
             <div className="container position-relative">
