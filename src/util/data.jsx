@@ -202,7 +202,7 @@ export const journeyData = [
         date: "30 September 2024",
         title: "Virtual GTO Ground Rolled Out",
         desc: "Launch of India’s first virtual training experience for remote SSB preparation.",
-        image: "/assets/img/about/journey-slider.png",
+        image: "/assets/website/virtual.png",
     },
 
 ];

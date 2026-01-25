@@ -111,23 +111,21 @@ function GtoTrain() {
 
             <section className="enable-section sectionspace80">
                 <div className="container">
+                   
                     <div className="row align-items-center g-4">
 
-
-
-
-
-                        <div className="col-lg-7">
+                        {/* IMAGE */}
+                        <div className="col-lg-7 order-2 order-lg-1">
                             <div className="enable-image-wrap">
                                 <img src="/assets/img/about/journey-slider.png" alt="Enable Image" />
                             </div>
                         </div>
 
-                        <div className="col-lg-5">
+                        {/* CONTENT */}
+                        <div className="col-lg-5 order-1 order-lg-2">
                             <div className="sct-title mb-3 mt-4">
                                 <h2>What VTX™ is not</h2>
                             </div>
-                            {/* <p className="enable-subtitle">GTX<sup>TM</sup> helps aspirants:</p> */}
 
                             <div className="enable-list">
                                 <div className="enable-item">
@@ -140,12 +138,10 @@ function GtoTrain() {
                                     <span>A coaching shortcut</span>
                                 </div>
                             </div>
-
-
-
                         </div>
 
                     </div>
+
                 </div>
             </section>
 
@@ -209,7 +205,7 @@ function GtoTrain() {
                         <div className="col-lg-9 mx-auto">
                             <div className="bottom-banner-text text-center">
                                 <div className="sct-title mb-4">
-                                    <h2>Built with experience used with responsibility</h2>
+                                    <h2>Built with experience, used with responsibility</h2>
                                 </div>
                                 <p className='text-center'>
                                     Created by an ex-GTO, VTX™ blends real assessment insight with modern technology   <br />staying fully aligned with the spirit and integrity of the SSB process.

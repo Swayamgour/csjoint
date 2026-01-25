@@ -101,16 +101,20 @@ function About() {
                     id: "Army",
                     title: "Army Background",
                     content: [
-                        `21+ years of experience in strategic operations across broad theaters`,
+                        `Ex Coord Officer, 12 SSB (Bangalore)`,
                     ],
                 },
                 {
                     id: "Educational",
                     title: "Educational Background",
                     content: [
-                        ` B.Tech. (Electrical Engineering), NIT Srinagar (J&K)`,
-                        `Masters in Psychology, Minor in Industrial and Organisational Psychology`,
-                        `Masters in Mobility Engineering, Indian Institute of Science, Bangalore`,
+                        ` Graduation &
+                        Post Grad(St Xavier’s College, Calcutta`,
+                        ` MBA, Pune University`,
+                        ` Masters in Human Rights, Delhi University`,
+                        `PGDBA(HR)`,
+                        `PMP`,
+                        ` Certified Life Coach & Alternate Counsellor`
                     ],
                 },
             ],

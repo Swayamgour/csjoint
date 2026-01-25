@@ -23,6 +23,8 @@ function Magnize() {
     const [magazines, setMagazines] = useState([]);
     const [loading, setLoading] = useState(true);
     const [downloadBtn, setDownloadBtn] = useState(true);
+    const [selectedTag, setSelectedTag] = useState("all");
+
 
 
     const fetchAllMagazinePdfs = async () => {
@@ -62,7 +64,7 @@ function Magnize() {
     // import axios from "axios";
 
     const token = localStorage.getItem('authToken')
-    console.log(token)
+    // console.log(token)
 
     const navigate = useNavigate()
 
@@ -92,9 +94,16 @@ function Magnize() {
         }
     };
 
+    // const filteredMagazines =
+    //     selectedTag === "all"
+    //         ? magazines
+    //         : magazines.filter((item) => item.tags === selectedTag);
 
 
-
+    const filteredMagazines =
+        selectedTag === "all"
+            ? magazines
+            : magazines.filter((item) => item.tags === selectedTag);
 
 
     return (
@@ -114,16 +123,27 @@ function Magnize() {
                     </div>
 
                     {/* RIGHT SELECT */}
-                    <div className="col-4 col-md-4 text-md-end">
+                    <div className="col-8 col-md-4 text-md-end">
                         <form>
                             <div className="form-group">
-                                <select className="form-select thm-select w-100 w-md-auto">
+                                {/* <select className="form-select thm-select w-100 w-md-auto">
                                     <option value="all">All Resources</option>
                                     <option value="1">Current Affairs Magazine</option>
                                     <option value="2">Books</option>
                                     <option value="3">SSB Prep Material</option>
-                                    {/* <option value="4">Option 4</option> */}
+                                </select> */}
+
+                                <select
+                                    className="form-select thm-select w-100 w-md-auto"
+                                    value={selectedTag}
+                                    onChange={(e) => setSelectedTag(e.target.value)}
+                                >
+                                    <option value="all">All Resources</option>
+                                    <option value="Magazine">Current Affairs Magazine</option>
+                                    <option value="Books">Books</option>
+                                    <option value="SSBPrep">SSB Prep Material</option>
                                 </select>
+
                             </div>
                         </form>
                     </div>
@@ -131,7 +151,7 @@ function Magnize() {
                 </div>
 
                 <div className="col-12 mx-auto row g-4">
-                    {magazines?.map((item, index) => (
+                    {filteredMagazines?.map((item, index) => (
                         <div className="col-lg-4 col-md-6 col-sm-6" key={item._id || index}>
                             <div className="card magazine-card">
 

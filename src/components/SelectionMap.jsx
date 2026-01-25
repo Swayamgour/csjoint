@@ -29,11 +29,15 @@ export default function SelectionMap() {
         ],
 
         navy: [
-            "NSB I – Visakhapatnam",
-            "NSB II – Bhopal",
-            "NSB III – Kolkata",
-            // "NSB IV – Visakhapatnam",
-            "NSB V – Bangalore",
+            // "NSB I – Visakhapatnam",
+            "NSB Vizag",
+            "33 SSB, Bhopal",
+            // "NSB II – Bhopal",
+            "SSB (Kolkata)",
+            "12 SSB, Bangalore",
+            // "NSB III – Kolkata",
+            // // "NSB IV – Visakhapatnam",
+            // "NSB V – Bangalore",
         ],
     };
 
