@@ -328,6 +328,7 @@ p {
     -webkit-text-fill-color: transparent;
 
     animation: shineLeft 5s linear infinite;
+    padding: 0 4px;
 }
 
 @keyframes shineLeft {
