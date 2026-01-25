@@ -86,7 +86,7 @@ function About() {
         // Mentor-in-residence & Principal Insight Officer
         {
             id: "member-2",
-            image: "/assets/vivek.jpeg",
+            image: "/assets/1.jpeg",
             designation: "Mentor-in-residence & Principal Insight Officer",
             name: "Lt Colonel Vivek Talwar (Retd.)",
             sections: [

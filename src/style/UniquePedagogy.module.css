@@ -69,19 +69,27 @@
 /* ================= IMAGE SECTION ================= */
 
 .imageSection {
-    
+
     width: 100%;
     /* height: 100vh; */
     /* background: url("../../public/assets/unsplash_5Mj4PO7KIFc.png") center / cover no-repeat; */
     position: relative;
 }
 
-
-.MuteBtn{
-    position: absolute;
-    bottom: 10%;
-    right: 10%;
+.MuteBtn {
+    color: var(--secondary-color);
+    font-size: 25px;
+    display: flex;
+    /* width: 100%; */
+    padding-right: 20px;
+    padding-top: 10px;
+    /* justify-content: flex-end; */
+   
 }
+
+
+
+
 
 /* DARK OVERLAY */
 

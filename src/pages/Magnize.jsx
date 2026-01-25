@@ -101,9 +101,10 @@ function Magnize() {
 
 
     const filteredMagazines =
-        selectedTag === "all"
+        (selectedTag === "all"
             ? magazines
-            : magazines.filter((item) => item.tags === selectedTag);
+            : magazines.filter(item => item.tags === selectedTag)
+        ).sort((a, b) => new Date(b.uploadDate) - new Date(a.uploadDate));
 
 
     return (

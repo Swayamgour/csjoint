@@ -5,6 +5,9 @@ import styles from "../../style/UniquePedagogy.module.css";
 import HeadingTwo from "../../components/HeadingTwo";
 import { useRef, useState } from "react";
 
+import { IoVolumeMuteSharp } from "react-icons/io5";
+import { VscUnmute } from "react-icons/vsc";
+
 const UniquePedagogy = () => {
 
 
@@ -73,12 +76,14 @@ const UniquePedagogy = () => {
 
             </video>
 
-            <button className={styles.MuteBtn} onClick={() => {
-                setIsMuted(!isMuted);
-                videoRef.current.muted = !isMuted;
-            }}>
-                {isMuted ? "Unmute 🔊" : "Mute 🔇"}
-            </button>
+            <div className='d-flex justify-content-end  '>
+                <button className={styles.MuteBtn} onClick={() => {
+                    setIsMuted(!isMuted);
+                    videoRef.current.muted = !isMuted;
+                }}>
+                    {!isMuted ? <VscUnmute /> : <IoVolumeMuteSharp />}
+                </button>
+            </div>
 
             <div className={styles.KnowMoreBtn}>
                 <CustomButton text='KNOW MORE' onClick={() => navigate('/GtoTrain')} />
