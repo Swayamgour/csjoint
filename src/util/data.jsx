@@ -50,7 +50,7 @@ export const coursesData = [
         sessions: "10",
         hours: "60",
         description: `Full SSB Course that covers intricate details of the 05 day assessment procedure`,
-        image: "/assets/website/10dayshackathon_thumbail.png",
+        image: "/assets/website/course5.png",
     },
 
     {
@@ -108,7 +108,10 @@ export const coursesData = [
         hours: "30",
         description:
             "Complete preparation for 9  group situational tasks",
-        image: "/assets/98c7a7f50b4f84914d4384c7773d36774b2c9ad3.jpg",
+        // image: "/assets/98c7a7f50b4f84914d4384c7773d36774b2c9ad3.jpg",
+
+        image: "/assets/website/10dayshackathon_thumbail.png",
+
     },
 ];
 

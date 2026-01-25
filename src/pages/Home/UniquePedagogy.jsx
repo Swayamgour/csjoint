@@ -3,11 +3,18 @@ import CustomButton from "../../components/CustomButton";
 import Heading from "../../components/Heading";
 import styles from "../../style/UniquePedagogy.module.css";
 import HeadingTwo from "../../components/HeadingTwo";
+import { useRef, useState } from "react";
 
 const UniquePedagogy = () => {
 
 
     const navigate = useNavigate()
+
+    const videoRef = useRef(null);
+    const [isMuted, setIsMuted] = useState(true);
+
+
+
     return (
         <section className={styles.wrapper}>
             {/* TOP CONTENT */}
@@ -49,15 +56,29 @@ const UniquePedagogy = () => {
             <video
                 className={styles.imageSection}
                 autoPlay
-                muted
+                // muted/
                 loop
                 playsInline
-                
+
+                ref={videoRef}
+                // className={styles.imageSection}
+                // autoPlay
+                // loop
+                // playsInline
+                muted={isMuted}
+
             >
                 {/* <source src="/assets/BannerVideo.mp4" type="video/mp4" /> */}
                 <source src="/assets/vtx.mp4" type="video/mp4" />
 
             </video>
+
+            <button className={styles.MuteBtn} onClick={() => {
+                setIsMuted(!isMuted);
+                videoRef.current.muted = !isMuted;
+            }}>
+                {isMuted ? "Unmute 🔊" : "Mute 🔇"}
+            </button>
 
             <div className={styles.KnowMoreBtn}>
                 <CustomButton text='KNOW MORE' onClick={() => navigate('/GtoTrain')} />

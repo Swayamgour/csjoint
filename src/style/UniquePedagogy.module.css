@@ -73,7 +73,14 @@
     width: 100%;
     /* height: 100vh; */
     /* background: url("../../public/assets/unsplash_5Mj4PO7KIFc.png") center / cover no-repeat; */
-    /* position: relative; */
+    position: relative;
+}
+
+
+.MuteBtn{
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
 }
 
 /* DARK OVERLAY */

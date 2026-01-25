@@ -175,11 +175,11 @@ function About() {
                     spaceBetween={40}
                     loop={true}
 
-                    autoplay={{
-                        delay: 3000,
-                        disableOnInteraction: false,
-                        pauseOnMouseEnter: true,
-                    }}
+                    // autoplay={{
+                    //     delay: 3000,
+                    //     disableOnInteraction: false,
+                    //     pauseOnMouseEnter: true,
+                    // }}
 
                     pagination={{
                         el: ".roger-pagination",
