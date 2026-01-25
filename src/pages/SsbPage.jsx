@@ -6,6 +6,7 @@ import SelectionMap from '../components/SelectionMap'
 import DaySchedule from '../components/DaySchedule'
 import From from './From'
 import Footer from './Footer'
+import Faq from '../components/Faq'
 
 function SsbPage() {
 
@@ -22,6 +23,7 @@ function SsbPage() {
             <DaySchedule />
             <TipsToExcel />
             <SelectionMap />
+            <Faq />
             <Footer />
 
 

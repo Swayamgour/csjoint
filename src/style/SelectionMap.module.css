@@ -17,6 +17,22 @@
     font-family: var(--font1);
 }
 
+/* .svgWrapper {
+    position: relative;
+} */
+
+.tooltip {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    pointer-events: none;
+    z-index: 100;
+}
+
+
 .tabs {
     display: flex;
     gap: 40px;
@@ -457,12 +473,23 @@
     transition: all 0.3s ease;
     cursor: pointer;
     opacity: 0.25;
-    /* 👈 DEFAULT DIM */
+    /* default dim */
 }
 
+/* Active but NOT hovered */
 .activeState {
-    fill: #d2a100;
-    stroke: #f0c75e;
+    fill: #c3a32e;
+    /* light yellow */
+    stroke: #c3a32e;
     opacity: 1;
+    filter: none;
+    /* ❌ no glow by default */
+}
+
+/* Glow only on hover */
+.activeState:hover {
+    fill: #d2a100;
+    /* darker yellow on hover */
+    stroke: #f0c75e;
     filter: drop-shadow(0 0 18px rgba(210, 161, 0, 0.6));
 }
