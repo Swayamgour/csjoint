@@ -1,7 +1,10 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import CustomHeader from '../../components/CustomHeader'
 import From from '../From'
 import Footer from '../Footer'
+import { VscUnmute } from 'react-icons/vsc'
+import { IoVolumeMuteSharp } from 'react-icons/io5'
+import styles from '../../style/UniquePedagogy.module.css'
 
 function GtoTrain() {
 
@@ -24,6 +27,11 @@ function GtoTrain() {
 
         return () => clearTimeout(timer);
     }, []);
+
+
+    const videoRef = useRef(null);
+    const [isMuted, setIsMuted] = useState(true);
+
 
 
     return (
@@ -101,7 +109,7 @@ function GtoTrain() {
 
                         <div className="col-lg-7">
                             <div className="enable-image-wrap">
-                                <img src="/assets/img/about/journey-slider.png" alt="Enable Image" />
+                                <img src="/assets/vtx1.png" alt="Enable Image" />
                             </div>
                         </div>
 
@@ -111,13 +119,13 @@ function GtoTrain() {
 
             <section className="enable-section sectionspace80">
                 <div className="container">
-                   
+
                     <div className="row align-items-center g-4">
 
                         {/* IMAGE */}
                         <div className="col-lg-7 order-2 order-lg-1">
                             <div className="enable-image-wrap">
-                                <img src="/assets/img/about/journey-slider.png" alt="Enable Image" />
+                                <img src="/assets/Vtxnot.png" alt="Enable Image" />
                             </div>
                         </div>
 
@@ -152,7 +160,35 @@ function GtoTrain() {
                 <div className="container-fluid px-0">
                     <div className="row g-0">
                         <div className="col-lg-12 img-gradient-wrapper">
-                            <img src="/assets/img/about/about-breed.webp" alt="Enable Image" />
+                            <video
+                                className={styles.imageSection}
+                                autoPlay
+                                // muted/
+                                loop
+                                playsInline
+
+                                ref={videoRef}
+                                // className={styles.imageSection}
+                                // autoPlay
+                                // loop
+                                // playsInline
+                                muted={isMuted}
+
+                            >
+                                {/* <source src="/assets/BannerVideo.mp4" type="video/mp4" /> */}
+                                <source src="/assets/0125(6).mp4" type="video/mp4" />
+
+                            </video>
+
+                            <div className='d-flex justify-content-end  '>
+                                <button className={styles.MuteBtn} onClick={() => {
+                                    setIsMuted(!isMuted);
+                                    videoRef.current.muted = !isMuted;
+                                }}>
+                                    {!isMuted ? <VscUnmute /> : <IoVolumeMuteSharp />}
+                                </button>
+                            </div>
+                            {/* <img src="/assets/img/about/about-breed.webp" alt="Enable Image" /> */}
                         </div>
                     </div>
                 </div>

@@ -1418,7 +1418,7 @@ p {
 }
 
 .GTO-img-section .img-gradient-wrapper {
-    position: relative;
+    /* position: relative; */
     overflow: hidden;
 }
 
